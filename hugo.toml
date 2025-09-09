@@ -1,0 +1,52 @@
+baseURL = "https://dailyspin.fm/"
+title = "Daily Spin"
+theme = "vng-blue"
+languageCode = "en-us"
+enableRobotsTXT = true
+pagerSize = 15
+buildFuture = false
+
+[params]
+homeEventPosition = "none"
+homeToBlogText    = "To&nbsp;blog"
+description       = "One perfect track, every day. Background + why it’s great."
+author            = "Daily Spin"
+location          = "Internet Radio"
+github            = "https://github.com/<you>"
+x                 = "https://x.com/<you>"
+instagram         = "https://instagram.com/<you>"
+spotify           = "https://open.spotify.com/user/<id>"
+substack          = "https://<you>.substack.com"
+custom_script_inline = ""
+
+[params.giscus]
+enable = false
+
+[taxonomies]
+artist = "artist"
+genre  = "genres"
+mood   = "moods"
+era    = "era"
+year   = "year"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+  [[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 2
+  [[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 3
+  [[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 4

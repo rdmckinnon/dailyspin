@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -e
+case "$1" in
+  new)
+    shift
+    if [[ -z "$*" ]]; then echo "Usage: ./ds new \"Song – Artist\""; exit 1; fi
+    slug=$(echo "$*" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g;s/^-|-$//g')
+    path="content/songs/$(date +%Y)/$(date +%m)/$slug/index.md"
+    hugo new --kind song "$path"
+    echo "Created: $path"
+    ;;
+  schedule)
+    file="$2"; date="$3"
+    if [[ -z "$file" || -z "$date" ]]; then
+      echo "Usage: ./ds schedule <content-file> <YYYY-MM-DD>"; exit 1
+    fi
+    perl -0777 -i -pe "s/(featured_date:\s*)\d{4}-\d{2}-\d{2}/\${1}$date/" "$file"
+    echo "Scheduled $file for $date"
+    ;;
+  serve)
+    hugo server -D
+    ;;
+  publish)
+    hugo --minify && git add -A && git commit -m "Publish" && git push
+    ;;
+  *)
+    echo "ds commands: new \"Song – Artist\" | schedule <file> <YYYY-MM-DD> | serve | publish"
+    ;;
+esac
