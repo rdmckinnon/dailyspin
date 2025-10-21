@@ -1,12 +1,12 @@
-// DailySpin — Subtle Vintage Music Palette
+// DailySpin — Very Subtle Music-Inspired Palette
 
-// Warm, vintage-inspired palette (subtle enhancement of original)
-$ds-bg: #fffcf7;           // Subtle warm white
-$ds-surface: #faf6f0;      // Warm off-white
-$ds-fg: #1a1410;           // Warm black
-$ds-muted: #75634e;        // Warm gray-brown
-$ds-border: #e0d5c7;       // Warm gray
-$ds-accent: #c86f3a;       // Warm terracotta/orange
+// Barely warm palette (just a hint of warmth)
+$ds-bg: #fdfdfb;           // Almost white with tiny warmth
+$ds-surface: #f9f9f7;      // Very light warm gray
+$ds-fg: #1a1918;           // Almost black with hint of warmth
+$ds-muted: #6e6b68;        // Neutral warm gray
+$ds-border: #e8e6e3;       // Very light warm gray
+$ds-accent: #d97542;       // Muted orange (only place with color)
 
 // Map to Bootstrap CSS variables
 :root {
@@ -21,29 +21,25 @@ $ds-accent: #c86f3a;       // Warm terracotta/orange
   --bs-body-color: var(--ds-fg);
   --bs-border-color: var(--ds-border);
   --bs-primary: var(--ds-accent);
-  --bs-primary-rgb: 200, 111, 58; // Terracotta RGB
+  --bs-primary-rgb: 217, 117, 66;
   --bs-secondary: var(--ds-muted);
-
-  // Additional accent colors
-  --vintage-rust: #a85a3c;
-  --vintage-gold: #b89968;
 }
 
-// Dark mode with subtle warmth
+// Dark mode (keep mostly neutral)
 @media (prefers-color-scheme: dark) {
   :root {
-    --ds-bg: #12100e;        // Warm dark
-    --ds-surface: #1c1814;    // Slightly lighter
-    --ds-fg: #f5f1e8;         // Warm white
-    --ds-muted: #a08d76;      // Warm tan
-    --ds-border: #332e28;     // Warm gray
-    --ds-accent: #d98556;     // Lighter terracotta
+    --ds-bg: #111110;        // Almost pure black
+    --ds-surface: #1a1918;    // Very dark gray
+    --ds-fg: #f0efed;         // Almost white
+    --ds-muted: #8a8784;      // Neutral gray
+    --ds-border: #2d2c2a;     // Dark gray
+    --ds-accent: #e08856;     // Slightly brighter orange
 
     --bs-body-bg: var(--ds-bg);
     --bs-body-color: var(--ds-fg);
     --bs-border-color: var(--ds-border);
     --bs-primary: var(--ds-accent);
-    --bs-primary-rgb: 217, 133, 86;
+    --bs-primary-rgb: 224, 136, 86;
     --bs-secondary: var(--ds-muted);
   }
 }
