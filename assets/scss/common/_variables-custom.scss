@@ -1,14 +1,14 @@
-// DailySpin — Minimal, premium palette and variables
+// DailySpin — Subtle Vintage Music Palette
 
-// Base palette (Swiss minimalist vibes)
-$ds-bg: #ffffff;
-$ds-surface: #f8fafb;
-$ds-fg: #141618;
-$ds-muted: #6b7280;
-$ds-border: #e5e7eb;
-$ds-accent: #111827; // deep slate accent used sparingly
+// Warm, vintage-inspired palette (subtle enhancement of original)
+$ds-bg: #fffcf7;           // Subtle warm white
+$ds-surface: #faf6f0;      // Warm off-white
+$ds-fg: #1a1410;           // Warm black
+$ds-muted: #75634e;        // Warm gray-brown
+$ds-border: #e0d5c7;       // Warm gray
+$ds-accent: #c86f3a;       // Warm terracotta/orange
 
-// Map to Bootstrap CSS variables (fallback if theme uses CSS vars at runtime)
+// Map to Bootstrap CSS variables
 :root {
   --ds-bg: #{$ds-bg};
   --ds-surface: #{$ds-surface};
@@ -21,24 +21,29 @@ $ds-accent: #111827; // deep slate accent used sparingly
   --bs-body-color: var(--ds-fg);
   --bs-border-color: var(--ds-border);
   --bs-primary: var(--ds-accent);
-  --bs-primary-rgb: 17, 24, 39;
+  --bs-primary-rgb: 200, 111, 58; // Terracotta RGB
   --bs-secondary: var(--ds-muted);
+
+  // Additional accent colors
+  --vintage-rust: #a85a3c;
+  --vintage-gold: #b89968;
 }
 
+// Dark mode with subtle warmth
 @media (prefers-color-scheme: dark) {
   :root {
-    --ds-bg: #0f1113;
-    --ds-surface: #111418;
-    --ds-fg: #e7ecef;
-    --ds-muted: #9aa3ad;
-    --ds-border: #272c31;
-    --ds-accent: #e7ecef;
+    --ds-bg: #12100e;        // Warm dark
+    --ds-surface: #1c1814;    // Slightly lighter
+    --ds-fg: #f5f1e8;         // Warm white
+    --ds-muted: #a08d76;      // Warm tan
+    --ds-border: #332e28;     // Warm gray
+    --ds-accent: #d98556;     // Lighter terracotta
 
     --bs-body-bg: var(--ds-bg);
     --bs-body-color: var(--ds-fg);
     --bs-border-color: var(--ds-border);
     --bs-primary: var(--ds-accent);
-    --bs-primary-rgb: 231, 236, 239;
+    --bs-primary-rgb: 217, 133, 86;
     --bs-secondary: var(--ds-muted);
   }
 }
