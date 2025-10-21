@@ -1,43 +1,168 @@
 {{ define "main" }}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1>{{ .Title }}</h1>
-    </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/example-guide/" role="button">{{ i18n "get_started" }}</a>
-      {{ .Content }}
-    </div>
-  </div>
-</section>
-{{ end }}
+  {{/* Fetch latest song */}}
+  {{ $songs := where site.RegularPages "Section" "songs" }}
+  {{ $sorted := sort $songs "Date" "desc" }}
+  {{ $latest := index $sorted 0 }}
 
-{{ define "sidebar-prefooter" }}
-  {{ if site.Params.doks.backgroundDots -}}
-  <div class="d-flex justify-content-start">
-    <div class="bg-dots"></div>
-  </div>
-  {{ end -}}
-  {{ if eq $.Site.Language.LanguageName "English" }}
-  <section class="section section-md section-features">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
-          <h2 class="h4">Update content</h2>
-          <p>Edit <code>content/_index.md</code> to see this page change.</p>
+  <section class="ds-hero container">
+    <div class="ds-hero-inner">
+      <div class="ds-hero-badge" aria-hidden="true">
+        <!-- Tabler icon: music -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="16" r="3"/>
+        </svg>
+        DailySpin.fm
+      </div>
+      <h1 class="ds-hero-title">The Anti‑Playlist</h1>
+      <p class="ds-hero-lead">One perfect track, curated daily. Deep, minimalist, and obsessively considered.</p>
+      <div class="ds-hero-ctas">
+        <a class="btn btn-dark ds-btn-primary" href="/songs/">Explore Songs</a>
+        {{ if $latest }}
+        <a class="btn btn-outline-dark ds-btn-secondary" href="{{ $latest.RelPermalink }}">Today’s Pick</a>
+        {{ end }}
+        <a class="btn btn-outline-dark ds-btn-secondary" href="#random" data-random-song>
+          Random Song
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-features container">
+    <div class="row g-4 g-md-5">
+      <div class="col-12 col-md-4">
+        <div class="ds-feature">
+          <!-- Tabler icon: sparkles -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/><path d="M5 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/><path d="M19 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"/></svg>
+          <h3>Curated, not crowded</h3>
+          <p>Singular focus every day. No noise, no filler—just one track that matters.</p>
         </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Add new content</h2>
-          <p>Add Markdown files to <code>content</code> to create new pages.</p>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="ds-feature">
+          <!-- Tabler icon: lifebuoy (deep dive) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l3.54 3.54"/><path d="M14.53 5.47l3.54-3.54"/><path d="M14.53 18.53l3.54 3.54"/><path d="M4.93 19.07l3.54-3.54"/></svg>
+          <h3>Deep, elegant notes</h3>
+          <p>Context, history, and the “why” behind the music—written with restraint.</p>
         </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Configure your site</h2>
-          <p>Edit your config in <code>config/_default/params.toml</code>.</p>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="ds-feature">
+          <!-- Tabler icon: focus -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M7 12H4"/><path d="M20 12h-3"/><path d="M12 7V4"/><path d="M12 20v-3"/></svg>
+          <h3>Minimalist by design</h3>
+          <p>A calm, premium interface that gets out of the way and lets the music speak.</p>
         </div>
-        <div class="col-lg-5">
-          <h2 class="h4">Read the docs</h2>
-          <p>Learn more in the <a href="https://getdoks.org/">Docs</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  {{ if $latest }}
+  <section class="ds-featured container">
+    <div class="ds-card">
+      <div class="ds-card-header">
+        <!-- Tabler icon: flame-like highlight (bolt) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l-4 12h6l-4 6"/></svg>
+        Today’s Pick
+      </div>
+      <div class="ds-card-body">
+        <div class="ds-featured-text">
+          <h2 class="ds-featured-title"><a href="{{ $latest.RelPermalink }}">{{ $latest.Title }}</a></h2>
+          {{ with $latest.Params.artists }}<p class="ds-featured-meta">{{ delimit . ", " }}</p>{{ end }}
+        </div>
+        {{ with $latest.Params.spotify_id }}
+          <div class="spotify-embed my-3">
+            <iframe 
+              style="border-radius:12px" 
+              src="https://open.spotify.com/embed/track/{{ . }}?utm_source=generator&theme=0" 
+              width="100%" 
+              height="152" 
+              frameborder="0" 
+              allowfullscreen 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+            </iframe>
+          </div>
+        {{ end }}
+      </div>
+      <div class="ds-card-footer">
+        <a class="ds-link" href="/songs/">Browse all songs</a>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Recent Picks (last 3 songs) */}}
+  {{ $recent := first 3 (sort $songs "Date" "desc") }}
+  {{ if gt (len $recent) 0 }}
+  <section class="ds-section" style="background: color-mix(in srgb, var(--ds-surface) 70%, var(--ds-bg) 30%);">
+    <div class="ds-wrap">
+      <div class="container" style="max-width: 960px;">
+        <div class="d-flex align-items-center justify-content-between mb-4 mb-md-5">
+          <div>
+            <h2 class="ds-hero-slim" style="text-align:left; margin:0;">
+              <span style="font-size: clamp(1.6rem, 3.2vw, 2.25rem); font-weight: 800; color: var(--bs-body-color);">Recent Picks</span>
+            </h2>
+            <p style="margin:6px 0 0; color: var(--ds-muted);">Each day brings a new perfect discovery</p>
+          </div>
+          <a class="btn btn-outline-dark rounded-pill ds-micro-motion" href="/songs/">
+            View Archive
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="vstack gap-3 gap-md-4">
+          {{ range $recent }}
+          <div class="ds-card p-3 p-md-4">
+            <div class="row g-3 g-md-4 align-items-center">
+              <div class="col-3 col-md-2">
+                <a href="{{ .RelPermalink }}" class="text-decoration-none">
+                  <div class="ds-art position-relative">
+                    <div class="ds-art-overlay"></div>
+                    <button type="button" class="btn btn-dark btn-sm rounded-circle ds-micro-motion ds-art-play" aria-label="Open {{ .Title }}">
+                      <!-- Tabler: player-play -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="7 4 19 12 7 20 7 4"></polygon></svg>
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div class="col-9 col-md-6">
+                <h3 class="m-0" style="font-size: 1.1rem; font-weight: 700;">
+                  <a href="{{ .RelPermalink }}" class="stretched-link text-decoration-none" style="color: inherit;">{{ .Title }}</a>
+                </h3>
+                <div style="color: var(--ds-muted);">
+                  {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
+                </div>
+                <div style="color: var(--ds-muted); font-size: 0.9rem;">
+                  {{ with .Params.albums }}{{ index . 0 }}{{ end }}{{ with .Params.release_year }} · {{ . }}{{ end }}
+                </div>
+                {{ with .Params.tags }}
+                <div class="mt-2" style="display:flex; flex-wrap:wrap; gap:6px;">
+                  {{ range first 3 . }}
+                    <a class="ds-pill" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="m-0" style="color: var(--ds-muted); line-height: 1.5; font-size: 0.95rem;">{{ .Summary }}</p>
+              </div>
+              <div class="col-12 col-md-1 text-md-end">
+                <span style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 12px; color: var(--ds-muted); background: var(--ds-surface); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--ds-border);">
+                  {{ .Date | time.Format "Jan 2" }}
+                </span>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+        <div class="text-center mt-4 mt-md-5">
+          <a class="btn btn-link rounded-pill ds-micro-motion" href="/songs/" style="color: var(--ds-muted); text-decoration: none;">
+            Load more picks
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ms-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -45,15 +170,5 @@
   {{ end }}
 {{ end }}
 
-{{ define "sidebar-footer" }}
-{{ if site.Params.doks.sectionFooter -}}
-<section class="section section-md container-fluid bg-light">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-7">
-      <h2 class="mt-2">Start building with Doks today</h2>
-      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-    </div>
-  </div>
-</section>
-{{ end -}}
-{{ end }}
+{{ define "sidebar-prefooter" }}{{ end }}
+{{ define "sidebar-footer" }}{{ end }}

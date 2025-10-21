@@ -1,10 +1,10 @@
 # Hugo
-title = "My Docs"
-description = "Congrats on setting up a new Doks project!"
+title = "DailySpin.fm"
+description = "The Anti-Playlist. One perfect track, curated daily. Deep dives into the songs that matter."
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["songs"]
 
 [social]
   twitter = "getdoks"

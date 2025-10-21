@@ -1,0 +1,16 @@
+{{- $style := .Get "style" | default "highlight" -}}
+{{- $artist := .Get "artist" -}}
+{{- $song := .Get "song" -}}
+
+<div class="lyrics-callout lyrics-callout-{{ $style }}">
+  <div class="lyrics-content">
+    {{ .Inner | markdownify }}
+  </div>
+  {{- if or $artist $song -}}
+  <div class="lyrics-attribution">
+    {{- if $artist -}}{{ $artist }}{{- end -}}
+    {{- if and $artist $song -}} — {{- end -}}
+    {{- if $song -}}"{{ $song }}"{{- end -}}
+  </div>
+  {{- end -}}
+</div>

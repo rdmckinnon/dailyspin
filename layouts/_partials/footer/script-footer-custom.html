@@ -1,13 +1,35 @@
-{{/* Put your custom <script></script> tags here */}}
+{{/* Custom footer scripts */}}
 
-{{/* EXAMPLE - only load script for production
-{{ if eq (hugo.Environment) "production" -}}
-  {{ partial "footer/esbuild" (dict "src" "js/instantpage.js" "load" "async" "transpile" false) -}}
-{{ end -}}
-*/}}
-
-{{/* EXAMPLE - only load script for a page type e.g. contact or gallery
-{{ if eq .Type "gallery" -}}
-  {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
-{{ end -}}
-*/}}
+{{/* Provide a lightweight list of song URLs for client-side random navigation */}}
+{{- $urls := slice -}}
+{{- range where site.RegularPages "Section" "songs" -}}
+  {{- $urls = $urls | append .RelPermalink -}}
+{{- end -}}
+<script>
+  window.DS_SONG_URLS = {{ $urls | jsonify }};
+  (function () {
+    function goRandom() {
+      var list = (window.DS_SONG_URLS || []);
+      if (!list.length) return;
+      var i = Math.floor(Math.random() * list.length);
+      var url = list[i];
+      if (url) window.location.assign(url);
+    }
+    function bind() {
+      var els = document.querySelectorAll('[data-random-song]');
+      els.forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          goRandom();
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bind);
+    } else { bind(); }
+  })();
+  // Optional: allow direct #random navigation
+  if (location.hash === '#random') {
+    try { (function(){ var l=window.DS_SONG_URLS||[]; if(l.length){ location.replace(l[Math.floor(Math.random()*l.length)]); } })(); } catch(e){}
+  }
+</script>

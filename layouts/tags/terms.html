@@ -1,0 +1,55 @@
+{{ define "main" }}
+<section class="ds-wrap ds-section">
+  <header class="ds-hero-slim" aria-labelledby="tagsTitle">
+    <h1 id="tagsTitle">Explore Tags</h1>
+    <p>Browse songs by categories, moods, and themes.</p>
+  </header>
+
+  <div class="ds-controls">
+    {{ $total := len .Site.Taxonomies.tags }}
+    <label class="ds-input" aria-label="Filter tags">
+      <svg class="ds-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input id="tagsFilter" type="search" placeholder="Filter tags... (e.g. chill, 90s, synth)" autocomplete="off" />
+    </label>
+    <div class="ds-count" aria-live="polite"><span id="tagsCount">{{ $total }}</span> tags</div>
+  </div>
+
+  <ul id="tagsGrid" class="ds-grid ds-grid-sm" role="list">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+      <li class="ds-card" role="listitem" data-name="{{ .Name | lower }}">
+        <a class="ds-card-link" href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}" aria-label="{{ .Name }} tag ({{ .Count }})" style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+          <span class="ds-card-title" style="font-size:16px; margin:0;">{{ .Name | title }}</span>
+          <span class="ds-chip" style="font-variant-numeric: tabular-nums;">{{ .Count }}</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+  <p id="tagsEmpty" class="ds-empty">No tags match your filter.</p>
+</section>
+
+<script>
+  (function() {
+    const input = document.getElementById('tagsFilter');
+    const grid = document.getElementById('tagsGrid');
+    const empty = document.getElementById('tagsEmpty');
+    const count = document.getElementById('tagsCount');
+    if (!input || !grid) return;
+    const items = Array.from(grid.querySelectorAll('.tag-card'));
+    const update = () => {
+      const q = (input.value || '').toLowerCase().trim();
+      let visible = 0;
+      items.forEach(li => {
+        const ok = !q || li.dataset.name.includes(q);
+        li.style.display = ok ? '' : 'none';
+        if (ok) visible++;
+      });
+      if (count) count.textContent = String(visible);
+      if (empty) empty.style.display = visible ? 'none' : 'block';
+    };
+    input.addEventListener('input', update);
+    // Quick keyboard: Esc clears
+    input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { input.value = ''; update(); input.blur(); } });
+  })();
+</script>
+{{ end }}

@@ -1,0 +1,119 @@
+{{ define "main" }}
+<section class="ds-wrap ds-section">
+  <header class="ds-hero-slim">
+    <h1>Explore Songs</h1>
+    <p>Search and sort across all tracks.</p>
+  </header>
+
+  {{ $total := len .Pages }}
+  <div class="ds-controls" role="region" aria-label="Song filters">
+    <label class="ds-input" aria-label="Filter songs">
+      <svg class="ds-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input id="q" type="search" placeholder="Search title, artist, genre, tag..." autocomplete="off" />
+    </label>
+    <div class="ds-select">
+      <label for="sort" style="color:var(--ds-muted); font-size:13px;">Sort</label>
+      <select id="sort" aria-label="Sort songs">
+        <option value="new">Newest</option>
+        <option value="old">Oldest</option>
+        <option value="az">A–Z</option>
+        <option value="za">Z–A</option>
+      </select>
+    </div>
+    <div class="ds-count" aria-live="polite"><span id="count">{{ $total }}</span> songs</div>
+  </div>
+
+  {{ $pages := .Pages }}
+  <ul id="grid" class="ds-grid" role="list">
+    {{ range $pages }}
+      {{ $title := .Title }}
+      {{ $artists := delimit (.Params.artists) ", " }}
+      {{ $genres := delimit (.Params.genres) ", " }}
+      {{ $tags := delimit (.Params.tags) ", " }}
+      {{ $year := .Params.release_year }}
+      <li class="ds-card" role="listitem"
+          data-title="{{ $title | lower }}"
+          data-artists="{{ $artists | lower }}"
+          data-genres="{{ $genres | lower }}"
+          data-tags="{{ $tags | lower }}"
+          data-year="{{ $year }}">
+        <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
+          <h3 class="ds-card-title">{{ .Title }}</h3>
+          <div class="ds-card-meta">
+            {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
+            {{ with .Params.release_year }} · {{ . }}{{ end }}
+          </div>
+          <div class="ds-card-summary">{{ .Summary }}</div>
+          {{ with .Params.tags }}
+            <div class="ds-chips" aria-label="Tags">
+              {{ range first 6 . }}
+                <a class="ds-chip" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+  <p id="empty" class="ds-empty">No songs match your search.</p>
+</section>
+
+<script>
+  (function() {
+    const q = document.getElementById('q');
+    const grid = document.getElementById('grid');
+    const empty = document.getElementById('empty');
+    const count = document.getElementById('count');
+    const sortSel = document.getElementById('sort');
+    if (!q || !grid) return;
+
+    let items = Array.from(grid.children);
+
+    function matches(li, term) {
+      if (!term) return true;
+      term = term.toLowerCase();
+      return (
+        li.dataset.title.includes(term) ||
+        li.dataset.artists.includes(term) ||
+        li.dataset.genres.includes(term) ||
+        li.dataset.tags.includes(term) ||
+        (li.dataset.year || '').includes(term)
+      );
+    }
+
+    function applyFilterAndSort() {
+      const term = (q.value || '').trim().toLowerCase();
+      let visible = 0;
+      items.forEach(li => {
+        const ok = matches(li, term);
+        li.style.display = ok ? '' : 'none';
+        if (ok) visible++;
+      });
+      if (count) count.textContent = String(visible);
+      empty.style.display = visible ? 'none' : 'block';
+
+      // Sort only visible items
+      const mode = sortSel.value;
+      const visibleItems = items.filter(li => li.style.display !== 'none');
+      visibleItems.sort((a, b) => {
+        if (mode === 'az' || mode === 'za') {
+          const at = a.dataset.title, bt = b.dataset.title;
+          const cmp = at.localeCompare(bt);
+          return mode === 'az' ? cmp : -cmp;
+        }
+        // year sort fallback
+        const ay = parseInt(a.dataset.year || '0', 10);
+        const by = parseInt(b.dataset.year || '0', 10);
+        return mode === 'old' ? (ay - by) : (by - ay); // default newest
+      });
+      // Re-append in order
+      visibleItems.forEach(el => grid.appendChild(el));
+    }
+
+    q.addEventListener('input', applyFilterAndSort);
+    q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value=''; applyFilterAndSort(); q.blur(); } });
+    sortSel.addEventListener('change', applyFilterAndSort);
+  })();
+</script>
+{{ end }}

@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section class="ds-wrap ds-section">
+  <header class="ds-hero-slim">
+    <h1>{{ .Title }}</h1>
+    <p>Songs tagged with “{{ .Title }}”.</p>
+  </header>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ if gt (len $pages) 0 }}
+    <ul class="ds-grid" role="list">
+      {{ range $pages }}
+        <li class="ds-card" role="listitem">
+          <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
+            <h3 class="ds-card-title">{{ .Title }}</h3>
+            <div class="ds-card-meta">
+              {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
+              {{ with .Params.release_year }} · {{ . }}{{ end }}
+            </div>
+            <div class="ds-card-summary">{{ .Summary }}</div>
+            {{ with .Params.tags }}
+              <div class="ds-chips">
+                {{ range . }}
+                  <a class="ds-chip" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" aria-label="Tag {{ . }}">#{{ . }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="ds-empty" style="display:block">No songs found with this tag yet.</p>
+  {{ end }}
+</section>
+{{ end }}

@@ -29,15 +29,9 @@
   url = "/tutorial/lorem/"
 
 [[main]]
-  name = "Docs"
-  url = "/docs/guides/example-guide/"
-# url = "/docs/1.0/prologue/introduction/"
+  name = "Music"
+  url = "/songs/"
   weight = 10
-
-[[main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 30
 
 # [[social]]
 #   name = "Twitter"

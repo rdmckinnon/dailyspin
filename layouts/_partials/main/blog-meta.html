@@ -1,0 +1,32 @@
+{{- $contributors := .Params.contributors | default slice -}}
+{{- $last := sub (len $contributors) 1 -}}
+<p>
+  <small>
+    {{- time.Format (default ":date_long" .Site.Params.dateFormat) .PublishDate -}}
+    {{- with .Params.categories -}}
+      {{ $len := len . }}
+      {{ if eq $len 1 }}
+        in <a class="stretched-link text-body" href="{{ `categories/` | relURL }}{{ . | urlize | lower }}">{{ . }}</a>
+      {{ else }}
+        in
+        {{ range $index, $cat := . }}
+          <a class="stretched-link text-body" href="{{ `categories/` | relURL }}{{ $cat | urlize | lower }}">{{ $cat }}</a>
+          {{- if lt $index (sub $len 2) }}, {{ else if lt $index (sub $len 1) }} and {{ end -}}
+        {{ end }}
+      {{ end }}
+    {{- end -}}
+    {{- if gt (len $contributors) 0 -}}
+      {{- $len := len $contributors -}}
+      {{- if eq $len 1 -}}
+        {{ " " }}by <a class="stretched-link text-body" href="{{ `contributors/` | relURL }}{{ index $contributors 0 | urlize | lower }}">{{ index $contributors 0 }}</a>
+      {{- else -}}
+        {{ " " }}by
+        {{- range $index, $contributor := $contributors -}}
+          {{- if and (eq $index $last) (gt $len 2) }} and{{ end }}
+          {{ " " }}<a class="stretched-link text-body" href="{{ `contributors/` | relURL }}{{ $contributor | urlize | lower }}">{{ $contributor }}</a>
+          {{- if and (lt $index $last) (lt $len 3) }} and{{ else if and (lt $index $last) (gt $len 2) }},{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  </small>
+</p>
