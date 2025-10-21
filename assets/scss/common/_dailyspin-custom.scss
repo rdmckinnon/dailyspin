@@ -652,6 +652,156 @@ main .container { padding-left: 1rem; padding-right: 1rem; }
 .ds-art:hover .ds-art-play { opacity: 1; }
 
 // ————————————————————————————————————————————————
+// HOME PAGE: MAKE IT POP
+// ————————————————————————————————————————————————
+
+// Hero title - BIG and bold with gradient
+.ds-hero-title {
+  background: linear-gradient(135deg, var(--ds-fg) 0%, var(--ds-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: none;
+}
+
+// Hero badge - vibrant orange
+.ds-hero-badge {
+  background: var(--ds-accent) !important;
+  color: white !important;
+  border-color: var(--ds-accent) !important;
+  box-shadow: 0 4px 14px rgba(217, 117, 66, 0.25);
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+// Hero lead - bigger and better contrast
+.ds-hero-lead {
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem) !important;
+  font-weight: 500 !important;
+  color: var(--ds-muted) !important;
+}
+
+// Primary button - vibrant and prominent
+.ds-btn-primary {
+  background: var(--ds-accent) !important;
+  border-color: var(--ds-accent) !important;
+  box-shadow: 0 6px 20px rgba(217, 117, 66, 0.3);
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+.ds-btn-primary:hover {
+  background: color-mix(in srgb, var(--ds-accent) 85%, black) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(217, 117, 66, 0.4);
+}
+
+// Today's Pick card - PROMINENT
+.ds-featured .ds-card {
+  border: 2px solid var(--ds-accent) !important;
+  box-shadow:
+    0 8px 32px rgba(217, 117, 66, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--ds-accent) 3%, var(--ds-bg)),
+    var(--ds-bg)
+  );
+}
+
+.ds-featured .ds-card-header {
+  background: var(--ds-accent) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ds-featured .ds-featured-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  color: var(--ds-fg) !important;
+  margin: 0.5rem 0 !important;
+}
+
+// Feature cards - subtle hover pop
+.ds-feature {
+  transition: all 0.3s ease;
+}
+
+.ds-feature:hover {
+  transform: translateY(-4px);
+  border-color: var(--ds-accent) !important;
+  box-shadow:
+    0 8px 24px rgba(217, 117, 66, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+.ds-feature .icon {
+  color: var(--ds-accent) !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+// Recent picks cards - better contrast
+.ds-card:hover {
+  border-color: var(--ds-accent) !important;
+  box-shadow:
+    0 6px 20px rgba(217, 117, 66, 0.08),
+    0 3px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+// Pills/tags - vibrant on hover
+.ds-pill:hover,
+.ds-chip:hover {
+  background: var(--ds-accent) !important;
+  color: white !important;
+  border-color: var(--ds-accent) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(217, 117, 66, 0.25);
+}
+
+// Spotify embed in Today's Pick - make it stand out
+.ds-featured .spotify-embed iframe {
+  border-radius: 12px;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(217, 117, 66, 0.08);
+}
+
+// Art squares - orange accent glow
+.ds-art-overlay {
+  background: linear-gradient(135deg,
+    rgba(217, 117, 66, 0.15),
+    rgba(217, 117, 66, 0.08)
+  ) !important;
+}
+
+.ds-art:hover .ds-art-overlay {
+  background: linear-gradient(135deg,
+    rgba(217, 117, 66, 0.25),
+    rgba(217, 117, 66, 0.15)
+  ) !important;
+}
+
+// Play buttons - orange
+.ds-art-play {
+  background: var(--ds-accent) !important;
+  border-color: var(--ds-accent) !important;
+}
+
+.ds-art-play:hover {
+  background: color-mix(in srgb, var(--ds-accent) 85%, black) !important;
+}
+
+// ————————————————————————————————————————————————
 // MINIMAL MUSIC-INSPIRED TWEAKS
 // ————————————————————————————————————————————————
 
