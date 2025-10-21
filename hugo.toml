@@ -18,7 +18,7 @@ mode = "auto"  # auto, light, dark, or toggle
 useCDN = false
 subtitle = "One perfect track, every day. Background + why it's great."
 description = "One perfect track, every day. Background + why it's great."
-customcss = ["css/vintage.css"]  # Custom vintage music theme styling
+customCSS = ["css/vintage.css"]  # Custom vintage music theme styling
 
 # Social Links (update these with your actual URLs)
 [[params.social]]
