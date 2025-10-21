@@ -652,6 +652,237 @@ main .container { padding-left: 1rem; padding-right: 1rem; }
 .ds-art:hover .ds-art-play { opacity: 1; }
 
 // ————————————————————————————————————————————————
+// IMPORT FUN DISPLAY FONTS
+// ————————————————————————————————————————————————
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&family=Pacifico&family=Poppins:wght@400;600;800;900&display=swap');
+
+// ————————————————————————————————————————————————
+// BOLD & ECCENTRIC HOMEPAGE
+// ————————————————————————————————————————————————
+
+// Hero section - HUGE and BOLD
+.ds-hero-bold {
+  position: relative;
+  padding: clamp(4rem, 12vw, 10rem) 0 clamp(3rem, 8vw, 6rem);
+  overflow: hidden;
+  background: linear-gradient(135deg,
+    var(--ds-bg) 0%,
+    color-mix(in srgb, var(--ds-accent) 5%, var(--ds-bg)) 100%
+  );
+}
+
+// Vinyl record decorations (background circles)
+.vinyl-decoration {
+  position: absolute;
+  border-radius: 50%;
+  border: 12px solid var(--ds-accent);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vinyl-1 {
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  right: -100px;
+  animation: spin-slow 30s linear infinite;
+}
+
+.vinyl-2 {
+  width: 280px;
+  height: 280px;
+  bottom: -100px;
+  left: -80px;
+  animation: spin-slow 25s linear infinite reverse;
+}
+
+.vinyl-3 {
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  left: 10%;
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ds-hero-bold-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+// Eyebrow text
+.ds-hero-eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow-text {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  letter-spacing: 0.25em;
+  color: var(--ds-accent);
+  background: var(--ds-fg);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 400;
+  transform: rotate(-2deg);
+  box-shadow: 4px 4px 0px var(--ds-accent);
+}
+
+// MEGA HERO TYPOGRAPHY
+.ds-hero-mega {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5rem, 18vw, 14rem);
+  line-height: 0.85;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-line-1 {
+  color: var(--ds-fg);
+  text-shadow:
+    6px 6px 0px var(--ds-accent),
+    -2px -2px 0px color-mix(in srgb, var(--ds-accent) 50%, transparent);
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.hero-line-2 {
+  background: linear-gradient(135deg, var(--ds-accent) 0%, color-mix(in srgb, var(--ds-accent) 70%, var(--ds-fg)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: rotate(2deg);
+  display: inline-block;
+  margin-left: clamp(2rem, 8vw, 6rem);
+}
+
+// Tagline with fun font
+.ds-hero-tagline {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: var(--ds-muted);
+  margin: 2rem 0 3rem;
+  line-height: 1.3;
+}
+
+.tagline-accent {
+  font-family: 'Pacifico', cursive;
+  color: var(--ds-accent);
+  font-size: 1.2em;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+// Bold CTA buttons
+.ds-hero-ctas-bold {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.btn-bold {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-bold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.03) 10px,
+    rgba(255,255,255,0.03) 20px
+  );
+  pointer-events: none;
+}
+
+.btn-bold-primary {
+  background: var(--ds-accent);
+  color: white;
+  box-shadow:
+    6px 6px 0px var(--ds-fg),
+    8px 8px 0px var(--ds-accent);
+}
+
+.btn-bold-primary:hover {
+  background: color-mix(in srgb, var(--ds-accent) 85%, black);
+  transform: translate(2px, 2px) rotate(-1deg);
+  box-shadow:
+    4px 4px 0px var(--ds-fg),
+    6px 6px 0px var(--ds-accent);
+  color: white;
+}
+
+.btn-bold-secondary {
+  background: var(--ds-fg);
+  color: var(--ds-bg);
+  box-shadow: 6px 6px 0px var(--ds-accent);
+}
+
+.btn-bold-secondary:hover {
+  background: color-mix(in srgb, var(--ds-fg) 85%, var(--ds-accent));
+  transform: translate(2px, 2px) rotate(1deg);
+  box-shadow: 4px 4px 0px var(--ds-accent);
+  color: var(--ds-bg);
+}
+
+// Hero stats - big numbers
+.hero-stats {
+  display: flex;
+  gap: clamp(2rem, 6vw, 4rem);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  color: var(--ds-accent);
+  text-shadow: 3px 3px 0px color-mix(in srgb, var(--ds-accent) 20%, transparent);
+}
+
+.stat-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  letter-spacing: 0.2em;
+  color: var(--ds-muted);
+  margin-top: 0.25rem;
+}
+
+// ————————————————————————————————————————————————
 // HOME PAGE: MAKE IT POP (SUBTLE VERSION)
 // ————————————————————————————————————————————————
 

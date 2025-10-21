@@ -4,27 +4,44 @@
   {{ $sorted := sort $songs "Date" "desc" }}
   {{ $latest := index $sorted 0 }}
 
-  <section class="ds-hero container">
-    <div class="ds-hero-inner">
-      <div class="ds-hero-badge" aria-hidden="true">
-        <!-- Tabler icon: music -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18V5l12-2v13"/>
-          <circle cx="6" cy="18" r="3"/>
-          <circle cx="18" cy="16" r="3"/>
-        </svg>
-        DailySpin.fm
+  <section class="ds-hero-bold container">
+    <div class="vinyl-decoration vinyl-1"></div>
+    <div class="vinyl-decoration vinyl-2"></div>
+    <div class="vinyl-decoration vinyl-3"></div>
+
+    <div class="ds-hero-bold-inner">
+      <div class="ds-hero-eyebrow">
+        <span class="eyebrow-text">ONE SONG • ONE DAY</span>
       </div>
-      <h1 class="ds-hero-title">The Anti‑Playlist</h1>
-      <p class="ds-hero-lead">One perfect track, curated daily. Deep, minimalist, and obsessively considered.</p>
-      <div class="ds-hero-ctas">
-        <a class="btn btn-dark ds-btn-primary" href="/songs/">Explore Songs</a>
-        {{ if $latest }}
-        <a class="btn btn-outline-dark ds-btn-secondary" href="{{ $latest.RelPermalink }}">Today’s Pick</a>
-        {{ end }}
-        <a class="btn btn-outline-dark ds-btn-secondary" href="#random" data-random-song>
-          Random Song
+      <h1 class="ds-hero-mega">
+        <span class="hero-line-1">DAILY</span>
+        <span class="hero-line-2">SPIN</span>
+      </h1>
+      <p class="ds-hero-tagline">Your daily dose of<br><span class="tagline-accent">musical genius</span></p>
+      <div class="ds-hero-ctas-bold">
+        <a class="btn-bold btn-bold-primary" href="/songs/">
+          <span>EXPLORE</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
+        {{ if $latest }}
+        <a class="btn-bold btn-bold-secondary" href="{{ $latest.RelPermalink }}">
+          <span>TODAY'S PICK</span>
+        </a>
+        {{ end }}
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">{{ len $songs }}</div>
+          <div class="stat-label">TRACKS</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">365</div>
+          <div class="stat-label">DAYS/YR</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">CURATED</div>
+        </div>
       </div>
     </div>
   </section>
