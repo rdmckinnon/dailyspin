@@ -1,0 +1,248 @@
+/* ================================
+   Daily Spin - Vintage Music Theme
+   ================================ */
+
+:root {
+  /* Vintage Color Palette */
+  --vintage-cream: #faf6f1;
+  --vintage-paper: #f4ede4;
+  --vintage-orange: #d97742;
+  --vintage-rust: #b85c38;
+  --vintage-brown: #6b4423;
+  --vintage-dark: #2d1e1a;
+  --vintage-gold: #c9a96e;
+  --vintage-green: #6b8e4e;
+
+  /* Override Archie's default colors */
+  --accent-color: var(--vintage-orange);
+  --link-color: var(--vintage-rust);
+  --text-color: var(--vintage-dark);
+  --background-color: var(--vintage-cream);
+}
+
+/* Typography - Vintage Feel */
+body {
+  background-color: var(--vintage-cream);
+  color: var(--vintage-dark);
+  font-family: 'Georgia', 'Garamond', serif;
+  line-height: 1.7;
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Headers with vintage typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', 'Courier', monospace;
+  color: var(--vintage-brown);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--vintage-orange);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Links - Warm vintage style */
+a {
+  color: var(--vintage-rust);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--vintage-orange);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--vintage-orange);
+  border-bottom: 1px solid var(--vintage-orange);
+}
+
+/* Header/Navigation - Record store vibe */
+header {
+  background: linear-gradient(135deg, var(--vintage-brown) 0%, var(--vintage-rust) 100%);
+  color: var(--vintage-cream);
+  padding: 2rem 1rem;
+  border-bottom: 4px solid var(--vintage-gold);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header a {
+  color: var(--vintage-cream);
+  border-bottom: none;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: var(--vintage-gold);
+}
+
+/* Main content - Paper texture feel */
+main {
+  background-color: var(--vintage-paper);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+/* Post metadata - Music tags styling */
+.post-meta,
+.post-date,
+.post-tags {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--vintage-brown);
+  letter-spacing: 0.05em;
+}
+
+/* Tags - Vinyl record inspired */
+.tag,
+.tags a,
+a[href*="/tags/"],
+a[href*="/artist/"],
+a[href*="/genres/"] {
+  display: inline-block;
+  background: var(--vintage-brown);
+  color: var(--vintage-cream);
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--vintage-gold);
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+.tag:hover,
+.tags a:hover,
+a[href*="/tags/"]:hover,
+a[href*="/artist/"]:hover,
+a[href*="/genres/"]:hover {
+  background: var(--vintage-orange);
+  border-color: var(--vintage-rust);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Spotify embeds - Frame like a record sleeve */
+iframe[src*="spotify"] {
+  border: 6px solid var(--vintage-brown);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin: 2rem 0;
+  background: var(--vintage-dark);
+}
+
+/* Blockquotes - Album liner notes style */
+blockquote {
+  border-left: 4px solid var(--vintage-orange);
+  background: rgba(217, 119, 66, 0.1);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--vintage-brown);
+}
+
+/* Code blocks - Vintage terminal */
+code, pre {
+  background: var(--vintage-dark);
+  color: var(--vintage-cream);
+  font-family: 'Courier New', monospace;
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 2px solid var(--vintage-brown);
+}
+
+/* Footer - Record label style */
+footer {
+  background: var(--vintage-brown);
+  color: var(--vintage-cream);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  border-top: 4px solid var(--vintage-gold);
+}
+
+footer a {
+  color: var(--vintage-gold);
+  border-bottom: 1px dotted var(--vintage-gold);
+}
+
+footer a:hover {
+  color: var(--vintage-orange);
+}
+
+/* Pagination - Vintage buttons */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pagination a,
+.pagination span {
+  background: var(--vintage-brown);
+  color: var(--vintage-cream);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  border: 2px solid var(--vintage-gold);
+}
+
+.pagination a:hover {
+  background: var(--vintage-orange);
+  border-bottom: 2px solid var(--vintage-gold);
+}
+
+/* Dark mode adjustments - Keep vintage feel */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vintage-cream: #2d1e1a;
+    --vintage-paper: #3a2820;
+    --vintage-dark: #faf6f1;
+  }
+
+  body {
+    background-color: var(--vintage-cream);
+    color: var(--vintage-dark);
+  }
+
+  main {
+    background-color: var(--vintage-paper);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+}
