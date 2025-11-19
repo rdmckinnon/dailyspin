@@ -1,291 +1,352 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>404 — Lost in the Mix</title>
-    <meta name="robots" content="noindex" />
-    <style>
-      :root {
-        --bg: #0b0d10;
-        --bg-soft: #11141a;
-        --fg: #e6f0ff;
-        --muted: #9fb3c8;
-        --accent: #66e2a4;
-        --accent-2: #6aa8ff;
-        --danger: #ff6a88;
-      }
-      * { box-sizing: border-box; }
-      html, body { height: 100%; }
-      body {
-        margin: 0;
-        background: radial-gradient(1200px 800px at 20% 10%, #0e1218 0, var(--bg) 60%),
-                    radial-gradient(900px 700px at 80% 30%, #0c1020 0, var(--bg) 60%);
-        color: var(--fg);
-        font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-        display: grid;
-        place-items: center;
-      }
-      .wrap {
-        width: min(960px, 92vw);
-        margin: 6vh auto;
-        text-align: center;
-      }
-      .tag {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        background: #0f1522;
-        color: var(--muted);
-        letter-spacing: .08em;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 12px;
-      }
-      h1 {
-        font-size: clamp(56px, 11vw, 120px);
-        line-height: 0.95;
-        margin: 14px 0 6px;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-      .sub {
-        color: var(--muted);
-        margin: 0 0 22px;
-        font-size: clamp(16px, 2.4vw, 20px);
-      }
-      .panel {
-        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: 16px;
-        padding: 18px 16px 12px;
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-      }
-      .viz {
-        height: 160px;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-        gap: 6px;
-        align-items: end;
-        padding: 10px 6px;
-        border-radius: 12px;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(180deg, rgba(102,226,164,0.08), rgba(106,168,255,0.08));
-      }
-      .bar {
-        width: 100%;
-        height: 8px;
-        background: linear-gradient(180deg, var(--accent), var(--accent-2));
-        border-radius: 6px 6px 2px 2px;
-        transition: height 90ms linear;
-        box-shadow: 0 0 10px rgba(102,226,164,0.25), 0 0 20px rgba(106,168,255,0.2);
-      }
-      .gridline {
-        position: absolute;
-        left: 0; right: 0;
-        height: 1px; background: rgba(255,255,255,0.06);
-      }
-      .gridline:nth-child(1) { top: 25%; }
-      .gridline:nth-child(2) { top: 50%; }
-      .gridline:nth-child(3) { top: 75%; }
 
-      .controls {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 16px;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Lost in the Mix</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --bg-soft: #11141a;
+      --fg: #e6f0ff;
+      --muted: #888;
+      --accent: #fff;
+      --accent-2: #888;
+      --danger: #ff6a88;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 20% 10%, #0e1218 0, var(--bg) 60%),
+        radial-gradient(900px 700px at 80% 30%, #0c1020 0, var(--bg) 60%);
+      color: var(--fg);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      display: grid;
+      place-items: center;
+    }
+
+    .wrap {
+      width: min(960px, 92vw);
+      margin: 6vh auto;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #0f1522;
+      color: var(--muted);
+      letter-spacing: .08em;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(56px, 11vw, 120px);
+      line-height: 0.95;
+      margin: 14px 0 6px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0 0 22px;
+      font-size: clamp(16px, 2.4vw, 20px);
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 18px 16px 12px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .viz {
+      height: 160px;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      gap: 6px;
+      align-items: end;
+      padding: 10px 6px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(150, 150, 150, 0.08));
+    }
+
+    .bar {
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      border-radius: 6px 6px 2px 2px;
+      transition: height 90ms linear;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.25), 0 0 20px rgba(150, 150, 150, 0.2);
+    }
+
+    .gridline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .gridline:nth-child(1) {
+      top: 25%;
+    }
+
+    .gridline:nth-child(2) {
+      top: 50%;
+    }
+
+    .gridline:nth-child(3) {
+      top: 75%;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    button,
+    .home {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #0f1420;
+      color: var(--fg);
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .06s ease, background .2s ease, border-color .2s ease;
+      text-decoration: none;
+    }
+
+    button:hover,
+    .home:hover {
+      background: #12192a;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    button[disabled] {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+
+    .home {
+      border-color: rgba(255, 255, 255, 0.35);
+      background: #0f1a17;
+    }
+
+    .tip {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap" role="main">
+    <span class="tag" aria-hidden="true">Page not found</span>
+    <h1>404</h1>
+    <p class="sub">Looks like we dropped the beat. Let’s get you back in tune.</p>
+
+    <section class="panel" aria-label="Music visualizer">
+      <div class="viz" id="viz" aria-hidden="true"></div>
+      <div class="controls" aria-label="Playback controls">
+        <button id="start">Start the jam</button>
+        <button id="stop" disabled>Stop</button>
+        <button id="replay" disabled>Replay riff</button>
+        <button id="mute" disabled aria-pressed="false">Mute</button>
+        <a class="home" href="{{ " /" | relURL }}">Back to home</a>
+      </div>
+      <div class="tip">Audio starts only on click. Headphones recommended.</div>
+    </section>
+    <p class="tip" style="margin-top:18px">Pro tip: Type 4-0-4 to hear the motif.</p>
+  </main>
+
+  <script>
+    // Minimal, dependency-free WebAudio synth + visualizer
+    (function () {
+      const startBtn = document.getElementById('start');
+      const stopBtn = document.getElementById('stop');
+      const replayBtn = document.getElementById('replay');
+      const muteBtn = document.getElementById('mute');
+      const viz = document.getElementById('viz');
+
+      let ctx, master, analyser, dataArray, rafId, seqTimer, isMuted = false;
+      const lookahead = 120; // ms between steps
+      const barsCount = 48;
+
+      // Build bars
+      for (let i = 0; i < barsCount; i++) {
+        const b = document.createElement('div');
+        b.className = 'bar';
+        b.style.height = (8 + Math.random() * 12) + 'px';
+        viz.appendChild(b);
       }
-      button, .home {
-        appearance: none;
-        border: 1px solid rgba(255,255,255,0.15);
-        background: #0f1420;
-        color: var(--fg);
-        padding: 10px 14px;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: transform .06s ease, background .2s ease, border-color .2s ease;
-        text-decoration: none;
+      // Add subtle gridlines
+      for (let i = 0; i < 3; i++) {
+        const g = document.createElement('div');
+        g.className = 'gridline';
+        viz.appendChild(g);
       }
-      button:hover, .home:hover { background: #12192a; border-color: rgba(255,255,255,0.25); }
-      button:active { transform: translateY(1px); }
-      button[disabled] { opacity: .6; cursor: not-allowed; }
-      .home { border-color: rgba(102,226,164,0.35); background: #0f1a17; }
 
-      .tip { color: var(--muted); font-size: 13px; margin-top: 10px; }
-      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-    </style>
-  </head>
-  <body>
-    <main class="wrap" role="main">
-      <span class="tag" aria-hidden="true">Page not found</span>
-      <h1>404</h1>
-      <p class="sub">Looks like we dropped the beat. Let’s get you back in tune.</p>
+      function initAudio() {
+        if (ctx) return;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        ctx = new AudioContext();
+        master = ctx.createGain();
+        master.gain.value = 0.8;
+        analyser = ctx.createAnalyser();
+        analyser.fftSize = 256;
+        dataArray = new Uint8Array(analyser.frequencyBinCount);
+        master.connect(analyser).connect(ctx.destination);
+      }
 
-      <section class="panel" aria-label="Music visualizer">
-        <div class="viz" id="viz" aria-hidden="true"></div>
-        <div class="controls" aria-label="Playback controls">
-          <button id="start">Start the jam</button>
-          <button id="stop" disabled>Stop</button>
-          <button id="replay" disabled>Replay riff</button>
-          <button id="mute" disabled aria-pressed="false">Mute</button>
-          <a class="home" href="{{ "/" | relURL }}">Back to home</a>
-        </div>
-        <div class="tip">Audio starts only on click. Headphones recommended.</div>
-      </section>
-      <p class="tip" style="margin-top:18px">Pro tip: Type 4-0-4 to hear the motif.</p>
-    </main>
+      function pluck(freq = 440, when = 0, dur = 0.18) {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.value = freq;
+        // Quick pluck envelope
+        const t0 = ctx.currentTime + when;
+        gain.gain.setValueAtTime(0.0001, t0);
+        gain.gain.exponentialRampToValueAtTime(1.0, t0 + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, t0 + dur);
+        osc.connect(gain).connect(master);
+        osc.start(t0);
+        osc.stop(t0 + dur + 0.02);
+      }
 
-    <script>
-      // Minimal, dependency-free WebAudio synth + visualizer
-      (function() {
-        const startBtn = document.getElementById('start');
-        const stopBtn = document.getElementById('stop');
-        const replayBtn = document.getElementById('replay');
-        const muteBtn = document.getElementById('mute');
-        const viz = document.getElementById('viz');
+      // A friendly pentatonic riff with a 4-0-4 motif
+      const A4 = 440; // the 4
+      const REST = 0;
+      const scale = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25]; // C major-ish
+      const motif404 = [A4, REST, A4, 392.00, 329.63, 293.66, REST, 329.63];
+      const loop = [...motif404, 261.63, 293.66, 329.63, 392.00, 440.00, 392.00];
 
-        let ctx, master, analyser, dataArray, rafId, seqTimer, isMuted = false;
-        const lookahead = 120; // ms between steps
-        const barsCount = 48;
+      function startSeq() {
+        if (!ctx) initAudio();
+        if (ctx.state === 'suspended') ctx.resume();
+        let step = 0;
+        clearInterval(seqTimer);
+        seqTimer = setInterval(() => {
+          const freq = loop[step % loop.length];
+          if (freq) pluck(freq, 0, 0.14);
+          step++;
+        }, lookahead);
+        draw();
+      }
 
-        // Build bars
-        for (let i = 0; i < barsCount; i++) {
-          const b = document.createElement('div');
-          b.className = 'bar';
-          b.style.height = (8 + Math.random()*12) + 'px';
-          viz.appendChild(b);
-        }
-        // Add subtle gridlines
-        for (let i = 0; i < 3; i++) {
-          const g = document.createElement('div');
-          g.className = 'gridline';
-          viz.appendChild(g);
-        }
+      function stopSeq() {
+        clearInterval(seqTimer);
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
 
-        function initAudio() {
-          if (ctx) return;
-          const AudioContext = window.AudioContext || window.webkitAudioContext;
-          ctx = new AudioContext();
-          master = ctx.createGain();
-          master.gain.value = 0.8;
-          analyser = ctx.createAnalyser();
-          analyser.fftSize = 256;
-          dataArray = new Uint8Array(analyser.frequencyBinCount);
-          master.connect(analyser).connect(ctx.destination);
-        }
-
-        function pluck(freq = 440, when = 0, dur = 0.18) {
-          const osc = ctx.createOscillator();
-          const gain = ctx.createGain();
-          osc.type = 'triangle';
-          osc.frequency.value = freq;
-          // Quick pluck envelope
-          const t0 = ctx.currentTime + when;
-          gain.gain.setValueAtTime(0.0001, t0);
-          gain.gain.exponentialRampToValueAtTime(1.0, t0 + 0.01);
-          gain.gain.exponentialRampToValueAtTime(0.001, t0 + dur);
-          osc.connect(gain).connect(master);
-          osc.start(t0);
-          osc.stop(t0 + dur + 0.02);
-        }
-
-        // A friendly pentatonic riff with a 4-0-4 motif
-        const A4 = 440; // the 4
-        const REST = 0;
-        const scale = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25]; // C major-ish
-        const motif404 = [A4, REST, A4, 392.00, 329.63, 293.66, REST, 329.63];
-        const loop = [...motif404, 261.63, 293.66, 329.63, 392.00, 440.00, 392.00];
-
-        function startSeq() {
-          if (!ctx) initAudio();
-          if (ctx.state === 'suspended') ctx.resume();
-          let step = 0;
-          clearInterval(seqTimer);
-          seqTimer = setInterval(() => {
-            const freq = loop[step % loop.length];
-            if (freq) pluck(freq, 0, 0.14);
-            step++;
-          }, lookahead);
-          draw();
-        }
-
-        function stopSeq() {
-          clearInterval(seqTimer);
-          cancelAnimationFrame(rafId);
-          rafId = null;
-        }
-
-        function draw() {
-          const bars = viz.querySelectorAll('.bar');
-          const render = () => {
-            analyser.getByteFrequencyData(dataArray);
-            const len = bars.length;
-            for (let i = 0; i < len; i++) {
-              const v = dataArray[Math.floor(i * dataArray.length / len)] || 0;
-              const h = Math.max(6, (v/255) * 150);
-              bars[i].style.height = h.toFixed(0) + 'px';
-            }
-            rafId = requestAnimationFrame(render);
-          };
+      function draw() {
+        const bars = viz.querySelectorAll('.bar');
+        const render = () => {
+          analyser.getByteFrequencyData(dataArray);
+          const len = bars.length;
+          for (let i = 0; i < len; i++) {
+            const v = dataArray[Math.floor(i * dataArray.length / len)] || 0;
+            const h = Math.max(6, (v / 255) * 150);
+            bars[i].style.height = h.toFixed(0) + 'px';
+          }
           rafId = requestAnimationFrame(render);
-        }
+        };
+        rafId = requestAnimationFrame(render);
+      }
 
-        function toggleMute() {
-          if (!master) return;
-          isMuted = !isMuted;
-          master.gain.value = isMuted ? 0 : 0.8;
-          muteBtn.textContent = isMuted ? 'Unmute' : 'Mute';
-          muteBtn.setAttribute('aria-pressed', String(isMuted));
-        }
+      function toggleMute() {
+        if (!master) return;
+        isMuted = !isMuted;
+        master.gain.value = isMuted ? 0 : 0.8;
+        muteBtn.textContent = isMuted ? 'Unmute' : 'Mute';
+        muteBtn.setAttribute('aria-pressed', String(isMuted));
+      }
 
-        // Keyboard: type 4-0-4 to play the motif once
-        let keySeq = '';
-        window.addEventListener('keydown', (e) => {
-          if (!ctx) return;
-          if (['4','0'].includes(e.key)) {
-            keySeq += e.key;
-            if (keySeq.endsWith('404')) {
-              // play motif quickly
-              let t = 0;
-              motif404.forEach((f) => { if (f) pluck(f, t, 0.12); t += 0.1; });
-              keySeq = '';
-            }
-          } else if (e.key.length === 1) {
+      // Keyboard: type 4-0-4 to play the motif once
+      let keySeq = '';
+      window.addEventListener('keydown', (e) => {
+        if (!ctx) return;
+        if (['4', '0'].includes(e.key)) {
+          keySeq += e.key;
+          if (keySeq.endsWith('404')) {
+            // play motif quickly
+            let t = 0;
+            motif404.forEach((f) => { if (f) pluck(f, t, 0.12); t += 0.1; });
             keySeq = '';
           }
-        });
+        } else if (e.key.length === 1) {
+          keySeq = '';
+        }
+      });
 
-        startBtn.addEventListener('click', () => {
-          initAudio();
-          startSeq();
-          startBtn.disabled = true;
-          stopBtn.disabled = false;
-          replayBtn.disabled = false;
-          muteBtn.disabled = false;
-        });
+      startBtn.addEventListener('click', () => {
+        initAudio();
+        startSeq();
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+        replayBtn.disabled = false;
+        muteBtn.disabled = false;
+      });
 
-        stopBtn.addEventListener('click', () => {
-          stopSeq();
-          stopBtn.disabled = true;
-          startBtn.disabled = false;
-        });
+      stopBtn.addEventListener('click', () => {
+        stopSeq();
+        stopBtn.disabled = true;
+        startBtn.disabled = false;
+      });
 
-        replayBtn.addEventListener('click', () => {
-          if (!ctx) return;
-          let t = 0;
-          motif404.forEach((f) => { if (f) pluck(f, t, 0.14); t += 0.14; });
-        });
+      replayBtn.addEventListener('click', () => {
+        if (!ctx) return;
+        let t = 0;
+        motif404.forEach((f) => { if (f) pluck(f, t, 0.14); t += 0.14; });
+      });
 
-        muteBtn.addEventListener('click', toggleMute);
-      })();
-    </script>
-  </body>
+      muteBtn.addEventListener('click', toggleMute);
+    })();
+  </script>
+</body>
+
 </html>
-

@@ -1,44 +1,68 @@
-// DailySpin — Minimal, premium palette and variables
+// DailySpin — CUSTOM PALETTE (Light Mode)
 
-// Base palette (Swiss minimalist vibes)
-$ds-bg: #ffffff;
-$ds-surface: #f8fafb;
-$ds-fg: #141618;
-$ds-muted: #6b7280;
-$ds-border: #e5e7eb;
-$ds-accent: #111827; // deep slate accent used sparingly
+// Fonts: Oswald (Condensed/Bold) + Plus Jakarta Sans (Modern/Clean)
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Shrikhand&display=swap');
 
-// Map to Bootstrap CSS variables (fallback if theme uses CSS vars at runtime)
+// Palette Definition
+$bright-snow: #f8f9fa;
+$platinum: #e9ecef;
+$alabaster-grey: #dee2e6;
+$pale-slate: #ced4da;
+$slate-grey: #6c757d;
+$iron-grey: #495057;
+$gunmetal: #343a40;
+$carbon-black: #212529;
+
+// Semantic Mapping (Light Mode)
+$ds-bg: $bright-snow; // Main background (Light)
+$ds-surface: $platinum; // Cards/Sections (Light Gray)
+$ds-fg: $carbon-black; // Main text (Dark)
+$ds-muted: $slate-grey; // Muted text (Medium Gray)
+$ds-border: $pale-slate; // Borders (Light Gray)
+
+$ds-primary: $carbon-black; // Primary accent (Dark)
+$ds-secondary: $gunmetal; // Secondary accent
+$ds-accent: $iron-grey;
+
 :root {
   --ds-bg: #{$ds-bg};
   --ds-surface: #{$ds-surface};
   --ds-fg: #{$ds-fg};
   --ds-muted: #{$ds-muted};
   --ds-border: #{$ds-border};
+
+  --ds-primary: #{$ds-primary};
+  --ds-secondary: #{$ds-secondary};
   --ds-accent: #{$ds-accent};
+
+  --ds-font-heading: 'Oswald', sans-serif;
+  --ds-font-body: 'Plus Jakarta Sans', sans-serif;
+  --ds-font-brand: 'Shrikhand', cursive;
+
+  // Bootstrap Overrides
+  --bs-body-bg: var(--ds-bg);
+  --bs-body-color: var(--ds-fg);
+  --bs-border-color: var(--ds-border);
+  --bs-primary: var(--ds-primary);
+  --bs-primary-rgb: 33, 37, 41;
+  --bs-secondary: var(--ds-muted);
+  --bs-font-sans-serif: var(--ds-font-body);
+}
+
+[data-bs-theme="dark"] {
+  --ds-bg: #0b0d10;
+  --ds-surface: #11141a;
+  --ds-fg: #e6f0ff;
+  --ds-muted: #888;
+  --ds-border: #2c3035;
+  --ds-primary: #ffffff;
+  --ds-secondary: #e6f0ff;
+  --ds-accent: #888;
 
   --bs-body-bg: var(--ds-bg);
   --bs-body-color: var(--ds-fg);
   --bs-border-color: var(--ds-border);
-  --bs-primary: var(--ds-accent);
-  --bs-primary-rgb: 17, 24, 39;
+  --bs-primary: var(--ds-primary);
+  --bs-primary-rgb: 255, 255, 255;
   --bs-secondary: var(--ds-muted);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ds-bg: #0f1113;
-    --ds-surface: #111418;
-    --ds-fg: #e7ecef;
-    --ds-muted: #9aa3ad;
-    --ds-border: #272c31;
-    --ds-accent: #e7ecef;
-
-    --bs-body-bg: var(--ds-bg);
-    --bs-body-color: var(--ds-fg);
-    --bs-border-color: var(--ds-border);
-    --bs-primary: var(--ds-accent);
-    --bs-primary-rgb: 231, 236, 239;
-    --bs-secondary: var(--ds-muted);
-  }
 }

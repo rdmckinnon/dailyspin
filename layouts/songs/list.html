@@ -1,70 +1,70 @@
 {{ define "main" }}
-<section class="ds-wrap ds-section">
-  <header class="ds-hero-slim">
-    <h1>Explore Songs</h1>
-    <p>Search and sort across all tracks.</p>
+<section class="ds-wrap ds-section px-4">
+  <header class="ds-hero-slim text-center mb-5 pt-5">
+    <h1 class="mb-3" style="font-size: 4rem;">THE ARCHIVE</h1>
+    <p class="text-muted text-uppercase fw-bold">Explore the collection</p>
   </header>
 
   {{ $total := len .Pages }}
-  <div class="ds-controls" role="region" aria-label="Song filters">
+  <div class="ds-controls justify-content-center mb-5" role="region" aria-label="Song filters">
     <label class="ds-input" aria-label="Filter songs">
-      <svg class="ds-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input id="q" type="search" placeholder="Search title, artist, genre, tag..." autocomplete="off" />
+      <svg class="ds-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="q" type="search" placeholder="Search..." autocomplete="off" />
     </label>
     <div class="ds-select">
-      <label for="sort" style="color:var(--ds-muted); font-size:13px;">Sort</label>
-      <select id="sort" aria-label="Sort songs">
-        <option value="new">Newest</option>
-        <option value="old">Oldest</option>
-        <option value="az">A–Z</option>
-        <option value="za">Z–A</option>
+      <select id="sort" aria-label="Sort songs"
+        style="background: transparent; border: 1px solid var(--ds-border); color: var(--ds-fg); outline: none; padding: 1rem; font-family: var(--ds-font-body); text-transform: uppercase; height: 100%; border-radius: 100px;">
+        <option value="new" style="background: var(--ds-bg);">Newest</option>
+        <option value="old" style="background: var(--ds-bg);">Oldest</option>
+        <option value="az" style="background: var(--ds-bg);">A–Z</option>
+        <option value="za" style="background: var(--ds-bg);">Z–A</option>
       </select>
     </div>
-    <div class="ds-count" aria-live="polite"><span id="count">{{ $total }}</span> songs</div>
   </div>
 
   {{ $pages := .Pages }}
   <ul id="grid" class="ds-grid" role="list">
-    {{ range $pages }}
-      {{ $title := .Title }}
-      {{ $artists := delimit (.Params.artists) ", " }}
-      {{ $genres := delimit (.Params.genres) ", " }}
-      {{ $tags := delimit (.Params.tags) ", " }}
-      {{ $year := .Params.release_year }}
-      <li class="ds-card" role="listitem"
-          data-title="{{ $title | lower }}"
-          data-artists="{{ $artists | lower }}"
-          data-genres="{{ $genres | lower }}"
-          data-tags="{{ $tags | lower }}"
-          data-year="{{ $year }}">
-        <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
-          <h3 class="ds-card-title">{{ .Title }}</h3>
-          <div class="ds-card-meta">
-            {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
-            {{ with .Params.release_year }} · {{ . }}{{ end }}
-          </div>
-          <div class="ds-card-summary">{{ .Summary }}</div>
-          {{ with .Params.tags }}
-            <div class="ds-chips" aria-label="Tags">
-              {{ range first 6 . }}
-                <a class="ds-chip" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
-              {{ end }}
-            </div>
-          {{ end }}
-        </a>
-      </li>
+    {{ range $index, $page := $pages }}
+    {{ with $page }}
+    {{ $title := .Title }}
+    {{ $artists := delimit (.Params.artists) ", " }}
+    {{ $genres := delimit (.Params.genres) ", " }}
+    {{ $tags := delimit (.Params.tags) ", " }}
+    {{ $year := .Params.release_year }}
+    <li class="ds-card" role="listitem" data-title="{{ $title | lower }}" data-artists="{{ $artists | lower }}"
+      data-genres="{{ $genres | lower }}" data-tags="{{ $tags | lower }}" data-year="{{ $year }}">
+      <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
+        <div class="ds-art">
+          {{ $imgNum := add (mod $index 3) 1 }}
+          <img src="/images/placeholders/art-{{ $imgNum }}.png" alt="Abstract Studio Art"
+            style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="ds-card-meta mb-0">{{ .Date | time.Format "01.02" }}</span>
+          <span class="ds-card-meta mb-0">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</span>
+        </div>
+
+        <h3 class="ds-card-title" style="font-size: 1.75rem;">{{ .Title }}</h3>
+        <div class="ds-card-summary">{{ .Summary | truncate 100 }}</div>
+      </a>
+    </li>
+    {{ end }}
     {{ end }}
   </ul>
 
-  <p id="empty" class="ds-empty">No songs match your search.</p>
+  <p id="empty" class="ds-empty py-5">NO SONGS FOUND.</p>
 </section>
 
 <script>
-  (function() {
+  (function () {
     const q = document.getElementById('q');
     const grid = document.getElementById('grid');
     const empty = document.getElementById('empty');
-    const count = document.getElementById('count');
     const sortSel = document.getElementById('sort');
     if (!q || !grid) return;
 
@@ -90,7 +90,6 @@
         li.style.display = ok ? '' : 'none';
         if (ok) visible++;
       });
-      if (count) count.textContent = String(visible);
       empty.style.display = visible ? 'none' : 'block';
 
       // Sort only visible items
@@ -112,7 +111,7 @@
     }
 
     q.addEventListener('input', applyFilterAndSort);
-    q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value=''; applyFilterAndSort(); q.blur(); } });
+    q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; applyFilterAndSort(); q.blur(); } });
     sortSel.addEventListener('change', applyFilterAndSort);
   })();
 </script>

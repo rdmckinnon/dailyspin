@@ -7,29 +7,29 @@
 
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ if gt (len $pages) 0 }}
-    <ul class="ds-grid" role="list">
-      {{ range $pages }}
-        <li class="ds-card" role="listitem">
-          <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
-            <h3 class="ds-card-title">{{ .Title }}</h3>
-            <div class="ds-card-meta">
-              {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
-              {{ with .Params.release_year }} · {{ . }}{{ end }}
-            </div>
-            <div class="ds-card-summary">{{ .Summary }}</div>
-            {{ with .Params.tags }}
-              <div class="ds-chips">
-                {{ range . }}
-                  <a class="ds-chip" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" aria-label="Tag {{ . }}">#{{ . }}</a>
-                {{ end }}
-              </div>
-            {{ end }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>
+  <ul class="ds-grid" role="list">
+    {{ range $pages }}
+    <li class="ds-card" role="listitem">
+      <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
+        <div class="ds-art">
+          {{ $imgNum := add (mod .Date.Unix 3) 1 }}
+          <img src="/images/placeholders/art-{{ $imgNum }}.png" alt="Abstract Studio Art"
+            style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="ds-card-meta mb-0">{{ .Date | time.Format "01.02" }}</span>
+          <span class="ds-card-meta mb-0">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</span>
+        </div>
+
+        <h3 class="ds-card-title" style="font-size: 1.75rem;">{{ .Title }}</h3>
+        <div class="ds-card-summary">{{ .Summary | truncate 100 }}</div>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
   {{ else }}
-    <p class="ds-empty" style="display:block">No songs found with this tag yet.</p>
+  <p class="ds-empty" style="display:block">No songs found with this tag yet.</p>
   {{ end }}
 </section>
 {{ end }}

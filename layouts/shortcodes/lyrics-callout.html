@@ -2,12 +2,12 @@
 {{- $artist := .Get "artist" -}}
 {{- $song := .Get "song" -}}
 
-<div class="lyrics-callout lyrics-callout-{{ $style }}">
-  <div class="lyrics-content">
+<div class="ds-lyrics ds-lyrics-{{ $style }}">
+  <div class="ds-lyrics-content">
     {{ .Inner | markdownify }}
   </div>
   {{- if or $artist $song -}}
-  <div class="lyrics-attribution">
+  <div class="ds-lyrics-attribution">
     {{- if $artist -}}{{ $artist }}{{- end -}}
     {{- if and $artist $song -}} — {{- end -}}
     {{- if $song -}}"{{ $song }}"{{- end -}}
