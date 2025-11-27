@@ -1,31 +1,185 @@
 {{ define "main" }}
+{{/* Collect all unique values for filters */}}
+{{ $allGenres := slice }}
+{{ $allArtists := slice }}
+{{ $allDecades := slice }}
+{{ $allMoods := slice }}
+{{ $allPopularity := slice }}
+
+{{ range .Pages }}
+  {{ with .Params.genres }}{{ range . }}{{ $allGenres = $allGenres | append . }}{{ end }}{{ end }}
+  {{ with .Params.artists }}{{ range . }}{{ $allArtists = $allArtists | append . }}{{ end }}{{ end }}
+  {{ with .Params.moods }}{{ range . }}{{ $allMoods = $allMoods | append . }}{{ end }}{{ end }}
+  {{ with .Params.popularity }}{{ range . }}{{ $allPopularity = $allPopularity | append . }}{{ end }}{{ end }}
+  {{ with .Params.release_year }}
+    {{ $decade := printf "%s0s" (substr (string .) 0 3) }}
+    {{ $allDecades = $allDecades | append $decade }}
+  {{ end }}
+{{ end }}
+
+{{ $uniqueGenres := $allGenres | uniq | sort }}
+{{ $uniqueArtists := $allArtists | uniq | sort }}
+{{ $uniqueDecades := $allDecades | uniq | sort }}
+{{ $uniqueMoods := $allMoods | uniq | sort }}
+{{ $uniquePopularity := $allPopularity | uniq }}
+
+{{ $total := len .Pages }}
+{{ $artistCount := len $uniqueArtists }}
+{{ $genreCount := len $uniqueGenres }}
+
+{{/* Get recent songs (last 5) */}}
+{{ $recentSongs := first 5 .Pages }}
+
+{{/* Random featured song */}}
+{{ $randomIndex := mod (now.Unix) $total }}
+{{ $featuredSong := index .Pages (int $randomIndex) }}
+
 <section class="ds-wrap ds-section px-4">
-  <header class="ds-hero-slim text-center mb-5 pt-5">
-    <h1 class="mb-3" style="font-size: 4rem;">THE ARCHIVE</h1>
-    <p class="text-muted text-uppercase fw-bold">Explore the collection</p>
+  <header class="ds-hero-slim text-center mb-4 pt-5">
+    <h1 class="mb-3" style="font-size: 3.5rem; letter-spacing: -0.02em;">THE ARCHIVE</h1>
+
+    {{/* Stats Header */}}
+    <div class="ds-stats d-flex justify-content-center gap-4 mb-3" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ds-muted);">
+      <span><strong style="color: var(--ds-fg);">{{ $total }}</strong> Songs</span>
+      <span><strong style="color: var(--ds-fg);">{{ $artistCount }}</strong> Artists</span>
+      <span><strong style="color: var(--ds-fg);">{{ $genreCount }}</strong> Genres</span>
+      <span><strong style="color: var(--ds-fg);">{{ len $uniqueDecades }}</strong> Decades</span>
+    </div>
   </header>
 
-  {{ $total := len .Pages }}
-  <div class="ds-controls justify-content-center mb-5" role="region" aria-label="Song filters">
-    <label class="ds-input" aria-label="Filter songs">
-      <svg class="ds-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      <input id="q" type="search" placeholder="Search..." autocomplete="off" />
-    </label>
-    <div class="ds-select">
-      <select id="sort" aria-label="Sort songs"
-        style="background: transparent; border: 1px solid var(--ds-border); color: var(--ds-fg); outline: none; padding: 1rem; font-family: var(--ds-font-body); text-transform: uppercase; height: 100%; border-radius: 100px;">
-        <option value="new" style="background: var(--ds-bg);">Newest</option>
-        <option value="old" style="background: var(--ds-bg);">Oldest</option>
-        <option value="az" style="background: var(--ds-bg);">A–Z</option>
-        <option value="za" style="background: var(--ds-bg);">Z–A</option>
-      </select>
+  {{/* Featured Random Pick */}}
+  {{ with $featuredSong }}
+  <div class="ds-featured mb-5 p-4" style="background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid var(--ds-border); border-radius: 12px;">
+    <div class="d-flex align-items-center gap-2 mb-3">
+      <span style="font-size: 1.2rem;">🎲</span>
+      <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ds-muted);">Random Pick</span>
+    </div>
+    <div class="d-flex flex-wrap align-items-center gap-4">
+      <div class="ds-featured-art" style="width: 120px; height: 120px; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+        <img src="/images/placeholders/art-1.png" alt="Album Art" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+      </div>
+      <div class="flex-grow-1">
+        <p class="mb-1" style="color: var(--ds-muted); font-size: 0.9rem;">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }} · {{ .Params.release_year }}</p>
+        <h3 class="mb-2" style="font-size: 1.75rem; font-weight: 600;">{{ .Title }}</h3>
+        <p class="mb-3" style="color: var(--ds-muted); font-size: 0.9rem;">{{ .Summary | truncate 120 }}</p>
+        <div class="d-flex gap-2 flex-wrap">
+          {{ range first 2 .Params.genres }}
+          <span class="ds-pill" style="background: var(--ds-border); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; text-transform: uppercase;">{{ . }}</span>
+          {{ end }}
+          {{ with first 1 .Params.popularity }}
+          <span class="ds-pill" style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; text-transform: uppercase;">{{ index $.Params.popularity 0 }}</span>
+          {{ end }}
+        </div>
+      </div>
+      <a href="{{ .RelPermalink }}" class="btn" style="background: var(--ds-fg); color: var(--ds-bg); padding: 0.75rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; white-space: nowrap;">Listen Now</a>
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Recently Added Section */}}
+  <div class="ds-recent mb-5">
+    <div class="d-flex align-items-center gap-2 mb-3">
+      <span style="font-size: 1.2rem;">✨</span>
+      <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--ds-muted);">Recently Added</span>
+    </div>
+    <div class="d-flex gap-3 overflow-auto pb-2" style="scroll-snap-type: x mandatory;">
+      {{ range $recentSongs }}
+      <a href="{{ .RelPermalink }}" class="ds-recent-card" style="flex: 0 0 200px; scroll-snap-align: start; text-decoration: none; color: inherit;">
+        <div style="aspect-ratio: 1; border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; background: var(--ds-border);">
+          <img src="/images/placeholders/art-2.png" alt="Album Art" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+        </div>
+        <p class="mb-0 fw-bold" style="font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ .Title }}</p>
+        <p class="mb-0" style="font-size: 0.8rem; color: var(--ds-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</p>
+      </a>
+      {{ end }}
     </div>
   </div>
 
+  {{/* Filter Controls */}}
+  <div class="ds-filters mb-4">
+    {{/* Decade Filter */}}
+    <div class="mb-3">
+      <span class="text-uppercase fw-bold d-block mb-2" style="font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ds-muted);">Decade</span>
+      <div class="d-flex flex-wrap gap-2" id="decade-filters">
+        <button class="ds-chip active" data-filter="decade" data-value="all" style="background: var(--ds-fg); color: var(--ds-bg); border: none; padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">All</button>
+        {{ range $uniqueDecades }}
+        <button class="ds-chip" data-filter="decade" data-value="{{ . }}" style="background: transparent; color: var(--ds-fg); border: 1px solid var(--ds-border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">{{ . }}</button>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Genre Filter */}}
+    <div class="mb-3">
+      <span class="text-uppercase fw-bold d-block mb-2" style="font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ds-muted);">Genre</span>
+      <div class="d-flex flex-wrap gap-2" id="genre-filters">
+        <button class="ds-chip active" data-filter="genre" data-value="all" style="background: var(--ds-fg); color: var(--ds-bg); border: none; padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">All</button>
+        {{ range first 12 $uniqueGenres }}
+        <button class="ds-chip" data-filter="genre" data-value="{{ . | lower }}" style="background: transparent; color: var(--ds-fg); border: 1px solid var(--ds-border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">{{ . }}</button>
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Mood Filter */}}
+    <div class="mb-3">
+      <span class="text-uppercase fw-bold d-block mb-2" style="font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ds-muted);">Mood</span>
+      <div class="d-flex flex-wrap gap-2" id="mood-filters">
+        <button class="ds-chip active" data-filter="mood" data-value="all" style="background: var(--ds-fg); color: var(--ds-bg); border: none; padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">All</button>
+        {{ range first 10 $uniqueMoods }}
+        <button class="ds-chip" data-filter="mood" data-value="{{ . | lower }}" style="background: transparent; color: var(--ds-fg); border: 1px solid var(--ds-border); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; cursor: pointer; text-transform: uppercase;">{{ . }}</button>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  {{/* Search, Sort, and View Toggle */}}
+  <div class="ds-controls d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4" role="region" aria-label="Song filters">
+    <div class="d-flex gap-3 flex-grow-1">
+      <label class="ds-input flex-grow-1" aria-label="Filter songs" style="max-width: 400px;">
+        <svg class="ds-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input id="q" type="search" placeholder="Search songs, artists, genres..." autocomplete="off" />
+      </label>
+      <div class="ds-select">
+        <select id="sort" aria-label="Sort songs" style="background: transparent; border: 1px solid var(--ds-border); color: var(--ds-fg); outline: none; padding: 0.75rem 1rem; font-family: var(--ds-font-body); text-transform: uppercase; height: 100%; border-radius: 100px; font-size: 0.85rem;">
+          <option value="new" style="background: var(--ds-bg);">Newest</option>
+          <option value="old" style="background: var(--ds-bg);">Oldest</option>
+          <option value="az" style="background: var(--ds-bg);">A–Z</option>
+          <option value="za" style="background: var(--ds-bg);">Z–A</option>
+        </select>
+      </div>
+    </div>
+
+    {{/* View Toggle */}}
+    <div class="ds-view-toggle d-flex gap-1" role="group" aria-label="View options">
+      <button id="view-grid" class="active" title="Grid view" style="background: var(--ds-fg); color: var(--ds-bg); border: none; padding: 0.6rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+      </button>
+      <button id="view-list" title="List view" style="background: transparent; color: var(--ds-fg); border: 1px solid var(--ds-border); padding: 0.6rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  {{/* Artist Index */}}
+  <div class="ds-artist-index mb-4">
+    <details style="border: 1px solid var(--ds-border); border-radius: 8px;">
+      <summary class="p-3" style="cursor: pointer; font-size: 0.85rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">
+        Browse by Artist ({{ $artistCount }})
+      </summary>
+      <div class="p-3 pt-0 d-flex flex-wrap gap-2" style="max-height: 200px; overflow-y: auto;">
+        {{ range $uniqueArtists }}
+        <button class="ds-artist-chip" data-artist="{{ . | lower }}" style="background: transparent; color: var(--ds-muted); border: 1px solid var(--ds-border); padding: 0.3rem 0.75rem; border-radius: 100px; font-size: 0.75rem; cursor: pointer;">{{ . }}</button>
+        {{ end }}
+      </div>
+    </details>
+  </div>
+
+  {{/* Results Count */}}
+  <p id="results-count" class="mb-3" style="font-size: 0.85rem; color: var(--ds-muted);">Showing <strong id="visible-count">{{ $total }}</strong> of {{ $total }} songs</p>
+
+  {{/* Songs Grid */}}
   {{ $pages := .Pages }}
   <ul id="grid" class="ds-grid" role="list">
     {{ range $index, $page := $pages }}
@@ -33,86 +187,268 @@
     {{ $title := .Title }}
     {{ $artists := delimit (.Params.artists) ", " }}
     {{ $genres := delimit (.Params.genres) ", " }}
+    {{ $moods := delimit (.Params.moods) ", " }}
     {{ $tags := delimit (.Params.tags) ", " }}
     {{ $year := .Params.release_year }}
-    <li class="ds-card" role="listitem" data-title="{{ $title | lower }}" data-artists="{{ $artists | lower }}"
-      data-genres="{{ $genres | lower }}" data-tags="{{ $tags | lower }}" data-year="{{ $year }}">
+    {{ $decade := "" }}
+    {{ with $year }}{{ $decade = printf "%s0s" (substr (string .) 0 3) }}{{ end }}
+    {{ $popularity := "" }}
+    {{ with .Params.popularity }}{{ $popularity = index . 0 }}{{ end }}
+    {{ $spotifyId := .Params.spotify_id }}
+    <li class="ds-card" role="listitem"
+        data-title="{{ $title | lower }}"
+        data-artists="{{ $artists | lower }}"
+        data-genres="{{ $genres | lower }}"
+        data-moods="{{ $moods | lower }}"
+        data-tags="{{ $tags | lower }}"
+        data-year="{{ $year }}"
+        data-decade="{{ $decade }}"
+        data-popularity="{{ $popularity | lower }}"
+        data-date="{{ .Date.Unix }}">
       <a class="ds-card-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">
         <div class="ds-art">
           {{ $imgNum := add (mod $index 3) 1 }}
-          <img src="/images/placeholders/art-{{ $imgNum }}.png" alt="Abstract Studio Art"
-            style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
+          <img src="/images/placeholders/art-{{ $imgNum }}.png" alt="Abstract Studio Art" style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
+          {{ with $spotifyId }}
+          <div class="ds-play-overlay" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.2s;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          {{ end }}
         </div>
 
         <div class="d-flex justify-content-between align-items-center mb-2">
-          <span class="ds-card-meta mb-0">{{ .Date | time.Format "01.02" }}</span>
-          <span class="ds-card-meta mb-0">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</span>
+          <span class="ds-card-meta mb-0">{{ $year }}</span>
+          <span class="ds-card-meta mb-0">{{ $artists }}</span>
         </div>
 
-        <h3 class="ds-card-title" style="font-size: 1.75rem;">{{ .Title }}</h3>
-        <div class="ds-card-summary">{{ .Summary | truncate 100 }}</div>
+        <h3 class="ds-card-title" style="font-size: 1.5rem;">{{ .Title }}</h3>
+
+        {{/* Genre Pills */}}
+        <div class="ds-card-genres d-flex flex-wrap gap-1 mb-2">
+          {{ range first 2 .Params.genres }}
+          <span style="background: var(--ds-border); padding: 0.15rem 0.5rem; border-radius: 100px; font-size: 0.65rem; text-transform: uppercase; color: var(--ds-muted);">{{ . }}</span>
+          {{ end }}
+          {{ with $popularity }}
+          <span style="background: rgba(255,255,255,0.08); padding: 0.15rem 0.5rem; border-radius: 100px; font-size: 0.65rem; text-transform: uppercase; color: var(--ds-muted);">{{ . }}</span>
+          {{ end }}
+        </div>
+
+        <div class="ds-card-summary">{{ .Summary | truncate 80 }}</div>
       </a>
     </li>
     {{ end }}
     {{ end }}
   </ul>
 
-  <p id="empty" class="ds-empty py-5">NO SONGS FOUND.</p>
+  <p id="empty" class="ds-empty py-5" style="display: none;">NO SONGS FOUND.</p>
 </section>
 
+<style>
+  .ds-card:hover .ds-play-overlay {
+    opacity: 1 !important;
+  }
+  .ds-chip:hover {
+    background: var(--ds-border) !important;
+  }
+  .ds-chip.active {
+    background: var(--ds-fg) !important;
+    color: var(--ds-bg) !important;
+    border-color: var(--ds-fg) !important;
+  }
+  .ds-artist-chip:hover {
+    background: var(--ds-border) !important;
+    color: var(--ds-fg) !important;
+  }
+
+  /* List view styles */
+  .ds-grid.list-view {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  .ds-grid.list-view .ds-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .ds-grid.list-view .ds-card .ds-art {
+    width: 60px !important;
+    height: 60px !important;
+    aspect-ratio: 1 !important;
+    flex-shrink: 0;
+    border-radius: 4px !important;
+  }
+  .ds-grid.list-view .ds-card .ds-card-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .ds-grid.list-view .ds-card .ds-card-title {
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+  .ds-grid.list-view .ds-card .ds-card-summary,
+  .ds-grid.list-view .ds-card .ds-card-genres {
+    display: none !important;
+  }
+  .ds-grid.list-view .ds-card .ds-card-meta {
+    font-size: 0.75rem;
+  }
+</style>
+
 <script>
-  (function () {
-    const q = document.getElementById('q');
-    const grid = document.getElementById('grid');
-    const empty = document.getElementById('empty');
-    const sortSel = document.getElementById('sort');
-    if (!q || !grid) return;
+(function () {
+  const q = document.getElementById('q');
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const sortSel = document.getElementById('sort');
+  const visibleCountEl = document.getElementById('visible-count');
+  const viewGrid = document.getElementById('view-grid');
+  const viewList = document.getElementById('view-list');
 
-    let items = Array.from(grid.children);
+  if (!q || !grid) return;
 
-    function matches(li, term) {
-      if (!term) return true;
+  let items = Array.from(grid.children);
+  let activeFilters = { decade: 'all', genre: 'all', mood: 'all', artist: null };
+
+  function matches(li, term) {
+    // Check text search
+    if (term) {
       term = term.toLowerCase();
-      return (
+      const textMatch = (
         li.dataset.title.includes(term) ||
         li.dataset.artists.includes(term) ||
         li.dataset.genres.includes(term) ||
         li.dataset.tags.includes(term) ||
         (li.dataset.year || '').includes(term)
       );
+      if (!textMatch) return false;
     }
 
-    function applyFilterAndSort() {
-      const term = (q.value || '').trim().toLowerCase();
-      let visible = 0;
-      items.forEach(li => {
-        const ok = matches(li, term);
-        li.style.display = ok ? '' : 'none';
-        if (ok) visible++;
-      });
-      empty.style.display = visible ? 'none' : 'block';
-
-      // Sort only visible items
-      const mode = sortSel.value;
-      const visibleItems = items.filter(li => li.style.display !== 'none');
-      visibleItems.sort((a, b) => {
-        if (mode === 'az' || mode === 'za') {
-          const at = a.dataset.title, bt = b.dataset.title;
-          const cmp = at.localeCompare(bt);
-          return mode === 'az' ? cmp : -cmp;
-        }
-        // year sort fallback
-        const ay = parseInt(a.dataset.year || '0', 10);
-        const by = parseInt(b.dataset.year || '0', 10);
-        return mode === 'old' ? (ay - by) : (by - ay); // default newest
-      });
-      // Re-append in order
-      visibleItems.forEach(el => grid.appendChild(el));
+    // Check decade filter
+    if (activeFilters.decade !== 'all') {
+      if (li.dataset.decade !== activeFilters.decade) return false;
     }
 
-    q.addEventListener('input', applyFilterAndSort);
-    q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; applyFilterAndSort(); q.blur(); } });
-    sortSel.addEventListener('change', applyFilterAndSort);
-  })();
+    // Check genre filter
+    if (activeFilters.genre !== 'all') {
+      if (!li.dataset.genres.includes(activeFilters.genre)) return false;
+    }
+
+    // Check mood filter
+    if (activeFilters.mood !== 'all') {
+      if (!li.dataset.moods.includes(activeFilters.mood)) return false;
+    }
+
+    // Check artist filter
+    if (activeFilters.artist) {
+      if (!li.dataset.artists.includes(activeFilters.artist)) return false;
+    }
+
+    return true;
+  }
+
+  function applyFilterAndSort() {
+    const term = (q.value || '').trim().toLowerCase();
+    let visible = 0;
+    items.forEach(li => {
+      const ok = matches(li, term);
+      li.style.display = ok ? '' : 'none';
+      if (ok) visible++;
+    });
+    empty.style.display = visible ? 'none' : 'block';
+    visibleCountEl.textContent = visible;
+
+    // Sort visible items
+    const mode = sortSel.value;
+    const visibleItems = items.filter(li => li.style.display !== 'none');
+    visibleItems.sort((a, b) => {
+      if (mode === 'az' || mode === 'za') {
+        const at = a.dataset.title, bt = b.dataset.title;
+        const cmp = at.localeCompare(bt);
+        return mode === 'az' ? cmp : -cmp;
+      }
+      // Date sort
+      const ad = parseInt(a.dataset.date || '0', 10);
+      const bd = parseInt(b.dataset.date || '0', 10);
+      return mode === 'old' ? (ad - bd) : (bd - ad);
+    });
+    visibleItems.forEach(el => grid.appendChild(el));
+  }
+
+  // Search and sort listeners
+  q.addEventListener('input', applyFilterAndSort);
+  q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; applyFilterAndSort(); q.blur(); } });
+  sortSel.addEventListener('change', applyFilterAndSort);
+
+  // Filter chip listeners
+  document.querySelectorAll('.ds-chip[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterType = btn.dataset.filter;
+      const value = btn.dataset.value;
+
+      // Update active state
+      document.querySelectorAll(`.ds-chip[data-filter="${filterType}"]`).forEach(b => {
+        b.classList.remove('active');
+        b.style.background = 'transparent';
+        b.style.color = 'var(--ds-fg)';
+        b.style.borderColor = 'var(--ds-border)';
+      });
+      btn.classList.add('active');
+      btn.style.background = 'var(--ds-fg)';
+      btn.style.color = 'var(--ds-bg)';
+
+      activeFilters[filterType] = value;
+      applyFilterAndSort();
+    });
+  });
+
+  // Artist chip listeners
+  document.querySelectorAll('.ds-artist-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const artist = btn.dataset.artist;
+      if (activeFilters.artist === artist) {
+        activeFilters.artist = null;
+        btn.style.background = 'transparent';
+        btn.style.color = 'var(--ds-muted)';
+      } else {
+        document.querySelectorAll('.ds-artist-chip').forEach(b => {
+          b.style.background = 'transparent';
+          b.style.color = 'var(--ds-muted)';
+        });
+        activeFilters.artist = artist;
+        btn.style.background = 'var(--ds-fg)';
+        btn.style.color = 'var(--ds-bg)';
+      }
+      applyFilterAndSort();
+    });
+  });
+
+  // View toggle listeners
+  viewGrid.addEventListener('click', () => {
+    grid.classList.remove('list-view');
+    viewGrid.classList.add('active');
+    viewGrid.style.background = 'var(--ds-fg)';
+    viewGrid.style.color = 'var(--ds-bg)';
+    viewGrid.style.border = 'none';
+    viewList.classList.remove('active');
+    viewList.style.background = 'transparent';
+    viewList.style.color = 'var(--ds-fg)';
+    viewList.style.border = '1px solid var(--ds-border)';
+  });
+
+  viewList.addEventListener('click', () => {
+    grid.classList.add('list-view');
+    viewList.classList.add('active');
+    viewList.style.background = 'var(--ds-fg)';
+    viewList.style.color = 'var(--ds-bg)';
+    viewList.style.border = 'none';
+    viewGrid.classList.remove('active');
+    viewGrid.style.background = 'transparent';
+    viewGrid.style.color = 'var(--ds-fg)';
+    viewGrid.style.border = '1px solid var(--ds-border)';
+  });
+})();
 </script>
 {{ end }}
