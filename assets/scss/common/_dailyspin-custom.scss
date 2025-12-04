@@ -705,6 +705,49 @@ a {
   font-style: italic;
 }
 
+.ds-signup {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-signup-text {
+  font-family: var(--ds-font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.ds-signup-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-family: var(--ds-font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--ds-fg);
+  color: var(--ds-bg);
+  border: 2px solid var(--ds-fg);
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: transparent;
+    color: var(--ds-fg);
+  }
+}
+
+.ds-signup-note {
+  font-family: var(--ds-font-body);
+  font-size: 0.85rem;
+  color: var(--ds-muted);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 // ============================================
 // 14b. PREVIEW POST
 // ============================================
