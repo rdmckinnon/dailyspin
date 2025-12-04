@@ -12,20 +12,20 @@
 {{/* Shuffle by taking a subset */}}
 {{ $albumArts = first 8 $albumArts }}
 
+{{/* Page-level album art background */}}
+<div class="ds-page-bg">
+  {{ range $albumArts }}
+  <div class="ds-page-bg-album">
+    <img src="{{ . }}" alt="" loading="lazy">
+  </div>
+  {{ end }}
+</div>
+<div class="ds-page-overlay"></div>
+
 {{/* ============================================
     HERO: THE MANIFESTO
 ============================================ */}}
 <section class="ds-manifesto">
-  <div class="ds-manifesto-bg">
-    {{ range $albumArts }}
-    <div class="ds-manifesto-album">
-      <img src="{{ . }}" alt="" loading="lazy">
-    </div>
-    {{ end }}
-  </div>
-
-  <div class="ds-manifesto-overlay"></div>
-
   <div class="container">
     <div class="ds-manifesto-content">
       <h1 class="ds-manifesto-headline">SOMETHING BROKE.</h1>

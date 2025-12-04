@@ -2,11 +2,16 @@
 
 // 1. Global Reset & Typography
 body {
-  background-color: var(--ds-bg);
+  background-color: transparent;
   color: var(--ds-fg);
   font-family: var(--ds-font-body);
   -webkit-font-smoothing: antialiased;
-  background-image: none; // Clean background
+  background-image: none;
+}
+
+// Add a base background for non-homepage pages
+body:not(.home) {
+  background-color: var(--ds-bg);
 }
 
 h1,
@@ -447,32 +452,25 @@ a {
 // 12. HOMEPAGE REDESIGN — THE MANIFESTO
 // ============================================
 
-.ds-manifesto {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 0 4rem;
-  overflow: hidden;
-}
-
-.ds-manifesto-bg {
-  position: absolute;
+// Page-level album art background (fixed, covers entire viewport)
+.ds-page-bg {
+  position: fixed;
   inset: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  opacity: 0.25;
+  opacity: 0.3;
   pointer-events: none;
+  z-index: -2;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    opacity: 0.15;
+    opacity: 0.2;
   }
 }
 
-.ds-manifesto-album {
+.ds-page-bg-album {
   overflow: hidden;
 
   img {
@@ -483,16 +481,25 @@ a {
   }
 }
 
-.ds-manifesto-overlay {
-  position: absolute;
+.ds-page-overlay {
+  position: fixed;
   inset: 0;
-  background: rgba(248, 249, 250, 0.75);
+  background: rgba(248, 249, 250, 0.7);
   pointer-events: none;
-  z-index: 1;
+  z-index: -1;
 
   [data-bs-theme="dark"] & {
-    background: rgba(11, 13, 16, 0.75);
+    background: rgba(11, 13, 16, 0.7);
   }
+}
+
+.ds-manifesto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
 }
 
 .ds-manifesto-content {
@@ -675,9 +682,7 @@ a {
 .ds-cta {
   padding: 5rem 0;
   text-align: center;
-  background: var(--ds-surface);
-  border-top: 1px solid var(--ds-border);
-  border-bottom: 1px solid var(--ds-border);
+  background: transparent;
 }
 
 .ds-cta-headline {
@@ -1124,7 +1129,7 @@ a {
 .ds-navbar {
   padding: 1.25rem 0;
   border-bottom: 1px solid var(--ds-border);
-  background: var(--ds-bg);
+  background: transparent;
 }
 
 .ds-brand {
