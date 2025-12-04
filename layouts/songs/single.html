@@ -24,7 +24,7 @@
             <span class="text-uppercase ls-2 fw-bold ds-hero-date">{{ .Date.Format "October 2, 2006" }}</span>
           </div>
           <h1 class="ds-hero-title mb-4" style="font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.9;">{{ .Title }}</h1>
-          <div class="ds-hero-meta fs-4 mb-5"
+          <div class="ds-hero-meta fs-4"
             style="color: var(--ds-muted); font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em;">
             {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
           </div>
@@ -33,10 +33,10 @@
     </div>
   </header>
 
-  <div class="container py-5" id="details">
+  <div class="container py-3" id="details">
     <div class="row g-5 justify-content-center">
       {{/* Main Content */}}
-      <div class="col-lg-8">
+      <div class="col-lg-10">
         <div class="ds-content">
           <p class="lead mb-5" style="font-size: 1.4rem; font-weight: 400; color: var(--ds-fg); line-height: 1.6;">{{
             .Summary
@@ -97,7 +97,7 @@
 
 <style>
   .ds-hero-single {
-    padding: 8rem 0 4rem;
+    padding: 6rem 0 1rem;
     background: var(--ds-bg);
   }
 
