@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Folk Rock", "Rock", "Crosby Stills Nash", "1960s", "Protest Song", "Political", "Harmony"]
 
 # Song details
-spotify_id: "3dwrRA6ETm8cYVdxLfexbY"
+spotify_id: "1zMfsMdwkSLvuqcCVEZGlT"
 release_year: "1969"
 featured_date: 2025-12-07
 ---

@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Hard Rock", "Blues Rock", "Led Zeppelin", "1970s", "Iconic Drums", "John Bonham", "Most Sampled"]
 
 # Song details
-spotify_id: "0Y1EwxYgLWdEQ49r8DgCq2"
+spotify_id: "05f8Hg3RSfiPSCBQOtxl3i"
 release_year: "1971"
 featured_date: 2025-12-15
 ---

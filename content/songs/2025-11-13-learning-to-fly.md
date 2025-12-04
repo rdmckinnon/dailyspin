@@ -23,6 +23,7 @@ popularity: ["deep cut classic"]
 tags: ["Cult Classic", "Progressive Rock", "Art Rock", "Pink Floyd", "1980s", "Atmospheric", "David Gilmour", "Deep Cut"]
 
 # Song details
+spotify_id: "3ieDOGcOqVxScs2VZBzidt"
 release_year: "1987"
 featured_date: 2025-09-09
 ---

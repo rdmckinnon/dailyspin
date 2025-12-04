@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Rock", "Live Recording", "Dire Straits", "1990s", "Guitar Hero", "Mark Knopfler", "Hammersmith"]
 
 # Song details
-spotify_id: "0HBhWC5xpByksAkvtpCd0f"
+spotify_id: "3ERAMiW30OO27CqE8SHjX9"
 release_year: "1993"
 featured_date: 2025-12-09
 ---

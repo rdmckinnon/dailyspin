@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Progressive Rock", "Art Rock", "Pink Floyd", "1970s", "Industry Critique", "Concept Album", "Roy Harper"]
 
 # Song details
-spotify_id: "5QLxKsM0IcKPNZMmLLvShF"
+spotify_id: "3CmHvyZQQAGkKkTjTBFWN6"
 release_year: "1975"
 featured_date: 2025-12-06
 ---

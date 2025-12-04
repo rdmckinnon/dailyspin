@@ -53,6 +53,8 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   contributor = "contributors"
   category = "categories"
   tag = "tags"
+  artist = "artists"
+  series = "series"
 
 [permalinks]
   blog = "/blog/:slug/"

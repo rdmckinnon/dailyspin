@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Pop Rock", "Alternative Rock", "Duran Duran", "1990s", "Comeback", "Ballad", "Simon Le Bon"]
 
 # Song details
-spotify_id: "5CfkQJKHnNNa4DJSCLrJ6s"
+spotify_id: "0wokCRaKD0zPNhMRXAgVsr"
 release_year: "1992"
 featured_date: 2025-12-27
 ---

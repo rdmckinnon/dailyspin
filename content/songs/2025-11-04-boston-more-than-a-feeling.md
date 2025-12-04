@@ -23,6 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Classic Rock", "Hard Rock", "Boston", "1970s", "Arena Rock", "Anthem", "Guitar Driven"]
 
 # Song details
+spotify_id: "1QEEqeFIZktqIpPI4jSVSF"
 release_year: "1976"
 featured_date: 2025-09-09
 ---

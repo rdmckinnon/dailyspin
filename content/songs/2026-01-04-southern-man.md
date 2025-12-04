@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Folk Rock", "Hard Rock", "Neil Young", "CSNY", "1970s", "Political", "Lynyrd Skynyrd Feud"]
 
 # Song details
-spotify_id: "1cTKJxmPaRfOTCwqPZG8xX"
+spotify_id: "0hssLSXpq33Uqb2YZRECcR"
 release_year: "1970"
 featured_date: 2026-01-04
 ---

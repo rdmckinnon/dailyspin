@@ -23,7 +23,7 @@ popularity: ["fan favorite"]
 tags: ["Fan Favorite", "Progressive Rock", "Art Rock", "Dire Straits", "1980s", "Epic", "Mark Knopfler", "Title Track"]
 
 # Song details
-spotify_id: "0kfAqe4lEH62mOIXzpOnKN"
+spotify_id: "0oITRRofhFHlTadArBF1b5"
 release_year: "1982"
 featured_date: 2025-12-17
 ---

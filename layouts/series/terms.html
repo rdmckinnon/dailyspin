@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="ds-wrap ds-section px-4">
+  <header class="ds-hero-slim text-center mb-5 pt-5">
+    <h1 class="mb-3" style="font-size: 3.5rem; letter-spacing: -0.02em;">SERIES</h1>
+    <p style="color: var(--ds-muted); font-size: 1.1rem;">Curated collections of related songs</p>
+  </header>
+
+  {{/* Series Grid */}}
+  <div class="row g-4">
+    {{ range .Pages.ByTitle }}
+    <div class="col-12 col-md-6 col-lg-4">
+      <a href="{{ .RelPermalink }}" class="d-block p-4 text-decoration-none h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid var(--ds-border); border-radius: 12px; transition: transform 0.2s, border-color 0.2s;">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <div style="width: 56px; height: 56px; border-radius: 8px; background: var(--ds-primary, #8ed6fb); display: flex; align-items: center; justify-content: center;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ds-bg)" stroke-width="2">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3"></circle>
+              <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3 class="mb-0" style="font-size: 1.25rem; color: var(--ds-fg);">{{ .Title }}</h3>
+            <p class="mb-0" style="font-size: 0.85rem; color: var(--ds-muted);">{{ len .Pages }} songs</p>
+          </div>
+        </div>
+        {{ with .Description }}
+        <p class="mb-0" style="font-size: 0.9rem; color: var(--ds-muted); line-height: 1.5;">{{ . }}</p>
+        {{ end }}
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ if eq (len .Pages) 0 }}
+  <div class="text-center py-5">
+    <p style="color: var(--ds-muted);">No series yet. Add <code>series: ["Series Name"]</code> to song frontmatter to create collections.</p>
+  </div>
+  {{ end }}
+</section>
+
+<style>
+  .col-12 a:hover {
+    transform: translateY(-4px);
+    border-color: var(--ds-primary, #8ed6fb) !important;
+  }
+</style>
+{{ end }}

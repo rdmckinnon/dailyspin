@@ -23,7 +23,7 @@ popularity: ["fan favorite"]
 tags: ["Fan Favorite", "Southern Rock", "Hard Rock", "Lynyrd Skynyrd", "1970s", "Ronnie Van Zant", "Title Track"]
 
 # Song details
-spotify_id: "3u81sVKL3sQn2fPw1VJLGE"
+spotify_id: "02UFwtmJ0ogLQWMx43Okuh"
 release_year: "1976"
 featured_date: 2025-12-19
 ---

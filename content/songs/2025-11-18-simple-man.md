@@ -23,6 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Southern Rock", "Classic Rock", "Lynyrd Skynyrd", "1970s", "Ballad", "Wisdom", "Family Values"]
 
 # Song details
+spotify_id: "2OKpPObai8zENmFKSy0C7M"
 release_year: "1973"
 featured_date: 2025-09-09
 ---

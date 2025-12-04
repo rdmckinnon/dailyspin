@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Alternative Rock", "Folk Rock", "Counting Crows", "1990s", "Adam Duritz", "Debut Single"]
 
 # Song details
-spotify_id: "1GQLWMspNXoM0cZVpCif5h"
+spotify_id: "35qwJUKVy1OIt0wQ3xEXi0"
 release_year: "1993"
 featured_date: 2026-01-05
 ---

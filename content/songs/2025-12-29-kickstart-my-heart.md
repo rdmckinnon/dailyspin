@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Hard Rock", "Glam Metal", "Mötley Crüe", "1980s", "Nikki Sixx", "Dr Feelgood", "Stadium Anthem"]
 
 # Song details
-spotify_id: "7MdH8PmRJC2fCUhJyX4K5D"
+spotify_id: "4Yqy0GpeDEXLibWJCZyQew"
 release_year: "1989"
 featured_date: 2025-12-29
 ---

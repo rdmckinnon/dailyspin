@@ -23,6 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Reggae", "Roots Reggae", "Bob Marley", "1970s", "Love Song", "Jamaican", "Spiritual"]
 
 # Song details
+spotify_id: "3pHpV3pa96s4vuBP7sQq0V"
 release_year: "1978"
 featured_date: 2025-09-09
 ---

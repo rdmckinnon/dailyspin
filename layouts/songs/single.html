@@ -1,14 +1,29 @@
 {{ define "main" }}
+{{/* Get Spotify data if available */}}
+{{ $spotifyData := index site.Data.spotify .Params.spotify_id }}
+{{ $albumArt := "" }}
+{{ with $spotifyData }}{{ $albumArt = .albumArt.large }}{{ end }}
+
 <article class="ds-single">
   {{/* Hero Section */}}
   <header class="ds-hero-single">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
+        {{/* Album Art (if available) */}}
+        {{ if $albumArt }}
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <div class="ds-album-art mx-auto" style="max-width: 300px;">
+            <img src="{{ $albumArt }}" alt="{{ .Title }} album art" style="width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+          </div>
+        </div>
+        <div class="col-lg-8 text-center text-lg-start">
+        {{ else }}
         <div class="col-lg-10 offset-lg-1 text-center">
-          <div class="mb-4 d-flex align-items-center justify-content-center gap-3">
+        {{ end }}
+          <div class="mb-4 d-flex align-items-center {{ if $albumArt }}justify-content-center justify-content-lg-start{{ else }}justify-content-center{{ end }} gap-3">
             <span class="text-uppercase ls-2 fw-bold ds-hero-date">{{ .Date.Format "October 2, 2006" }}</span>
           </div>
-          <h1 class="ds-hero-title mb-4" style="font-size: clamp(3rem, 8vw, 6rem); line-height: 0.9;">{{ .Title }}</h1>
+          <h1 class="ds-hero-title mb-4" style="font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.9;">{{ .Title }}</h1>
           <div class="ds-hero-meta fs-4 mb-5"
             style="color: var(--ds-muted); font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em;">
             {{ with .Params.artists }}{{ delimit . ", " }}{{ end }}
@@ -40,6 +55,27 @@
           </div>
           {{ end }}
         </div>
+
+        {{/* Related Songs */}}
+        {{ $related := site.RegularPages.Related . | first 4 }}
+        {{ with $related }}
+        <div class="ds-related mt-5 pt-5 border-top border-secondary">
+          <h3 class="mb-4" style="font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.1em;">You Might Also Like</h3>
+          <div class="row g-3">
+            {{ range . }}
+            <div class="col-6 col-md-3">
+              <a href="{{ .RelPermalink }}" class="ds-related-card" style="display: block; text-decoration: none; color: inherit;">
+                <div style="aspect-ratio: 1; border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; background: var(--ds-border);">
+                  <img src="/images/placeholders/art-1.png" alt="Album Art" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                </div>
+                <p class="mb-0 fw-bold" style="font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ .Title }}</p>
+                <p class="mb-0" style="font-size: 0.75rem; color: var(--ds-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</p>
+              </a>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
 
         {{/* Navigation */}}
         <div class="d-flex justify-content-between mt-5 pt-5 border-top border-secondary">

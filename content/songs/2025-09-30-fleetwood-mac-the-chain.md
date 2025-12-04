@@ -23,6 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Classic Rock", "Pop Rock", "Fleetwood Mac", "1970s", "Breakup Song", "Rumours", "Iconic Bass Line"]
 
 # Song details
+spotify_id: "5e9TFTbltYBg2xThimr0rU"
 release_year: "1977"
 featured_date: 2025-09-09
 ---

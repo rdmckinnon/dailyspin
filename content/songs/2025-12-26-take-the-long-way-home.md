@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Progressive Pop", "Art Rock", "Supertramp", "1970s", "Breakfast in America", "Roger Hodgson"]
 
 # Song details
-spotify_id: "22bPsP2jCgbLUvh79lgnkM"
+spotify_id: "0v0XYK0pLgsPiq5u4FKHaw"
 release_year: "1979"
 featured_date: 2025-12-26
 ---

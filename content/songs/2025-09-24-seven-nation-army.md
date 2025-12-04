@@ -23,6 +23,7 @@ popularity: ["modern classic"]
 tags: ["Classic", "Alternative Rock", "Garage Rock", "The White Stripes", "2000s", "Iconic Riff", "Minimalist", "Grammy Winner"]
 
 # Song details
+spotify_id: "3dPQuX8Gs42Y7b454ybpMR"
 release_year: "2003"
 featured_date: 2025-09-09
 ---

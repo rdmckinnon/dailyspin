@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "New Wave", "Pop Rock", "INXS", "1980s", "Power Ballad", "Love Song", "Michael Hutchence"]
 
 # Song details
-spotify_id: "2IZZqH4K02UIYg5EohpNHV"
+spotify_id: "1qQSRy9DjrGh3jtsSCU6B1"
 release_year: "1988"
 featured_date: 2025-12-04
 ---

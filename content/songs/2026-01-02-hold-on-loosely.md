@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Southern Rock", "Arena Rock", "38 Special", "1980s", "AOR", "Relationship Wisdom"]
 
 # Song details
-spotify_id: "3S1tG7S8G2fv4rD7VV7uMz"
+spotify_id: "6i9dZZQWNB06HKsQYKTiPF"
 release_year: "1981"
 featured_date: 2026-01-02
 ---

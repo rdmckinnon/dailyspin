@@ -23,7 +23,7 @@ popularity: ["cult classic"]
 tags: ["Cult Classic", "Pop Rock", "Alternative Rock", "INXS", "1990s", "Love Song", "Michael Hutchence", "Underrated"]
 
 # Song details
-spotify_id: "5vHROdLXXOSLwMkPPWlmTZ"
+spotify_id: "6N81xlWzMaEYhjHry55OSI"
 release_year: "1992"
 featured_date: 2025-12-11
 ---

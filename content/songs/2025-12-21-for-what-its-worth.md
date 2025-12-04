@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Folk Rock", "Psychedelic Rock", "Buffalo Springfield", "1960s", "Protest Song", "Stephen Stills", "Neil Young"]
 
 # Song details
-spotify_id: "5Cp2yZsrMrqkWpT8xDuxcl"
+spotify_id: "1qRA5BS78u3gME0loMl9AA"
 release_year: "1967"
 featured_date: 2025-12-21
 ---

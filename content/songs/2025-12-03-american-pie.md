@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Folk Rock", "Soft Rock", "Don McLean", "1970s", "Epic", "Americana", "Sing-Along", "The Day The Music Died"]
 
 # Song details
-spotify_id: "1fDsrQ23eTAVFCGaQ4jVTb"
+spotify_id: "1fDsrQ23eTAVFElUMaf38X"
 release_year: "1971"
 featured_date: 2025-12-03
 ---

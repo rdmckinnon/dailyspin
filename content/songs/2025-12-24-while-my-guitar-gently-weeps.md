@@ -23,7 +23,7 @@ popularity: ["legendary"]
 tags: ["Legendary", "Rock", "Guitar Solo", "Prince", "George Harrison", "Tom Petty", "2000s", "Live Performance", "Rock Hall"]
 
 # Song details
-spotify_id: "2MWCiIz1i7Z8X6dYE4bqRs"
+spotify_id: "7DzktdAh3zTT5Li8vam9tt"
 release_year: "2004"
 featured_date: 2025-12-24
 ---

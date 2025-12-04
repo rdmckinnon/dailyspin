@@ -1,0 +1,67 @@
+{{ define "main" }}
+<section class="ds-wrap ds-section px-4">
+  <header class="ds-hero-slim text-center mb-5 pt-5">
+    <h1 class="mb-3" style="font-size: 3.5rem; letter-spacing: -0.02em;">ARTISTS</h1>
+    <p style="color: var(--ds-muted); font-size: 1.1rem;">Browse all {{ len .Pages }} artists in the archive</p>
+  </header>
+
+  {{/* Search */}}
+  <div class="mb-4" style="max-width: 400px; margin: 0 auto;">
+    <label class="ds-input" style="display: flex; align-items: center; gap: 0.75rem; background: transparent; border: 1px solid var(--ds-border); padding: 0.75rem 1rem; border-radius: 100px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="artist-search" type="search" placeholder="Search artists..." autocomplete="off" style="background: transparent; border: none; outline: none; color: var(--ds-fg); width: 100%; font-size: 0.95rem;" />
+    </label>
+  </div>
+
+  {{/* Artist Grid */}}
+  <div id="artist-grid" class="row g-3">
+    {{ range .Pages.ByTitle }}
+    <div class="col-6 col-md-4 col-lg-3 artist-item" data-name="{{ .Title | lower }}">
+      <a href="{{ .RelPermalink }}" class="d-block p-3 text-decoration-none" style="background: var(--ds-border); border-radius: 8px; transition: transform 0.2s, background 0.2s;">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--ds-bg); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: var(--ds-muted);">
+            {{ substr .Title 0 1 | upper }}
+          </div>
+          <div class="flex-grow-1 overflow-hidden">
+            <p class="mb-0 fw-bold" style="font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--ds-fg);">{{ .Title }}</p>
+            <p class="mb-0" style="font-size: 0.8rem; color: var(--ds-muted);">{{ len .Pages }} {{ if eq (len .Pages) 1 }}song{{ else }}songs{{ end }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+  <p id="no-results" style="display: none; text-align: center; color: var(--ds-muted); padding: 2rem;">No artists found.</p>
+</section>
+
+<style>
+  .artist-item a:hover {
+    background: rgba(255,255,255,0.1) !important;
+    transform: translateY(-2px);
+  }
+</style>
+
+<script>
+(function() {
+  const search = document.getElementById('artist-search');
+  const grid = document.getElementById('artist-grid');
+  const items = Array.from(grid.querySelectorAll('.artist-item'));
+  const noResults = document.getElementById('no-results');
+
+  search.addEventListener('input', () => {
+    const term = search.value.toLowerCase().trim();
+    let visible = 0;
+    items.forEach(item => {
+      const match = item.dataset.name.includes(term);
+      item.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    noResults.style.display = visible ? 'none' : 'block';
+  });
+})();
+</script>
+{{ end }}

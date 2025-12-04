@@ -23,7 +23,7 @@ popularity: ["cult classic"]
 tags: ["Cult Classic", "Acoustic Rock", "Singer-Songwriter", "Chris Cornell", "2000s", "Cover Song", "Prince", "Soundgarden"]
 
 # Song details
-spotify_id: "3MxEBPTK78f7h2RG89dKkF"
+spotify_id: "0tUELgOuOJ3KCsYMDDsNvD"
 release_year: "2007"
 featured_date: 2026-01-03
 ---

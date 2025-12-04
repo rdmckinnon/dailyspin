@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Hard Rock", "Power Ballad", "Whitesnake", "1980s", "Love Song", "David Coverdale"]
 
 # Song details
-spotify_id: "31GptoMzXRYmCJrWZfXq5v"
+spotify_id: "0IhUdJRoolbYeEMPL59XPm"
 release_year: "1987"
 featured_date: 2025-12-10
 ---

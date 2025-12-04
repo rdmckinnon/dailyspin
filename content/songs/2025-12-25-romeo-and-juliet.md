@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Rock", "Soft Rock", "Dire Straits", "1980s", "Love Song", "Mark Knopfler", "Ballad"]
 
 # Song details
-spotify_id: "3zSbNb4BKDMM0b51JdxlMo"
+spotify_id: "57MflfPN3ObQQAQtPUp0WF"
 release_year: "1980"
 featured_date: 2025-12-25
 ---

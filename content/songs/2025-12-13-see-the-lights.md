@@ -23,7 +23,7 @@ popularity: ["fan favorite"]
 tags: ["Fan Favorite", "New Wave", "Arena Rock", "Simple Minds", "1990s", "Anthemic", "Jim Kerr"]
 
 # Song details
-spotify_id: "1JvKfv6EMakMRgBL1pHNEV"
+spotify_id: "00Jk0pSoXt92IT9yYNaFqt"
 release_year: "1991"
 featured_date: 2025-12-13
 ---

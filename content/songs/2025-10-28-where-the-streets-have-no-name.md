@@ -23,6 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Alternative Rock", "Post-Punk", "U2", "1980s", "Epic", "Spiritual", "The Joshua Tree", "Anthem"]
 
 # Song details
+spotify_id: "2lirYBwSxwISX3Fa6MeBWj"
 release_year: "1987"
 featured_date: 2025-09-09
 ---

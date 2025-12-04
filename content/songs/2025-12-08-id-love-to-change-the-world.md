@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Blues Rock", "Classic Rock", "Ten Years After", "1970s", "Social Commentary", "Acoustic Riff", "Alvin Lee"]
 
 # Song details
-spotify_id: "4GkKixLhoLFVk5ww7Ll2mX"
+spotify_id: "7n3WO6ESKS1uCI9fgkGs66"
 release_year: "1971"
 featured_date: 2025-12-08
 ---

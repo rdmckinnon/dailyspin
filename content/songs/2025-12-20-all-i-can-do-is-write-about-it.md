@@ -23,7 +23,7 @@ popularity: ["deep cut"]
 tags: ["Deep Cut", "Southern Rock", "Country Rock", "Lynyrd Skynyrd", "1970s", "Environmental", "Ronnie Van Zant", "Ballad"]
 
 # Song details
-spotify_id: "1vVgHQZ3qDRZDnYuJkP3Nw"
+spotify_id: "1xGkvw8sTnDujVFcMN6zvc"
 release_year: "1976"
 featured_date: 2025-12-20
 ---

@@ -23,7 +23,7 @@ popularity: ["deep cut"]
 tags: ["Deep Cut", "Alternative Rock", "Art Pop", "Tears For Fears", "1990s", "Title Track", "Atmospheric"]
 
 # Song details
-spotify_id: "0nQodOoFCUqPJu4QXQNSQA"
+spotify_id: "5Eg2fJOjmEQ6KhMReEnNmD"
 release_year: "1993"
 featured_date: 2025-12-18
 ---

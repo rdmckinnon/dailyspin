@@ -23,7 +23,7 @@ popularity: ["classic"]
 tags: ["Classic", "Rock", "Power Ballad", "Meat Loaf", "1990s", "Jim Steinman", "Epic", "Theatrical"]
 
 # Song details
-spotify_id: "3DhZ2FmXPgPi7Z9tCc6kVF"
+spotify_id: "391CwgcBxvUHmEKda2b5In"
 release_year: "1993"
 featured_date: 2025-12-28
 ---

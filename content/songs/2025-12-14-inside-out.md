@@ -23,7 +23,7 @@ popularity: ["deep cut"]
 tags: ["Deep Cut", "Pop Rock", "Soft Rock", "Phil Collins", "1980s", "Introspective", "But Seriously"]
 
 # Song details
-spotify_id: "2wJugKnmLaoVwGOMh8EC53"
+spotify_id: "58gTIXqsg6sVmAscK3LpKx"
 release_year: "1989"
 featured_date: 2025-12-14
 ---
