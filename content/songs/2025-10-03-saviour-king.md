@@ -1,69 +1,36 @@
 ---
+draft: true
 title: "Saviour King"
-description: "Hillsong United's powerful worship anthem celebrating Christ's sovereignty"
-summary: "A modern worship classic that combines contemporary production with timeless theological themes"
-date: 2025-10-03T03:54:05-05:00
-lastmod: 2025-12-05T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Saviour King - Hillsong United | DailySpin.fm" 
-  description: "Hillsong United's Saviour King exemplifies contemporary worship music at its most powerful"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-10-03
 artists: ["Hillsong United"]
-albums: ["All of the Above"]
-genres: ["Contemporary Christian", "Worship"]
-moods: ["Worshipful", "Triumphant", "Reverent"]
-years: ["2007"]
-popularity: ["worship classic"]
-tags: ["Classic", "Contemporary Christian", "Worship", "Hillsong United", "2000s", "Modern Worship", "Triumphant", "Church Music"]
-
-# Song details
+album: "All of the Above"
 release_year: "2007"
-featured_date: 2025-09-09
+spotify_id: "3bCtVbnjKgJdGnXqIWvsHo"
+genres: ["contemporary christian", "worship"]
+duration: "6:10"
+description: "Australian megachurch rock that sounds exactly like what it is—and somehow that's not a criticism."
 ---
 
-## Background
+There's a moment in a Hillsong song—this one, most of them—where the band drops out and it's just thousands of voices singing in a stadium. No irony. No distance. Just belief, loud and unashamed.
 
-From Hillsong United's 2007 album *All of the Above*, "Saviour King" became one of the defining worship songs of the late 2000s. Written by Marty Sampson and Mia Fieldes, the song combines contemporary rock production with traditional Christian theology, creating a bridge between modern musical sensibilities and ancient faith traditions.
+You can roll your eyes at it. A lot of people do. But try standing in a room when it happens and not feeling *something*.
 
-The track emerged from Hillsong Church's vibrant worship culture in Sydney, Australia, and quickly spread to churches worldwide. Its success helped establish Hillsong United as one of the most influential contemporary worship bands globally.
+[YOUR MEMORY HERE - a worship moment that hit you, or didn't, and why]
 
-## Why It's Good
+<!--more-->
 
-"Saviour King" succeeds through its perfect balance of musical power and theological depth. The arrangement builds from contemplative verses to explosive choruses that invite congregational participation, while the lyrics maintain biblical accuracy without sacrificing contemporary relevance.
+Hillsong United came out of Sydney, Australia, and by the mid-2000s they'd become the dominant force in contemporary worship music. "Saviour King" is from *All of the Above*, released in 2007, and it's a perfect example of their formula: build slow, crescendo big, invite everyone to join in.
 
-The song's genius lies in its accessibility - complex theological concepts are presented through memorable melodies and relatable language. This approach allows both new believers and mature Christians to connect with the message while creating an atmosphere conducive to corporate worship.
+The formula works because it's designed to work. Marty Sampson and Mia Fieldes wrote this song knowing exactly how it would function in a service—the quiet moments for reflection, the explosive choruses for communal release. It's engineered for its purpose, and there's no shame in that. A hammer doesn't need to be subtle.
 
-{{< lyrics-callout style="centered" artist="Hillsong United" song="Saviour King" >}}
-Let now the weak say I have strength  
-By the spirit of power  
-That raised Christ from the dead
-{{< /lyrics-callout >}}
+The lyrics aren't poetry. They're declaration. Statements of faith designed to be sung by people who believe them, or want to believe them, or are trying to figure out what they believe. The repetition isn't lazy—it's liturgical. Say it enough times and maybe it becomes true. Maybe that's the whole point.
 
-The production incorporates modern rock elements while maintaining the reverent atmosphere essential for worship music, creating a sound that appeals to contemporary audiences.
+The production is slick—too slick for some tastes. Electric guitars with the right amount of edge, drums that punch without threatening, keyboards that soar on cue. It sounds like a million dollars because it probably cost that much.
 
-## Standout Lyrics
+But here's the thing: cynicism only gets you so far. At some point you have to reckon with the fact that millions of people find genuine meaning in this music. They raise their hands. They close their eyes. They sing about a king who saves, and for those minutes, they feel saved.
 
-The song's power lies in its declaration of Christ's ultimate authority and the joy found in worshiping the eternal King.
+That's not nothing.
 
-{{< lyrics-callout style="inline" >}}
-You are the Saviour King  
-You are the Saviour King
-{{< /lyrics-callout >}}
+Whether you believe in the theology or not, you have to respect the craft. And maybe, if you're honest, admit that the feeling they're chasing isn't so different from what everyone's chasing.
 
-[Listen on Spotify](https://open.spotify.com/search/hillsong%20united%20saviour%20king)
-
----
-
-**Featured on:** September 25, 2025  
-**Artist:** Hillsong United  
-**Album:** All of the Above  
-**Genre:** Contemporary Christian, Worship  
-**Mood:** Worshipful, Triumphant, Reverent  
-**Popularity:** Worship Classic  
-**Your Play Count:** 164 plays
+Something bigger than themselves.

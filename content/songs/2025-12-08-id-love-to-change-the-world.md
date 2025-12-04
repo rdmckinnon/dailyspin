@@ -4,7 +4,7 @@ description: "Ten Years After's unexpected hit that paired social commentary wit
 summary: "A blues-rock anthem that channeled early-70s disillusionment into an enduring classic"
 date: 2025-12-08T08:00:00-05:00
 lastmod: 2025-12-08T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

@@ -1,73 +1,42 @@
 ---
+draft: true
 title: "Simple Man"
-description: "Lynyrd Skynyrd's heartfelt ballad about wisdom, values, and living with integrity"
-summary: "A timeless Southern rock classic that offers life advice wrapped in beautiful melody and emotion"
-date: 2025-11-18T22:32:41-05:00
-lastmod: 2025-11-02T10:00:00-04:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Simple Man - Lynyrd Skynyrd | DailySpin.fm" 
-  description: "Lynyrd Skynyrd's Simple Man remains one of Southern rock's most enduring and meaningful ballads"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-11-18
 artists: ["Lynyrd Skynyrd"]
-albums: ["(Pronounced 'Lĕh-'nérd 'Skin-'nérd)"]
-genres: ["Southern Rock", "Classic Rock"]
-moods: ["Reflective", "Heartfelt", "Wise"]
-years: ["1973"]
-popularity: ["classic"]
-tags: ["Classic", "Southern Rock", "Classic Rock", "Lynyrd Skynyrd", "1970s", "Ballad", "Wisdom", "Family Values"]
-
-# Song details
-spotify_id: "2OKpPObai8zENmFKSy0C7M"
+album: "Pronounced 'Lĕh-'nérd 'Skin-'nérd"
 release_year: "1973"
-featured_date: 2025-09-09
+spotify_id: "2OKpPObai8zENmFKSy0C7M"
+genres: ["southern rock", "classic rock"]
+duration: "5:57"
+description: "A mother's advice that took six minutes to say and a lifetime to understand."
 ---
 
-## Background
+"Mama told me when I was young, come sit beside me, my only son."
 
-From Lynyrd Skynyrd's 1973 debut album *(Pronounced 'Lĕh-'nérd 'Skin-'nérd)*, "Simple Man" showcases the band's softer, more contemplative side. Written by Ronnie Van Zant and Gary Rossington, the song was inspired by Van Zant's mother's advice and reflects the traditional Southern values that influenced the band's worldview.
+Everyone has a song their mother should have sung them. This is the one mine did. The one that still calls me back to who I'm supposed to be when I've wandered too far.
 
-The track stands apart from Skynyrd's harder rock material, featuring acoustic guitar and Van Zant's most emotionally vulnerable vocal performance. Its message of simple living and moral integrity resonated with audiences looking for authenticity in an increasingly complex world.
+[YOUR MEMORY HERE - the advice you got that you didn't understand until you needed it]
 
-## Why It's Good
+<!--more-->
 
-"Simple Man" succeeds through its genuine emotion and timeless wisdom. Van Zant's vocals carry the weight of lived experience, delivering the song's life lessons with both tenderness and authority. The acoustic guitar work provides a gentle foundation that allows the message to take center stage.
+1973. Lynyrd Skynyrd's debut album with a name nobody could pronounce and songs everybody could feel. Ronnie Van Zant was twenty-four years old, writing like a man who'd already lived several lifetimes. Maybe he knew something. He'd be dead in four years.
 
-The song's genius lies in its universal appeal - the advice about finding love, understanding, and living simply speaks to fundamental human needs that transcend generation and geography. This timeless quality has made it one of Southern rock's most enduring songs.
+"Simple Man" is a mother's monologue set to music. Van Zant and Gary Rossington wrote it as a ballad of guidance, a letter from parent to child, a set of instructions for navigating a world that specializes in complication.
 
-{{< lyrics-callout style="centered" artist="Lynyrd Skynyrd" song="Simple Man" >}}
-Mama told me when I was young  
-Come sit beside me my only son  
-And listen closely to what I say  
-And if you do this it'll help you some sunny day
-{{< /lyrics-callout >}}
+The advice is deceptively simple: forget your lust for rich man's gold. Find a woman who'll love you. Be something you can love and understand. Don't live too fast. Trouble will come, and it will pass.
 
-The production maintains an intimate, almost conversational feel that makes listeners feel like they're receiving personal advice from a trusted friend or family member.
+Try actually doing any of that. I dare you.
 
-## Standout Lyrics
+The acoustic guitar intro is one of the most recognizable in rock. Soft, deliberate, patient—like a hand on your shoulder before important news. The band builds slowly, knowing the song needs room to breathe, knowing the message won't land if you're rushing to deliver it.
 
-The song's power lies in its heartfelt life advice and the wisdom that comes from understanding what truly matters.
+Van Zant's voice on this track is different from the rest of Skynyrd's catalog. Vulnerable. Tender. He's not posturing. He's remembering. He's passing something along that was passed to him.
 
-{{< lyrics-callout style="inline" >}}
-And be a simple kind of man  
-Oh, be something you love and understand  
-Baby be a simple kind of man  
-Oh, won't you do this for me, son, if you can
-{{< /lyrics-callout >}}
+"And be a simple kind of man. Be something you love and understand."
 
-[Listen on Spotify](https://open.spotify.com/search/lynyrd%20skynyrd%20simple%20man)
+In a culture obsessed with complexity, with optimization, with more and faster and better—this song is a radical act of resistance. It suggests that enough might actually be enough. That wanting less might mean having more.
 
----
+I don't always believe it. But I always need to hear it.
 
-**Featured on:** October 15, 2025  
-**Artist:** Lynyrd Skynyrd  
-**Album:** (Pronounced 'Lĕh-'nérd 'Skin-'nérd)  
-**Genre:** Southern Rock, Classic Rock  
-**Mood:** Reflective, Heartfelt, Wise  
-**Popularity:** Classic  
-**Your Play Count:** 128 plays
+Thanks, Mama. Thanks, Ronnie.
+
+Some lessons take a while to sink in.

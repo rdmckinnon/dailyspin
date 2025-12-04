@@ -4,7 +4,7 @@ description: "Lynyrd Skynyrd's mournful elegy for a disappearing Southern landsc
 summary: "A beautiful, melancholy meditation on environmental loss and the death of a way of life"
 date: 2025-12-20T08:00:00-05:00
 lastmod: 2025-12-20T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

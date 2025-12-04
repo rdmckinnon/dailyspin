@@ -4,7 +4,7 @@ description: "Don McLean's epic chronicle of rock and roll history disguised as 
 summary: "An eight-minute journey through American music's lost innocence that became a generational touchstone"
 date: 2025-12-03T08:00:00-05:00
 lastmod: 2025-12-03T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

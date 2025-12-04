@@ -4,7 +4,7 @@ description: "Pink Floyd's sprawling tribute to lost founding member Syd Barrett
 summary: "A twenty-six minute elegy split across an album that mourns a friend lost to mental illness"
 date: 2025-12-30T08:00:00-05:00
 lastmod: 2025-12-30T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

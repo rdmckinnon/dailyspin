@@ -4,7 +4,7 @@ description: "Buffalo Springfield's protest anthem that captured the unease of a
 summary: "A deceptively gentle song about civil unrest that became the sound of 1960s dissent"
 date: 2025-12-21T08:00:00-05:00
 lastmod: 2025-12-21T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

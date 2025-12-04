@@ -10,7 +10,7 @@
   <div class="header-bar"></div>
   {{ end -}}
 
-  <header class="navbar navbar-expand-lg">
+  <header class="navbar navbar-expand-lg ds-navbar">
     {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
       {{ else -}}
@@ -18,8 +18,9 @@
         {{ end -}}
 
         <!-- Site title -->
-        <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}"
-          style="font-family: var(--ds-font-brand); font-size: 1.5rem;">{{ .Site.Title }}</a>
+        <a class="navbar-brand ds-brand" href="{{ relLangURL "" }}">
+          <span class="ds-brand-daily">Daily</span><span class="ds-brand-spin">Spin</span><span class="ds-brand-dot">.</span><span class="ds-brand-fm">fm</span>
+        </a>
 
         <!-- FlexSearch mobile -->
         {{ partial "main/showFlexSearch" . }}

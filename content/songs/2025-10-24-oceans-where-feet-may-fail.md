@@ -1,72 +1,36 @@
 ---
+draft: true
 title: "Oceans (Where Feet May Fail)"
-description: "Hillsong United's modern worship masterpiece about faith and trust in uncertainty"
-summary: "A powerful worship anthem that uses ocean imagery to explore stepping into the unknown with faith"
-date: 2025-10-24T11:56:55-05:00
-lastmod: 2025-12-08T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Oceans (Where Feet May Fail) - Hillsong United | DailySpin.fm" 
-  description: "Hillsong United's Oceans became one of the most influential worship songs of the 2010s"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-10-24
 artists: ["Hillsong United"]
-albums: ["Zion"]
-genres: ["Contemporary Christian", "Worship"]
-moods: ["Contemplative", "Faithful", "Oceanic"]
-years: ["2013"]
-popularity: ["modern worship classic"]
-tags: ["Classic", "Contemporary Christian", "Worship", "Hillsong United", "2010s", "Faith", "Contemplative", "Modern Worship"]
-
-# Song details
+album: "Zion"
 release_year: "2013"
-featured_date: 2025-09-09
+spotify_id: "2tyj6D0iFo6dkfsMjyRcgR"
+genres: ["contemporary christian", "worship"]
+duration: "8:56"
+description: "Nine minutes of stepping into water you can't see the bottom of."
 ---
 
-## Background
+"Spirit lead me where my trust is without borders."
 
-From Hillsong United's 2013 album *Zion*, "Oceans (Where Feet May Fail)" became one of the most influential worship songs of the decade. Written by Joel Houston, Matt Crocker, and Salomon Ligthelm, the song uses oceanic imagery to explore themes of faith, trust, and stepping into the unknown with God.
+That's the line people tattoo on their arms. The line they pray when they don't know what else to pray. The line that sounds like surrender and sounds like courage and sounds like the edge of something you can't take back.
 
-The track's success transcended traditional worship music boundaries, reaching mainstream Christian radio and influencing worship styles in churches worldwide. Its contemplative approach marked a shift toward more intimate, reflective worship music.
+[YOUR MEMORY HERE - a moment when you stepped out into the unknown, whether faith-based or not]
 
-## Why It's Good
+<!--more-->
 
-"Oceans" succeeds through its perfect marriage of vulnerability and strength. The sparse arrangement creates space for contemplation, while the gradual build mirrors the song's theme of stepping deeper into faith. Joel Houston's vocals convey both uncertainty and determination, capturing the essence of faithful trust.
+Hillsong United released "Oceans" on *Zion* in 2013, and it became inescapable in churches worldwide. Nine minutes long, which feels like a commitment. You don't play this song lightly. You play it when you mean it.
 
-The song's genius lies in its oceanic metaphor - the image of walking on water resonates with both biblical narrative and universal human experience of facing the unknown. This layered meaning creates multiple entry points for listeners to connect with the message.
+The song references Peter stepping out of the boat to walk on water toward Jesus. You know the story: he does fine until he looks down, sees the waves, gets scared, starts sinking. The point isn't that he failed. The point is that he got out of the boat in the first place.
 
-{{< lyrics-callout style="centered" artist="Hillsong United" song="Oceans (Where Feet May Fail)" >}}
-You call me out upon the waters  
-The great unknown where feet may fail  
-And there I find You in the mystery  
-In oceans deep  
-My faith will stand
-{{< /lyrics-callout >}}
+That's what the song's about. Getting out of the boat. Stepping where your feet may fail. Trusting that something will catch you even when logic says you'll drown.
 
-The production maintains a sense of vastness and depth that mirrors the ocean imagery, creating an immersive worship experience.
+The arrangement starts sparse—just voice and piano, intimate as a whispered prayer. Then it builds. Slowly, deliberately. Each instrument entering like another step into deeper water. By the time the bridge hits, it's a full swell, an ocean of sound that matches the lyric's emotional weight.
 
-## Standout Lyrics
+Joel Houston and Matt Crocker wrote something that feels genuinely risky. "Take me deeper than my feet could ever wander." That's not a safe prayer. That's asking for trouble. That's requesting exactly the kind of situation where you'd have no choice but to rely on faith because there's nothing else to hold onto.
 
-The song's power lies in its honest exploration of faith in uncertainty and the willingness to trust beyond what we can see.
+The production creates space. Big, reverberant space that sounds like being alone in a cathedral or lost at sea. It mirrors the vulnerability of the lyrics—vast and terrifying and somehow beautiful.
 
-{{< lyrics-callout style="inline" >}}
-Spirit lead me where my trust is without borders  
-Let me walk upon the waters  
-Wherever You would call me
-{{< /lyrics-callout >}}
+Whether you share the theology or not, the feeling is universal. Everyone has stood at the edge of something and wondered if they should jump. Everyone has chosen between the safety of the boat and the possibility of the water.
 
-[Listen on Spotify](https://open.spotify.com/search/hillsong%20united%20oceans%20where%20feet%20may%20fail)
-
----
-
-**Featured on:** October 12, 2025  
-**Artist:** Hillsong United  
-**Album:** Zion  
-**Genre:** Contemporary Christian, Worship  
-**Mood:** Contemplative, Faithful, Oceanic  
-**Popularity:** Modern Worship Classic  
-**Your Play Count:** 132 plays
+Some songs are about certainty. This one's about choosing to move forward without any.

@@ -1,69 +1,36 @@
 ---
-title: "Rocket Man (I Think It's Going to Be a Long, Long Time)"
-description: "Elton John's space-age masterpiece about isolation and longing"
-summary: "A timeless exploration of loneliness wrapped in soaring melodies and Bernie Taupin's evocative lyrics"
-date: 2025-11-05T09:48:22-05:00
-lastmod: 2025-09-09T16:02:03-04:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Rocket Man - Elton John | DailySpin.fm" 
-  description: "Why Elton John's Rocket Man remains a masterpiece of loneliness and longing 50+ years later"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+draft: true
+title: "Rocket Man"
+date: 2025-11-05
 artists: ["Elton John"]
-albums: ["Honky Château"]
-genres: ["Pop Rock", "Glam Rock"]
-moods: ["Melancholic", "Reflective", "Dreamy"]
-years: ["1972"]
-popularity: ["classic"]
-tags: ["Classic", "Pop Rock", "Glam Rock", "1970s", "Piano Ballad"]
-
-# Song details
-spotify_id: "3gdewACMIVMEWVbyb8O9sY"
+album: "Honky Château"
 release_year: "1972"
-featured_date: 2025-09-09
+spotify_id: "3gdewACMIVMEWVbyb8O9sY"
+genres: ["pop rock", "glam rock"]
+duration: "4:41"
+description: "The loneliest commute ever written, wrapped in piano and stars."
 ---
 
-## Background
+"And I think it's gonna be a long, long time."
 
-Released in 1972 as part of the *Honky Château* album, "Rocket Man" emerged during Elton John's most creatively fertile period. Bernie Taupin's lyrics were inspired by the short story "The Rocket Man" by Ray Bradbury, but transformed the sci-fi premise into something deeply human. The song came together during sessions at the Château d'Hérouville in France, where Elton's melodic genius met Taupin's poetic vision.
+Bernie Taupin wrote about an astronaut. Elton sang about everyone who ever felt like they were living someone else's life. The space suit was just a costume for the isolation we all carry around.
 
-The track was revolutionary for its time—a space-age ballad that used the metaphor of an astronaut to explore themes of isolation, duty, and the cost of ambition. It perfectly captured the post-Apollo era's mix of technological wonder and existential uncertainty.
+[YOUR MEMORY HERE - a moment when you felt far from home, even if you were technically standing in it]
 
-## Why It's Good
+<!--more-->
 
-"Rocket Man" is a masterclass in emotional storytelling through melody and arrangement. Elton's piano work builds from intimate whispers to soaring crescendos, mirroring the protagonist's journey from Earth to the void of space. The production layers strings and synthesizers with restraint, creating an otherworldly atmosphere without overwhelming the song's human core.
+The song dropped in 1972 on *Honky Château*, recorded in a French castle because of course it was. This was peak Elton—when he could turn anything Bernie handed him into something that made you feel both massive and microscopic at the same time.
 
-What makes it transcendent is how it uses the space travel metaphor to capture universal feelings of disconnection. The protagonist isn't just physically distant from Earth—he's emotionally adrift, going through the motions of a job that takes him away from everything he loves. It's simultaneously about astronauts, traveling musicians, and anyone who feels isolated by their circumstances.
+"It's just a job five days a week." That line destroys me every time. Not because space travel is boring, but because it reduces the most extraordinary experience imaginable to routine. To commute. The rocket man isn't living the dream. He's showing up for work. He's us.
 
-The vocal performance is pure Elton John magic: tender in the verses, powerful in the chorus, always serving the emotional truth of the song.
+The production does something remarkable: it makes space feel small. Intimate. The synthesizers create atmosphere, sure, but Elton's piano keeps it grounded. Human. The whole song sounds like it's floating, untethered, which is exactly how isolation feels.
 
-## Standout Lyrics
+"I'm not the man they think I am at home." There it is. The confession hidden in plain sight. We all have a public version and a private truth. Most of us never get called out on the distance between them. The rocket man does, every time he comes home to a wife who married someone else. Someone who stayed.
 
-The song's emotional core lies in lines that capture the protagonist's resignation and longing, particularly the contrast between the mundane nature of space travel as "just a job" and the profound loneliness it creates.
+Taupin borrowed from Bradbury's short story, but he made it universal. This isn't science fiction. This is Tuesday. This is leaving before the sun comes up and missing your kid's bedtime. This is the cost of ambition disguised as necessity.
 
-The chorus delivers one of pop music's most memorable hooks:
+The melody climbs and climbs and then just... floats. Suspended. Like the moment before a choice you can't take back. Elton's voice cracks in all the right places, not because he's showing off, but because the song demands it. Some feelings can't survive pristine delivery.
 
-{{< lyrics-callout style="centered" artist="Elton John" song="Rocket Man" >}}
-And I think it's gonna be a long, long time  
-'Til touchdown brings me 'round again to find  
-I'm not the man they think I am at home  
-Oh, no, no, no  
-I'm a rocket man  
-Rocket man, burning out his fuse up here alone
-{{< /lyrics-callout >}}
+Fifty years later, we're all still burning out our fuses up here alone. The rocket never lands. The distance never shrinks.
 
-[Listen on Spotify](https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY)
-
----
-
-**Featured on:** September 9, 2025  
-**Artist:** Elton John  
-**Album:** Honky Château  
-**Genre:** Pop Rock, Glam Rock  
-**Mood:** Melancholic, Reflective, Dreamy  
-**Popularity:** Classic
+That's not tragedy. That's just gravity.

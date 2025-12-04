@@ -4,7 +4,7 @@ description: "Counting Crows' sprawling debut single that captured 90s alienatio
 summary: "Adam Duritz's stream-of-consciousness masterpiece about outsiders and the gravity of small-town nights"
 date: 2026-01-05T08:00:00-05:00
 lastmod: 2026-01-05T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

@@ -4,7 +4,7 @@ description: "Dave Matthews Band's sprawling jam-band epic about mortality, memo
 summary: "A nine-minute journey through philosophical territory that showcases DMB's improvisational mastery"
 date: 2025-12-05T08:00:00-05:00
 lastmod: 2025-12-05T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

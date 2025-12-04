@@ -4,7 +4,7 @@ description: "Tears For Fears' return to form with a sophisticated meditation on
 summary: "A layered, atmospheric track that proved the duo still had creative depths to explore"
 date: 2025-12-18T08:00:00-05:00
 lastmod: 2025-12-18T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

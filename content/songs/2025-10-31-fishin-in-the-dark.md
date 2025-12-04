@@ -1,70 +1,34 @@
 ---
+draft: true
 title: "Fishin' in the Dark"
-description: "Nitty Gritty Dirt Band's romantic country anthem about simple pleasures and love"
-summary: "A perfectly crafted country love song celebrating intimate moments and simple romantic pleasures"
-date: 2025-10-31T07:25:37-05:00
-lastmod: 2025-12-02T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Fishin' in the Dark - Nitty Gritty Dirt Band | DailySpin.fm" 
-  description: "Nitty Gritty Dirt Band's Fishin' in the Dark became a beloved country standard for romantic evenings"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-10-31
 artists: ["Nitty Gritty Dirt Band"]
-albums: ["Hold On"]
-genres: ["Country", "Country Pop"]
-moods: ["Romantic", "Laid-back", "Intimate"]
-years: ["1987"]
-popularity: ["country standard"]
-tags: ["Classic", "Country", "Country Pop", "Nitty Gritty Dirt Band", "1980s", "Love Song", "Romantic", "Wedding Song"]
-
-# Song details
+album: "Hold On"
 release_year: "1987"
-featured_date: 2025-09-09
+spotify_id: "3FmAUR4SPWa3P1KyDr3rUf"
+genres: ["country", "country pop"]
+duration: "3:03"
+description: "A country love song about fishing that's not really about fishing at all."
 ---
 
-## Background
+There's no fish in this song. Let's get that out of the way right now.
 
-From the Nitty Gritty Dirt Band's 1987 album *Hold On*, "Fishin' in the Dark" became one of country music's most beloved romantic standards. Written by Wendy Waldman and Jim Photoglo, the song captures the magic of simple romantic moments under the stars, using fishing as a metaphor for intimate connection.
+"Fishin' in the Dark" is a metaphor, and not a particularly subtle one. A man and a woman, a blanket, the stars, cool grass, and an activity that definitely does not require a tackle box. The Nitty Gritty Dirt Band hit number one with a three-minute innuendo in 1987, and nobody seemed to mind.
 
-The track became the band's biggest hit in years, reaching #1 on the country charts and establishing itself as a wedding and slow-dance favorite. Its success proved that authentic country storytelling and romantic imagery could still resonate with mainstream audiences.
+[YOUR MEMORY HERE - a summer night, a certain someone, whatever you want to call what happened next]
 
-## Why It's Good
+<!--more-->
 
-"Fishin' in the Dark" succeeds through its perfect blend of romantic imagery and country authenticity. The song creates a vivid scene of nighttime romance by the water, with details specific enough to feel real yet universal enough for anyone to imagine themselves in the scenario.
+The song works because it commits to the bit. Wendy Waldman and Jim Photoglo wrote it with just enough plausible deniability that it could play on country radio without causing an FCC investigation. "You and me go fishin' in the dark, lying on our backs and counting the stars." Sure. Fishing. Everyone's doing that at night. In the grass. Together.
 
-The musical arrangement supports the intimate mood with gentle acoustic guitar, subtle harmonies, and a relaxed rhythm that mirrors a peaceful evening by the water. The band's performance conveys genuine warmth and affection.
+But beyond the wink-wink nudge-nudge, there's something genuinely sweet here. The details paint a picture: wind in her hair, fireflies dancing, the moon coming up. It's romantic in that old-fashioned way, where romance means actually spending time with someone instead of just swiping right.
 
-{{< lyrics-callout style="centered" artist="Nitty Gritty Dirt Band" song="Fishin' in the Dark" >}}
-You and me go fishin' in the dark  
-Lying on our backs and counting the stars  
-Where the cool grass grows
-{{< /lyrics-callout >}}
+The production is pure late-eighties country—clean, bright, designed for radio. Acoustic guitars jangle pleasantly. The harmonies are tight without being showy. The whole thing feels like a warm summer evening sounds.
 
-The production maintains a warm, organic feel that perfectly captures the song's themes of natural romance and simple country pleasures.
+"Lazy yellow moon coming up tonight, shining through the trees." That's not just scene-setting. That's memory. That's the kind of specific detail that only shows up when someone is genuinely nostalgic for something that actually happened.
 
-## Standout Lyrics
+The song has become a wedding staple, a first dance favorite, a late-night request at every country bar in America. It endures because it captures something real: the simple pleasure of being alone with someone you love, away from everything, under the stars.
 
-The song's appeal lies in its vivid imagery of romantic evenings and the celebration of simple, intimate moments together.
+The fish don't matter. They never did.
 
-{{< lyrics-callout style="inline" >}}
-I love to watch the wind in your hair  
-The moon coming up and the fireflies dancing in the air  
-Baby, I don't care
-{{< /lyrics-callout >}}
-
-[Listen on Spotify](https://open.spotify.com/search/nitty%20gritty%20dirt%20band%20fishin%20in%20the%20dark)
-
----
-
-**Featured on:** October 25, 2025  
-**Artist:** Nitty Gritty Dirt Band  
-**Album:** Hold On  
-**Genre:** Country, Country Pop  
-**Mood:** Romantic, Laid-back, Intimate  
-**Popularity:** Country Standard  
-**Your Play Count:** 125 plays
+What matters is who you're not catching them with.

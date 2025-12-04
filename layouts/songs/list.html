@@ -30,9 +30,12 @@
 {{/* Get recent songs (last 5) */}}
 {{ $recentSongs := first 5 .Pages }}
 
-{{/* Random featured song */}}
-{{ $randomIndex := mod (now.Unix) $total }}
-{{ $featuredSong := index .Pages (int $randomIndex) }}
+{{/* Random featured song - guard against empty pages */}}
+{{ $featuredSong := false }}
+{{ if gt $total 0 }}
+  {{ $randomIndex := mod (now.Unix) $total }}
+  {{ $featuredSong = index .Pages (int $randomIndex) }}
+{{ end }}
 
 <section class="ds-wrap ds-section px-4">
   <header class="ds-hero-slim text-center mb-4 pt-5">
@@ -66,9 +69,9 @@
           {{ range first 2 .Params.genres }}
           <span class="ds-pill" style="background: var(--ds-border); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; text-transform: uppercase;">{{ . }}</span>
           {{ end }}
-          {{ with first 1 .Params.popularity }}
-          <span class="ds-pill" style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; text-transform: uppercase;">{{ index $.Params.popularity 0 }}</span>
-          {{ end }}
+          {{ with .Params.popularity }}{{ if reflect.IsSlice . }}{{ with index . 0 }}
+          <span class="ds-pill" style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; text-transform: uppercase;">{{ . }}</span>
+          {{ end }}{{ end }}{{ end }}
         </div>
       </div>
       <a href="{{ .RelPermalink }}" class="btn" style="background: var(--ds-fg); color: var(--ds-bg); padding: 0.75rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; white-space: nowrap;">Listen Now</a>
@@ -206,10 +209,10 @@
     {{ range $index, $page := $pages }}
     {{ with $page }}
     {{ $title := .Title }}
-    {{ $artists := delimit (.Params.artists) ", " }}
-    {{ $genres := delimit (.Params.genres) ", " }}
-    {{ $moods := delimit (.Params.moods) ", " }}
-    {{ $tags := delimit (.Params.tags) ", " }}
+    {{ $artists := "" }}{{ with .Params.artists }}{{ $artists = delimit . ", " }}{{ end }}
+    {{ $genres := "" }}{{ with .Params.genres }}{{ $genres = delimit . ", " }}{{ end }}
+    {{ $moods := "" }}{{ with .Params.moods }}{{ $moods = delimit . ", " }}{{ end }}
+    {{ $tags := "" }}{{ with .Params.tags }}{{ $tags = delimit . ", " }}{{ end }}
     {{ $year := .Params.release_year }}
     {{ $decade := "" }}
     {{ with $year }}{{ $decade = printf "%s0s" (substr (string .) 0 3) }}{{ end }}

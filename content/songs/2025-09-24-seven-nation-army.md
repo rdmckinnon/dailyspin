@@ -1,70 +1,34 @@
 ---
+draft: true
 title: "Seven Nation Army"
-description: "The White Stripes' minimalist masterpiece with one of rock's most recognizable riffs"
-summary: "A garage rock anthem that proves sometimes the simplest ideas create the most powerful music"
-date: 2025-09-24T16:24:40-05:00
-lastmod: 2025-11-14T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Seven Nation Army - The White Stripes | DailySpin.fm" 
-  description: "The White Stripes' Seven Nation Army created one of the most iconic riffs in modern rock history"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-09-24
 artists: ["The White Stripes"]
-albums: ["Elephant"]
-genres: ["Alternative Rock", "Garage Rock"]
-moods: ["Powerful", "Driving", "Hypnotic"]
-years: ["2003"]
-popularity: ["modern classic"]
-tags: ["Classic", "Alternative Rock", "Garage Rock", "The White Stripes", "2000s", "Iconic Riff", "Minimalist", "Grammy Winner"]
-
-# Song details
-spotify_id: "3dPQuX8Gs42Y7b454ybpMR"
+album: "Elephant"
 release_year: "2003"
-featured_date: 2025-09-09
+spotify_id: "3dPQuX8Gs42Y7b454ybpMR"
+genres: ["alternative rock", "garage rock"]
+duration: "3:52"
+description: "Seven notes that conquered every stadium on earth. Jack White didn't even need a bass player."
 ---
 
-## Background
+Duh-duh-duh-duh-duh-duh-duh.
 
-From The White Stripes' 2003 album *Elephant*, "Seven Nation Army" became one of the most recognizable songs of the 2000s. Written by Jack White, the song's famous bass line was actually played on a guitar with a pitch shifter, creating the deep, hypnotic riff that defines the track. The minimalist approach perfectly exemplified the band's stripped-down aesthetic.
+You know it. The guy at the end of the bar knows it. Your grandmother knows it. Soccer hooligans in Manchester and football crowds in Alabama know it. That riff has become a universal language, the musical equivalent of "Hello" in every country on the planet.
 
-The song's title came from Jack White's childhood mispronunciation of "Salvation Army," and its success helped establish The White Stripes as leaders of the garage rock revival. The track won a Grammy Award and became a stadium anthem worldwide.
+[YOUR MEMORY HERE - when did this riff first crawl into your skull?]
 
-## Why It's Good
+<!--more-->
 
-"Seven Nation Army" succeeds through the power of simplicity and repetition. The iconic riff is both memorable and hypnotic, creating an immediate hook that draws listeners in. Jack White's raw vocals and Meg White's primal drumming create a sense of urgency and power that builds throughout the song.
+Here's the trick—it's not even a bass. Jack White played it on a guitar through a pitch shifter, dropping it an octave. The White Stripes didn't have a bass player. They didn't need one. They didn't need much of anything except Jack's vision and Meg's drumming, which sounds like someone kicking a door down in slow motion.
 
-The song's genius lies in its restraint - rather than adding layers of instrumentation, The White Stripes let the core riff and rhythm drive everything. This minimalist approach creates space for each element to have maximum impact, resulting in a sound that's both primitive and sophisticated.
+"Seven Nation Army" comes from *Elephant*, released in 2003. The title came from Jack's childhood mispronunciation of "Salvation Army," which is exactly the kind of origin story you'd expect from a song this stripped down and elemental. Everything about it sounds like it came from some primordial rock and roll swamp.
 
-{{< lyrics-callout style="centered" artist="The White Stripes" song="Seven Nation Army" >}}
-I'm gonna fight 'em off  
-A seven nation army couldn't hold me back  
-They're gonna rip it off  
-Taking their time right behind my back
-{{< /lyrics-callout >}}
+The minimalism is the point. Most bands would have buried that riff under layers of production, added harmonies, complicated the arrangement. Jack and Meg let it breathe. Let it stomp. Let it become the only thing you hear when you close your eyes.
 
-The production captures the raw energy of a live performance while maintaining clarity and punch, perfectly serving the song's garage rock aesthetic.
+"I'm gonna fight 'em off." Fight who? Doesn't matter. The specifics aren't the point. The feeling is the point. That snarling defiance, that absolutely unearned confidence that you—yes, you—can take on the entire world and win.
 
-## Standout Lyrics
+The song structure is almost insultingly simple. Verse, chorus, verse, chorus, bridge, out. Meg's drums never deviate from their primal march. And somehow, in that simplicity, they created something that will outlive us all.
 
-The song's power lies in its themes of defiance and individuality, expressing the feeling of standing against the world.
+The riff will be playing at sporting events long after anyone remembers who The White Stripes were. That's not sad. That's the dream. That's the music separating from the musicians and becoming something that belongs to everyone.
 
-{{< lyrics-callout style="inline" >}}
-And the message coming from my eyes says, 'Leave it alone'
-{{< /lyrics-callout >}}
-
-[Listen on Spotify](https://open.spotify.com/search/white%20stripes%20seven%20nation%20army)
-
----
-
-**Featured on:** September 30, 2025  
-**Artist:** The White Stripes  
-**Album:** Elephant  
-**Genre:** Alternative Rock, Garage Rock  
-**Mood:** Powerful, Driving, Hypnotic  
-**Popularity:** Modern Classic  
-**Your Play Count:** 145 plays
+Seven notes. Seven nation army. Sometimes less really is everything.

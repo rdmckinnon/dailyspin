@@ -4,7 +4,7 @@ description: "Neil Young's searing indictment of Southern racism that sparked ro
 summary: "A blistering accusation that confronted America's racial wounds with unflinching directness"
 date: 2026-01-04T08:00:00-05:00
 lastmod: 2026-01-04T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

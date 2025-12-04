@@ -4,7 +4,7 @@ description: "Dire Straits' iconic song transformed into a raw, electrifying liv
 summary: "The definitive live version that proves why Knopfler's guitar work needed a stage to reach its full potential"
 date: 2025-12-09T08:00:00-05:00
 lastmod: 2025-12-09T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

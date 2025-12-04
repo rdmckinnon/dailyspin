@@ -26,6 +26,11 @@
   source = "layouts"
   target = "layouts"
 
+# Mount our partials to override theme's _partials
+[[mounts]]
+  source = "layouts/partials"
+  target = "layouts/_partials"
+
 [[mounts]]
   # Exclude 'home.html' to avoid conflicts with a custom home page layout defined in the local 'layouts' directory.
   excludeFiles = "home.html"

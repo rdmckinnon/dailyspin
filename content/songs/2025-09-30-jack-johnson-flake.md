@@ -1,69 +1,36 @@
 ---
+draft: true
 title: "Flake"
-description: "Jack Johnson's laid-back surf rock meditation on relationships and reliability"
-summary: "A gentle acoustic masterpiece that captures the frustration and acceptance of dealing with unreliable people"
-date: 2025-09-30T23:34:13-05:00
-lastmod: 2025-10-09T10:00:00-04:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Flake - Jack Johnson | DailySpin.fm" 
-  description: "Why Jack Johnson's Flake remains a perfect example of surf rock songwriting"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-09-30
 artists: ["Jack Johnson"]
-albums: ["Brushfire Fairytales"]
-genres: ["Acoustic Rock", "Surf Rock"]
-moods: ["Laid-back", "Contemplative", "Mellow"]
-years: ["2003"]
-popularity: ["cult classic"]
-tags: ["Cult Classic", "Acoustic Rock", "Surf Rock", "Jack Johnson", "2000s", "Singer Songwriter", "Chill", "Relationship"]
-
-# Song details
-release_year: "2003"
-featured_date: 2025-09-09
+album: "Brushfire Fairytales"
+release_year: "2001"
+spotify_id: "3XTtHPmfnCfBVJpOB5gQ4i"
+genres: ["acoustic rock", "surf rock"]
+duration: "3:28"
+description: "A surfer-turned-songwriter figured out how to be annoyed without being angry. That's harder than it sounds."
 ---
 
-## Background
+We all know someone like this. The person who says "maybe" when they mean "no." The one who commits to plans they have no intention of keeping. The one who leaves you waiting, again, wondering why you're surprised.
 
-"Flake" appeared on Jack Johnson's 2003 album *Brushfire Fairytales*, establishing him as one of the premier voices in the surf rock revival. Written during Johnson's transition from professional surfing to music, the song captures the laid-back frustration of dealing with unreliable people while maintaining the mellow, accepting attitude that defines his musical persona.
+Jack Johnson wrote them a song. And somehow, it doesn't sound bitter.
 
-The track showcases Johnson's ability to find profound meaning in everyday annoyances, transforming personal irritation into universal commentary on human nature. Its acoustic simplicity belies sophisticated songwriting that resonates with anyone who's dealt with flaky friends or romantic partners.
+[YOUR MEMORY HERE - someone who always let you down, or a time when you were the flake]
 
-## Why It's Good
+<!--more-->
 
-Johnson's gentle vocal delivery transforms what could be bitter complaint into philosophical acceptance. His fingerpicking guitar style creates a hypnotic foundation that mirrors the cyclical nature of dealing with unreliable people - frustrating yet somehow soothing in its predictability. The rhythm section stays understated, allowing Johnson's storytelling to take center stage.
+"Flake" comes from *Brushfire Fairytales*, Johnson's 2001 debut that soundtracked every beach bonfire and dorm room hangout for the next decade. The man was a professional surfer before he picked up a guitar, and you can hear the water in everything he does—that patient, rhythmic quality of someone who's spent a lot of time waiting for waves.
 
-The song's strength lies in its relatability. Johnson captures the specific frustration of making plans with someone who consistently disappoints, yet his delivery lacks malice or anger. Instead, there's resigned understanding that some people simply operate differently, and perhaps that's just part of life's texture.
+The fingerpicking pattern is hypnotic. Simple enough that you could learn it in an afternoon, sophisticated enough that it keeps pulling you back in. Johnson's voice rides on top, conversational and warm, like he's telling you about his day rather than performing.
 
-{{< lyrics-callout style="centered" artist="Jack Johnson" song="Flake" >}}
-It seems to me that maybe  
-It pretty much always means no  
-So don't tell me you might just let it go
-{{< /lyrics-callout >}}
+"It seems to me that 'maybe' pretty much always means 'no.'" That's the line. That's the whole truth of dealing with unreliable people, delivered without malice. Just observation. Just acceptance.
 
-The production maintains the intimate, beachside atmosphere that makes Johnson's music so appealing.
+There's a Buddhist quality to Johnson's frustration. He's annoyed, sure. But he's not surprised. He's not demanding that people change. He's just... noting. This is how it is. This is how they are. The waves come when they come.
 
-## Standout Lyrics
+The production stays out of the way—acoustic guitar, gentle percussion, maybe some bass lurking in the background. No studio tricks. No overwrought arrangements. Just a guy and a song and a truth that anyone who's ever waited for someone can understand.
 
-The song's charm comes from its ability to turn everyday relationship dynamics into poetic observations about human nature and acceptance.
+"I know she loves the sunrise, no longer sees it with her sleeping eyes." That's not accusation. That's elegy. He's mourning who she was, or who he thought she was, before the flakiness became the defining feature.
 
-{{< lyrics-callout style="inline" >}}
-I know she loves me, but I don't know why  
-She says she loves me, but she don't know why
-{{< /lyrics-callout >}}
+Some songs rage against unreliability. This one just shrugs.
 
-[Listen on Spotify](https://open.spotify.com/search/jack%20johnson%20flake)
-
----
-
-**Featured on:** September 17, 2025  
-**Artist:** Jack Johnson  
-**Album:** Brushfire Fairytales  
-**Genre:** Acoustic Rock, Surf Rock  
-**Mood:** Laid-back, Contemplative, Mellow  
-**Popularity:** Cult Classic  
-**Your Play Count:** 196 plays
+Sometimes a shrug is the only honest response.

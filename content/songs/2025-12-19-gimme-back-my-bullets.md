@@ -4,7 +4,7 @@ description: "Lynyrd Skynyrd's defiant anthem about reclaiming their identity an
 summary: "A driving Southern rock track about fighting back against creative and commercial pressures"
 date: 2025-12-19T08:00:00-05:00
 lastmod: 2025-12-19T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

@@ -4,7 +4,7 @@ description: "Dire Straits' epic title track exploring the price of artistic int
 summary: "A fourteen-minute meditation on choosing passion over profit that showcases Knopfler at his most ambitious"
 date: 2025-12-17T08:00:00-05:00
 lastmod: 2025-12-17T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

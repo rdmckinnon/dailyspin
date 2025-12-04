@@ -1,70 +1,34 @@
 ---
+draft: true
 title: "Is This Love"
-description: "Bob Marley's tender reggae ballad exploring the depths of romantic devotion"
-summary: "A gentle masterpiece that showcases Marley's softer side while maintaining reggae's rhythmic foundation"
-date: 2025-09-22T08:05:59-05:00
-lastmod: 2025-10-12T10:00:00-04:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Is This Love - Bob Marley & The Wailers | DailySpin.fm" 
-  description: "How Bob Marley's Is This Love became one of reggae's most beloved love songs"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-09-22
 artists: ["Bob Marley & The Wailers"]
-albums: ["Kaya"]
-genres: ["Reggae", "Roots Reggae"]
-moods: ["Romantic", "Tender", "Spiritual"]
-years: ["1978"]
-popularity: ["classic"]
-tags: ["Classic", "Reggae", "Roots Reggae", "Bob Marley", "1970s", "Love Song", "Jamaican", "Spiritual"]
-
-# Song details
-spotify_id: "3pHpV3pa96s4vuBP7sQq0V"
+album: "Kaya"
 release_year: "1978"
-featured_date: 2025-09-09
+spotify_id: "3pHpV3pa96s4vuBP7sQq0V"
+genres: ["reggae", "roots reggae"]
+duration: "3:52"
+description: "Bob Marley asking the question everyone's afraid to ask out loud."
 ---
 
-## Background
+"Is this love that I'm feeling?"
 
-"Is This Love" appeared on Bob Marley & The Wailers' 1978 album *Kaya*, during a period when Marley was exploring more personal and romantic themes alongside his political and spiritual messages. The song showcases a gentler side of reggae, proving the genre's versatility beyond its association with rebellion and social commentary.
+He asks it like he genuinely doesn't know. And that's the whole point. Bob Marley—the revolutionary, the prophet, the man who faced down assassination attempts and kept singing—didn't have love figured out any better than the rest of us.
 
-Recorded at Criteria Studios in Miami, the track captures Marley at his most vulnerable and romantic. It represents the universal language of love that transcends cultural and musical boundaries, helping to bring reggae to mainstream audiences worldwide while maintaining its authentic roots.
+[YOUR MEMORY HERE - a moment when you weren't sure if what you felt was real]
 
-## Why It's Good
+<!--more-->
 
-Marley's vocal delivery is incredibly tender, transforming what could be simple romantic questioning into something profound and universal. The lilting reggae rhythm creates a hypnotic backdrop that mirrors the intoxicating feeling of new love. The Wailers' instrumentation is perfectly balanced - the bass line provides reggae's signature foundation while guitars add melodic sweetness.
+This comes from *Kaya*, released in 1978, an album that confused people who expected politics from Bob Marley. Where was the revolution? Where was the resistance? Instead, they got love songs and weed references—and some of the most honest music he ever made.
 
-What makes the song special is its vulnerability. Marley, often seen as a revolutionary figure, reveals his uncertainty and hope in matters of the heart. The repeated questioning "Is this love?" captures that universal moment of recognizing something special while being afraid to fully believe it.
+"Is This Love" is Marley at his most vulnerable. No manifestos. No Jah Rastafari. Just a man looking at someone and trying to figure out what's happening in his chest. "I want to know, want to know, want to know now."
 
-{{< lyrics-callout style="centered" artist="Bob Marley & The Wailers" song="Is This Love" >}}
-I wanna love you and treat you right  
-I wanna love you every day and every night  
-We'll be together with a roof right over our heads
-{{< /lyrics-callout >}}
+The bass line is almost absurdly simple—a few notes that cycle and recycle like a heartbeat. The rhythm guitar doing that classic reggae chop on the upbeat. The I-Threes harmonizing behind Bob like angels who've seen some things. None of it's complicated. None of it needs to be.
 
-The production maintains reggae's organic warmth while showcasing the genre's capacity for intimate expression.
+"I wanna love you and treat you right. I wanna love you every day and every night." That's not poetry. That's a promise. The kind you make when you've finally decided to stop running. The kind that terrifies you precisely because you mean it.
 
-## Standout Lyrics
+There's something almost childlike in the repetition. "Is this love? Is this love? Is this love?" Like he's asking the universe for confirmation. Like he needs someone to tell him it's okay to feel this much.
 
-The song's power lies in its honest exploration of love's uncertainty and the desire for genuine connection in a world full of superficial relationships.
+The song doesn't answer the question. It just keeps asking. And maybe that's the answer—that love isn't something you ever fully know. You just keep showing up. Keep asking. Keep hoping the answer is yes.
 
-{{< lyrics-callout style="inline" >}}
-Is this love, is this love, is this love  
-Is this love that I'm feelin'?
-{{< /lyrics-callout >}}
-
-[Listen on Spotify](https://open.spotify.com/search/bob%20marley%20is%20this%20love)
-
----
-
-**Featured on:** September 18, 2025  
-**Artist:** Bob Marley & The Wailers  
-**Album:** Kaya  
-**Genre:** Reggae, Roots Reggae  
-**Mood:** Romantic, Tender, Spiritual  
-**Popularity:** Classic  
-**Your Play Count:** 194 plays
+Some songs tell you what love is. This one admits we're all still figuring it out.

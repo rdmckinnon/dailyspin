@@ -4,7 +4,7 @@ description: "Whitesnake's power ballad that proved hair metal could have a tend
 summary: "A stadium-sized love song that balanced arena rock bombast with genuine romantic vulnerability"
 date: 2025-12-10T08:00:00-05:00
 lastmod: 2025-12-10T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

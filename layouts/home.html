@@ -1,163 +1,107 @@
 {{ define "main" }}
-{{/* Fetch latest song */}}
-{{ $songs := where site.RegularPages "Section" "songs" }}
-{{ $sorted := sort $songs "Date" "desc" }}
-{{ $latest := index $sorted 0 }}
+{{/* Pre-launch homepage - uses static album art from spotify.json */}}
 
-<section class="ds-hero container py-5">
-  <div class="row align-items-center g-5">
-    <div class="col-lg-6">
-      <div class="mb-4 d-flex align-items-center gap-3">
-        <span
-          style="font-family: var(--ds-font-brand); font-size: clamp(3rem, 5vw, 5rem); line-height: 1.1; color: var(--ds-primary); display: block; margin-bottom: 1rem;">DailySpin.fm</span>
-        <div style="height: 1px; width: 50px; background: var(--ds-fg);"></div>
-      </div>
-      <h1 class="ds-hero-title">
-        The Best<br>
-        <span class="outline" data-text="Music">Music</span><br>
-        From Every<br>
-        Genre
-      </h1>
-      <p class="ds-hero-lead">
-        A curated showcase of great music across all categories. No algorithms, just the best tracks spun daily.
-      </p>
-      <div class="d-flex gap-3">
-        <a class="btn ds-btn-primary" href="/songs/">Start Listening <span class="ms-2">→</span></a>
-      </div>
-
-      <!-- Decorative Stars -->
-      <svg class="ds-star" style="top: 10%; left: 0; width: 40px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="1">
-        <polygon
-          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-        </polygon>
-      </svg>
-      <svg class="ds-star" style="bottom: 20%; right: 10%; width: 60px; animation-duration: 15s;" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="1">
-        <polygon
-          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-        </polygon>
-      </svg>
-    </div>
-
-    <div class="col-lg-6">
-      <div class="row g-4">
-        <div class="col-6">
-          <div class="ds-art" style="height: 300px; border-radius: 150px 150px 0 0; overflow: hidden;">
-            <img src="/images/placeholders/art-2.png" alt="Abstract Studio Art"
-              style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
-          </div>
-        </div>
-        <div class="col-6 pt-5">
-          <div class="ds-art" style="height: 300px; border-radius: 0 0 150px 150px; overflow: hidden;">
-            <img src="/images/placeholders/art-3.png" alt="Abstract Studio Art"
-              style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="ds-features container py-5">
-  <div class="row g-5">
-    <div class="col-lg-4">
-      <div class="ds-feature">
-        <div class="ds-feature-number">01</div>
-        <h3>CURATED</h3>
-        <p>Singular focus every day. No noise, no filler—just one track that matters.</p>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="ds-feature">
-        <div class="ds-feature-number">02</div>
-        <h3>DEEP CUTS</h3>
-        <p>Context, history, and the “why” behind the music—written with restraint.</p>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="ds-feature">
-        <div class="ds-feature-number">03</div>
-        <h3>HI-FI</h3>
-        <p>A bold, distraction-free interface that puts the music first.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{ if $latest }}
-<section class="ds-featured container py-5">
-  <div class="ds-featured">
-    <div class="ds-card">
-      <div class="ds-card-header d-flex justify-content-between">
-        <span>FRESH DROP</span>
-        <span>{{ now.Format "October 2, 2006" }}</span>
-      </div>
-      <div class="ds-card-body">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5">
-            <div class="ds-art" style="aspect-ratio: 1; border-radius: 1rem; overflow: hidden;">
-              <img src="/images/placeholders/art-1.png" alt="Featured Art"
-                style="width:100%; height:100%; object-fit: cover; opacity: 0.9;">
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <h2 class="ds-featured-title"><a href="{{ $latest.RelPermalink }}">{{ $latest.Title }}</a></h2>
-            {{ with $latest.Params.artists }}
-            <p class="text-uppercase ls-2 mb-4" style="letter-spacing: 0.1em; color: var(--ds-muted);">{{ delimit . ", "
-              }}</p>
-            {{ end }}
-            <p class="ds-card-summary mb-5" style="font-size: 1.1rem;">{{ $latest.Summary }}</p>
-
-            <div class="d-flex gap-3">
-              <a class="btn ds-btn-primary" href="{{ $latest.RelPermalink }}">Read Story</a>
-              {{ with $latest.Params.spotify_id }}
-              <a class="btn ds-btn-secondary" href="https://open.spotify.com/track/{{ . }}" target="_blank">Spotify</a>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{/* Get album art directly from spotify data */}}
+{{ $spotifyData := site.Data.spotify }}
+{{ $albumArts := slice }}
+{{ range $id, $data := $spotifyData }}
+  {{ with $data.albumArt.large }}
+    {{ $albumArts = $albumArts | append . }}
+  {{ end }}
 {{ end }}
+{{/* Shuffle by taking a subset */}}
+{{ $albumArts = first 8 $albumArts }}
 
-{{/* Recent Picks (last 3 songs) */}}
-{{ $recent := first 3 (sort $songs "Date" "desc") }}
-{{ if gt (len $recent) 0 }}
-<section class="ds-section container py-5">
-  <div class="d-flex align-items-end justify-content-between mb-5">
-    <div>
-      <h2 class="mb-0" style="font-size: 3rem;">RECENT DROPS</h2>
-    </div>
-    <a class="btn ds-btn-secondary btn-sm" href="/songs/">
-      View All <span class="ms-2">→</span>
-    </a>
-  </div>
-
-  <div class="ds-grid mt-0">
-    {{ range $index, $page := $recent }}
-    <div class="ds-card">
-      <a href="{{ .RelPermalink }}" class="ds-card-link">
-        <div class="ds-art">
-          {{ $imgNum := add (mod $index 3) 1 }}
-          <img src="/images/placeholders/art-{{ $imgNum }}.png" alt="Abstract Studio Art"
-            style="width:100%; height:100%; object-fit: cover; opacity: 0.8;">
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <span class="ds-card-meta mb-0">{{ .Date | time.Format "01.02" }}</span>
-          <span class="ds-card-meta mb-0">{{ with .Params.artists }}{{ delimit . ", " }}{{ end }}</span>
-        </div>
-
-        <h3 class="ds-card-title" style="font-size: 1.75rem;">{{ .Title }}</h3>
-      </a>
+{{/* ============================================
+    HERO: THE MANIFESTO
+============================================ */}}
+<section class="ds-manifesto">
+  <div class="ds-manifesto-bg">
+    {{ range $albumArts }}
+    <div class="ds-manifesto-album">
+      <img src="{{ . }}" alt="" loading="lazy">
     </div>
     {{ end }}
   </div>
+
+  <div class="ds-manifesto-overlay"></div>
+
+  <div class="container">
+    <div class="ds-manifesto-content">
+      <h1 class="ds-manifesto-headline">SOMETHING BROKE.</h1>
+
+      <div class="ds-manifesto-text">
+        <p>Somewhere between Spotify's algorithm and TikTok's 15-second attention span, we stopped <em>listening</em> to music. We started consuming content.</p>
+
+        <p>The science is simple now. Repeat the hook every 30 seconds. Drop the chorus before anyone gets bored. Engineer the dopamine hit. Test it. Tweak it. Ship it.</p>
+
+        <p>It works. The numbers prove it.</p>
+
+        <p>But here's the thing—you can engineer a craving without ever satisfying it. You can write a song that gets stuck in someone's head without ever touching their heart.</p>
+
+        <p class="ds-manifesto-callout">Remember when songs were built to last?</p>
+
+        <p>When a band spent three years in a basement getting the guitar tone right. When a songwriter rewrote the bridge sixteen times because <em>almost</em> wasn't good enough. When a song could wreck you—not because it was loud, but because it was <em>true</em>.</p>
+
+        <p class="ds-manifesto-final">That's what we're chasing here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ============================================
+    CALL TO ACTION
+============================================ */}}
+<section class="ds-cta">
+  <div class="container">
+    <h2 class="ds-cta-headline">One song. One story. Every day.</h2>
+    <p class="ds-cta-subtext">Not the algorithm's pick. Not what's trending.<br>Just music that still believes in the slow build, the earned crescendo, the silence before the thing that changes everything.</p>
+  </div>
+</section>
+
+{{/* ============================================
+    PREVIEW POST
+============================================ */}}
+{{ $songs := where site.RegularPages "Section" "songs" }}
+{{ $preview := false }}
+{{ range $songs }}
+  {{ if eq .Title "Where the Streets Have No Name" }}
+    {{ $preview = . }}
+  {{ end }}
+{{ end }}
+{{ with $preview }}
+{{ $spotifyData := index site.Data.spotify .Params.spotify_id }}
+<section class="ds-preview container">
+  <div class="ds-preview-label">PREVIEW</div>
+  <a href="{{ .RelPermalink }}" class="ds-preview-card">
+    <div class="ds-preview-art">
+      {{ with $spotifyData }}
+      <img src="{{ .albumArt.large }}" alt="{{ $preview.Title }} album art">
+      {{ end }}
+    </div>
+    <div class="ds-preview-info">
+      <h3 class="ds-preview-title">{{ .Title }}</h3>
+      <p class="ds-preview-artist">{{ delimit .Params.artists ", " }}</p>
+      <p class="ds-preview-excerpt">{{ .Summary | plainify | truncate 200 }}</p>
+      <span class="ds-preview-cta">Read the story &rarr;</span>
+    </div>
+  </a>
 </section>
 {{ end }}
+
+{{/* ============================================
+    LAUNCH DATE
+============================================ */}}
+<section class="ds-launch container">
+  <div class="ds-launch-box">
+    <div class="ds-launch-date">
+      <span class="ds-launch-month">January</span>
+      <span class="ds-launch-day">1st,</span>
+      <span class="ds-launch-year">2026</span>
+    </div>
+  </div>
+</section>
+
 {{ end }}
 
 {{ define "sidebar-prefooter" }}{{ end }}

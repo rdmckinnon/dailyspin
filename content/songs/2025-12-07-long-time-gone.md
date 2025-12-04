@@ -4,7 +4,7 @@ description: "Crosby, Stills & Nash's urgent protest anthem born from the assass
 summary: "A politically charged folk-rock masterpiece that captured the turmoil and heartbreak of 1968"
 date: 2025-12-07T08:00:00-05:00
 lastmod: 2025-12-07T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

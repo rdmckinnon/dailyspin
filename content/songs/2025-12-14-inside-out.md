@@ -4,7 +4,7 @@ description: "Phil Collins' introspective deep cut exploring the masks we wear"
 summary: "A sophisticated pop track that balances commercial appeal with psychological depth"
 date: 2025-12-14T08:00:00-05:00
 lastmod: 2025-12-14T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

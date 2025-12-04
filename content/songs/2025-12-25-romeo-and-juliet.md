@@ -4,7 +4,7 @@ description: "Dire Straits' bittersweet ballad about love lost and memories that
 summary: "Mark Knopfler's most vulnerable songwriting wrapped in gorgeous fingerpicking and heartbreak"
 date: 2025-12-25T08:00:00-05:00
 lastmod: 2025-12-25T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

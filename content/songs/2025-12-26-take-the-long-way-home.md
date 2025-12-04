@@ -4,7 +4,7 @@ description: "Supertramp's bittersweet examination of success, identity, and the
 summary: "A perfectly crafted pop-rock song about the exhaustion of performing happiness while feeling empty inside"
 date: 2025-12-26T08:00:00-05:00
 lastmod: 2025-12-26T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

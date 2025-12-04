@@ -4,7 +4,7 @@ description: "The legendary Rock Hall performance where Prince stole the show wi
 summary: "A tribute performance that became one of rock's greatest guitar moments when Prince erupted into legend"
 date: 2025-12-24T08:00:00-05:00
 lastmod: 2025-12-24T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

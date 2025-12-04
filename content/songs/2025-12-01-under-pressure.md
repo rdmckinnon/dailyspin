@@ -4,7 +4,7 @@ description: "Queen and David Bowie's improvisational masterpiece about human co
 summary: "A legendary collaboration born from a late-night jam session that became an anthem for compassion"
 date: 2025-12-01T08:00:00-05:00
 lastmod: 2025-12-01T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

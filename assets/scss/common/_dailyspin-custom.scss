@@ -442,3 +442,789 @@ a {
     font-weight: 500;
   }
 }
+
+// ============================================
+// 12. HOMEPAGE REDESIGN — THE MANIFESTO
+// ============================================
+
+.ds-manifesto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+}
+
+.ds-manifesto-bg {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  opacity: 0.25;
+  pointer-events: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    opacity: 0.15;
+  }
+}
+
+.ds-manifesto-album {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+  }
+}
+
+.ds-manifesto-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 249, 250, 0.75);
+  pointer-events: none;
+  z-index: 1;
+
+  [data-bs-theme="dark"] & {
+    background: rgba(11, 13, 16, 0.75);
+  }
+}
+
+.ds-manifesto-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ds-manifesto-headline {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 0.9;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.ds-manifesto-text {
+  font-family: var(--ds-font-body);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--ds-fg);
+
+  p {
+    margin-bottom: 1.25rem;
+
+    em {
+      font-style: italic;
+      color: var(--ds-fg);
+    }
+  }
+}
+
+.ds-manifesto-callout {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 2rem) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2 !important;
+  margin: 2.5rem auto !important;
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--ds-fg);
+  border-bottom: 2px solid var(--ds-fg);
+  max-width: 90%;
+}
+
+.ds-manifesto-final {
+  font-weight: 600;
+  font-size: 1.2rem !important;
+  margin-top: 2rem !important;
+}
+
+// ============================================
+// 13. WORDS + SOUND SPLIT
+// ============================================
+
+.ds-split {
+  display: flex;
+  min-height: 60vh;
+  border-top: 1px solid var(--ds-border);
+  border-bottom: 1px solid var(--ds-border);
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+.ds-split-words,
+.ds-split-sound {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  position: relative;
+
+  @media (max-width: 992px) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.ds-split-words {
+  background: var(--ds-bg);
+  align-items: flex-end;
+  text-align: right;
+
+  @media (max-width: 992px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.ds-split-sound {
+  background: var(--ds-surface);
+  align-items: flex-start;
+}
+
+.ds-split-label {
+  font-family: var(--ds-font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ds-muted);
+  margin-bottom: 2rem;
+}
+
+.ds-split-content {
+  max-width: 400px;
+}
+
+.ds-split-quote {
+  font-family: var(--ds-font-body);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--ds-fg);
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.ds-split-cite {
+  display: block;
+  margin-top: 1.5rem;
+  font-family: var(--ds-font-heading);
+  font-size: 0.9rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-muted);
+}
+
+.ds-split-album {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ds-split-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ds-fg);
+  color: var(--ds-bg);
+  font-family: var(--ds-font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  width: 60px;
+  flex-shrink: 0;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+// ============================================
+// 14. CALL TO ACTION
+// ============================================
+
+.ds-cta {
+  padding: 5rem 0;
+  text-align: center;
+  background: var(--ds-surface);
+  border-top: 1px solid var(--ds-border);
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-cta-headline {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.ds-cta-subtext {
+  font-family: var(--ds-font-body);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--ds-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+// ============================================
+// 14b. PREVIEW POST
+// ============================================
+
+.ds-preview {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.ds-preview-label {
+  font-family: var(--ds-font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ds-muted);
+  margin-bottom: 1.5rem;
+}
+
+.ds-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--ds-fg);
+    transform: translateY(-2px);
+
+    .ds-preview-cta {
+      color: var(--ds-fg);
+    }
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+.ds-preview-art {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 576px) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.ds-preview-info {
+  flex: 1;
+}
+
+.ds-preview-title {
+  font-family: var(--ds-font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ds-fg);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.ds-preview-artist {
+  font-family: var(--ds-font-body);
+  font-size: 0.9rem;
+  color: var(--ds-muted);
+  margin: 0 0 1rem;
+}
+
+.ds-preview-excerpt {
+  font-family: var(--ds-font-body);
+  font-size: 0.95rem;
+  color: var(--ds-fg);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.ds-preview-cta {
+  font-family: var(--ds-font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-muted);
+  transition: color 0.2s ease;
+}
+
+// ============================================
+// 14c. LAUNCH DATE
+// ============================================
+
+.ds-launch {
+  padding: 4rem 0 6rem;
+  text-align: center;
+}
+
+.ds-launch-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ds-launch-date {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-family: var(--ds-font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.ds-launch-month {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--ds-fg);
+}
+
+.ds-launch-day {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--ds-muted);
+}
+
+.ds-launch-year {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ds-fg);
+  letter-spacing: 0.05em;
+}
+
+.ds-launch-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ds-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--ds-border);
+  border-radius: 50%;
+  color: var(--ds-fg);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--ds-fg);
+    background: var(--ds-fg);
+    color: var(--ds-bg);
+  }
+}
+
+.ds-social-divider {
+  font-family: var(--ds-font-heading);
+  font-size: 1.5rem;
+  color: var(--ds-muted);
+  font-weight: 700;
+}
+
+// ============================================
+// 15. TODAY'S SPIN
+// ============================================
+
+.ds-today {
+  padding: 6rem 0;
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-today-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-today-label {
+  font-family: var(--ds-font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.ds-today-date {
+  font-family: var(--ds-font-body);
+  font-size: 0.85rem;
+  color: var(--ds-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ds-today-card {
+  background: var(--ds-surface);
+  border-radius: 1.5rem;
+  padding: 3rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.ds-today-art {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  &:hover .ds-today-play {
+    opacity: 1;
+  }
+}
+
+.ds-today-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  svg {
+    width: 64px;
+    height: 64px;
+    color: #fff;
+  }
+}
+
+.ds-today-title {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--ds-muted);
+    }
+  }
+}
+
+.ds-today-artist {
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-muted);
+  margin-bottom: 1.5rem;
+}
+
+.ds-today-summary {
+  font-family: var(--ds-font-body);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ds-fg);
+}
+
+// ============================================
+// 16. RECENT SPINS
+// ============================================
+
+.ds-recent {
+  padding: 6rem 0;
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-recent-heading {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.ds-recent-subhead {
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  color: var(--ds-muted);
+  margin-bottom: 0;
+}
+
+.ds-recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.ds-recent-card {
+  position: relative;
+}
+
+.ds-recent-link {
+  display: block;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+
+    .ds-recent-art img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    .ds-recent-title {
+      color: var(--ds-muted);
+    }
+  }
+}
+
+.ds-recent-art {
+  aspect-ratio: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--ds-surface);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transition: all 0.4s ease;
+  }
+}
+
+.ds-recent-info {
+  padding: 0 0.25rem;
+}
+
+.ds-recent-date {
+  font-family: var(--ds-font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-muted);
+}
+
+.ds-recent-title {
+  font-family: var(--ds-font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0.5rem 0 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.ds-recent-artist {
+  font-family: var(--ds-font-body);
+  font-size: 0.85rem;
+  color: var(--ds-muted);
+  margin: 0;
+}
+
+// ============================================
+// 17. CLOSING
+// ============================================
+
+.ds-closing {
+  padding: 8rem 0;
+  text-align: center;
+  border-top: 1px solid var(--ds-border);
+}
+
+.ds-closing-text {
+  font-family: var(--ds-font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ds-muted);
+  margin: 0;
+}
+
+// ============================================
+// 18. CREATIVE HEADER
+// ============================================
+
+.ds-navbar {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--ds-border);
+  background: var(--ds-bg);
+}
+
+.ds-brand {
+  font-family: var(--ds-font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.ds-brand-daily {
+  color: var(--ds-fg);
+}
+
+.ds-brand-spin {
+  color: var(--ds-fg);
+}
+
+.ds-brand-dot {
+  color: var(--ds-muted);
+}
+
+.ds-brand-fm {
+  color: var(--ds-muted);
+  font-weight: 400;
+}
+
+// Override default navbar brand styles
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+// Nav links styling
+.ds-navbar .nav-link {
+  font-family: var(--ds-font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ds-fg);
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &.active {
+    color: var(--ds-muted);
+  }
+}
+
+// Search and icon buttons
+.ds-navbar .btn-link {
+  color: var(--ds-fg);
+  border: 1px solid var(--ds-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--ds-fg);
+    background: var(--ds-fg);
+    color: var(--ds-bg);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// Social links in header
+#socialMenu .social-link {
+  border: 1px solid var(--ds-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--ds-fg);
+    background: var(--ds-fg);
+    color: var(--ds-bg);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}

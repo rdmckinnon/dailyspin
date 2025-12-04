@@ -1,70 +1,36 @@
 ---
+draft: true
 title: "Don't Stop Believin'"
-description: "Journey's ultimate anthem of hope and perseverance"
-summary: "The most iconic arena rock anthem ever created, inspiring millions to never give up on their dreams"
-date: 2025-10-22T16:13:52-05:00
-lastmod: 2025-09-15T10:00:00-04:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Don't Stop Believin' - Journey | DailySpin.fm" 
-  description: "Why Journey's Don't Stop Believin' remains the ultimate feel-good anthem decades after its release"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-10-22
 artists: ["Journey"]
-albums: ["Escape"]
-genres: ["Classic Rock", "Arena Rock"]
-moods: ["Uplifting", "Anthemic", "Motivational"]
-years: ["1981"]
-popularity: ["classic"]
-tags: ["Classic", "Arena Rock", "Anthem", "1980s", "Journey", "Feel Good", "Most Played"]
-
-# Song details
+album: "Escape"
 release_year: "1981"
-featured_date: 2025-09-09
+spotify_id: "4bHsxqR3GMrXTxEPLuK5ue"
+genres: ["classic rock", "arena rock"]
+duration: "4:11"
+description: "The most overplayed song in karaoke history. Still works every single time."
 ---
 
-## Background
+The chorus doesn't show up until three minutes and twenty seconds into the song. That's the trick. That's the whole trick. You wait. You build. You hold out until people are begging for it, and then you give them what they came for.
 
-Released in 1981 as part of Journey's *Escape* album, "Don't Stop Believin'" has become one of the most enduring anthems in rock history. Written by Jonathan Cain, Steve Perry, and Neal Schon, the song emerged from Cain's personal mantra during tough times. The track's universal message of hope and determination struck a chord that resonates across generations.
+Jonathan Cain, Steve Perry, and Neal Schon understood something fundamental about hope: you have to earn it.
 
-The song's structure deliberately builds from quiet beginnings to soaring crescendos, mirroring the emotional journey from doubt to triumph that defines the human experience.
+[YOUR MEMORY HERE - a bar, a wedding, a moment when this song came on and everyone lost their minds]
 
-## Why It's Good
+<!--more-->
 
-"Don't Stop Believin'" is masterful storytelling wrapped in perfect arena rock packaging. The song follows two characters - a small-town girl and a city boy - whose paths cross on a midnight train, creating a narrative that feels both specific and universal. Steve Perry's soaring vocals carry the emotional weight while Neal Schon's guitar work provides the driving force.
+"Don't Stop Believin'" came out in 1981 on *Escape*, and it's been soundtrack to every karaoke night, sports montage, and last-call singalong since. The song has been so thoroughly absorbed into the collective unconscious that it's easy to forget it was ever new. But listen to it fresh, if you can—really listen—and you'll hear something remarkable.
 
-What makes it transcendent is its timing - the anthemic chorus doesn't arrive until 3 minutes and 20 seconds into the song, building anticipation to a fever pitch. When it finally hits, it feels earned and explosive.
+A small-town girl. A city boy. A midnight train going anywhere. Perry sketches these characters in broad strokes because the details don't matter. What matters is that they're looking for something. What matters is that they haven't found it yet. What matters is that they're still looking.
 
-{{< lyrics-callout style="centered" artist="Journey" song="Don't Stop Believin'" >}}
-Just a small town girl  
-Livin' in a lonely world  
-She took the midnight train goin' anywhere
-{{< /lyrics-callout >}}
+The opening piano riff is as recognizable as any in rock history. Neal Schon's guitar comes in like a conversation, answering the piano's questions. The bass and drums lock into that groove that feels like forward motion, like leaving somewhere bad for somewhere better.
 
-The production captures lightning in a bottle - every element serves the song's uplifting message while maintaining the grit necessary for authentic rock credibility.
+And Steve Perry's voice. That voice that sounds like it's reaching for something just out of frame. There's desperation in it, but not defeat. There's yearning, but not surrender.
 
-## Standout Lyrics
+The song is about people who ride trains to nowhere and sit in smoky rooms and wait for something to happen. It's about the singer and the strangers sharing the night and going on and on and on. It's about refusing to give up even when giving up would be easier.
 
-The song's power lies in its ability to transform everyday struggles into epic narratives of hope and perseverance.
+"Streetlights. People." Two words. An entire universe of lonely souls under yellow lights, all of them holding on to something.
 
-{{< lyrics-callout style="inline" >}}
-Don't stop believin'  
-Hold on to that feelin'  
-Streetlights, people
-{{< /lyrics-callout >}}
+The chorus finally hits, and every time—every single time—something happens. Fists pump. Voices join. Strangers become a choir.
 
-[Listen on Spotify](https://open.spotify.com/search/journey%20don%27t%20stop%20believin%27)
-
----
-
-**Featured on:** September 15, 2025  
-**Artist:** Journey  
-**Album:** Escape  
-**Genre:** Classic Rock, Arena Rock  
-**Mood:** Uplifting, Anthemic, Motivational  
-**Popularity:** Classic  
-**Your Play Count:** 259 plays
+That's not an accident. That's architecture.

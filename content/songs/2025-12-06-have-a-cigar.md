@@ -4,7 +4,7 @@ description: "Pink Floyd's biting satire of the music industry's hollow promises
 summary: "A scathing portrait of record label exploitation featuring one of rock's most sardonic guest vocals"
 date: 2025-12-06T08:00:00-05:00
 lastmod: 2025-12-06T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

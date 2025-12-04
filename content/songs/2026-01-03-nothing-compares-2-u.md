@@ -4,7 +4,7 @@ description: "Chris Cornell's devastatingly raw acoustic take on Prince's classi
 summary: "A stripped-down interpretation that transforms pop perfection into something even more heartbreaking"
 date: 2026-01-03T08:00:00-05:00
 lastmod: 2026-01-03T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

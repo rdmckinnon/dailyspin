@@ -4,7 +4,7 @@ description: "Simple Minds' anthemic celebration of connection and illumination"
 summary: "A soaring arena rock track that captured the band's gift for uplifting, cinematic rock"
 date: 2025-12-13T08:00:00-05:00
 lastmod: 2025-12-13T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

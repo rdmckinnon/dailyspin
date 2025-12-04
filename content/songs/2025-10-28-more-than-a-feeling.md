@@ -1,76 +1,36 @@
 ---
+draft: true
 title: "More Than a Feeling"
-description: "Boston's arena rock masterpiece that defined the sound of the mid-70s"
-summary: "The ultimate power ballad that launched Boston to superstardom with its soaring harmonies and guitar wizardry"
-date: 2025-10-28T23:41:19-05:00
-lastmod: 2025-12-14T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "More Than a Feeling - Boston | DailySpin.fm" 
-  description: "Why Boston's More Than a Feeling remains the blueprint for arena rock perfection"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-10-28
 artists: ["Boston"]
-albums: ["Boston"]
-genres: ["Classic Rock", "Hard Rock"]
-moods: ["Anthemic", "Nostalgic", "Powerful"]
-years: ["1976"]
-popularity: ["classic"]
-tags: ["Classic", "Classic Rock", "Hard Rock", "Boston", "1970s", "Arena Rock", "Anthem", "Guitar Driven"]
-
-# Song details
-spotify_id: "1QEEqeFIZktqIpPI4jSVSF"
+album: "Boston"
 release_year: "1976"
-featured_date: 2025-09-09
+spotify_id: "1QEEqeFIZktqIpPI4jSVSF"
+genres: ["classic rock", "arena rock"]
+duration: "4:45"
+description: "An MIT engineer spent five years in his basement perfecting the sound of nostalgia itself."
 ---
 
-## Background
+Tom Scholz was an engineer at Polaroid when he started recording this song. He built his own equipment. He designed his own effects pedals. He spent five years—five years—layering guitars in his basement until he had something that sounded like a memory feels.
 
-Released in 1976 on Boston's self-titled debut album, "More Than a Feeling" became the template for arena rock perfection. Tom Scholz, MIT graduate turned musical genius, crafted this song in his basement studio using innovative recording techniques and self-designed equipment. The track took over five years to perfect, with Scholz obsessing over every guitar tone and vocal harmony.
+That's what this song is. The sound of looking backward and aching for something you can't quite name.
 
-The song's success was immediate and massive, reaching #5 on the Billboard Hot 100 and establishing Boston as one of rock's most distinctive voices. Its influence can be heard in countless arena rock anthems that followed.
+[YOUR MEMORY HERE - the song that takes you back, the Marianne in your life]
 
-## Why It's Good
+<!--more-->
 
-"More Than a Feeling" succeeds through its perfect marriage of technical precision and emotional accessibility. Scholz's layered guitar work creates a wall of sound that's both powerful and melodic, while Brad Delp's soaring vocals add an ethereal quality that elevates the entire composition.
+"More Than a Feeling" opens with an acoustic guitar figure that's become shorthand for a certain kind of longing. Then the electric guitars enter, harmonized and soaring, and Brad Delp's voice floats in like someone calling from another room.
 
-The song's structure is masterful - building from a gentle acoustic opening through dynamic verses to an explosive, harmonized chorus that demands to be sung along with. Every element serves the song's nostalgic theme while showcasing the band's instrumental prowess.
+The song is about a girl named Marianne. Who is Marianne? Doesn't matter. She's every first love. She's everyone who got away. She's the version of your life that didn't happen.
 
-{{< lyrics-callout style="centered" artist="Boston" song="More Than a Feeling" >}}
-It's more than a feeling  
-(More than a feeling)  
-When I hear that old song they used to play  
-(More than a feeling)  
-I begin dreaming  
-(More than a feeling)  
-'Til I see Marianne walk away
-{{< /lyrics-callout >}}
+Scholz's perfectionism bordered on obsession. He recorded demo after demo, tweaking frequencies, adjusting levels, stacking guitar tracks until they created that distinctive wall of sound—thick and warm and somehow both powerful and gentle. The label thought they were getting a quick album. They got something that took years to make and sounds like it.
 
-The production remains a benchmark for rock recording, with its crystal-clear separation of instruments and innovative use of guitar layering creating a sound that was revolutionary for its time.
+Delp's vocals are the secret weapon. That high tenor, clear and strong, riding on top of those guitars like someone walking on clouds. When he hits the chorus, something happens in your chest. That's not an accident. That's engineering.
 
-## Standout Lyrics
+The song structure is classic: quiet verse, building pre-chorus, explosive chorus, repeat. But the execution elevates it beyond formula. The guitar harmonies in the bridge. The way the dynamics swell and recede. The production that somehow sounds both of its time and timeless.
 
-The song's emotional core lies in its exploration of how music triggers powerful memories and emotions, creating a universal connection with listeners.
+"When I'm tired and thinking cold, I hide in my music, forget the day." That's the whole thesis. Music as escape. Music as time machine. Music as the only reliable way back to who you used to be.
 
-{{< lyrics-callout style="inline" >}}
-I looked out this morning and the sun was gone  
-Turned on some music to start my day  
-I lost myself in a familiar song  
-I closed my eyes and I slipped away
-{{< /lyrics-callout >}}
+Scholz was right to take five years. Some things can't be rushed.
 
-[Listen on Spotify](https://open.spotify.com/search/boston%20more%20than%20a%20feeling)
-
----
-
-**Featured on:** September 14, 2025  
-**Artist:** Boston  
-**Album:** Boston  
-**Genre:** Classic Rock, Hard Rock  
-**Mood:** Anthemic, Nostalgic, Powerful  
-**Popularity:** Classic  
-**Your Play Count:** 209 plays
+Some feelings need that long to get right.

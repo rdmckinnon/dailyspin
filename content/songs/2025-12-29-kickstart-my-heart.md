@@ -4,7 +4,7 @@ description: "Mötley Crüe's adrenaline-fueled anthem inspired by Nikki Sixx's 
 summary: "A pure shot of hair metal energy born from genuine brushes with mortality"
 date: 2025-12-29T08:00:00-05:00
 lastmod: 2025-12-29T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

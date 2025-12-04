@@ -1,71 +1,40 @@
 ---
+draft: true
 title: "Learning to Fly"
-description: "Pink Floyd's atmospheric meditation on growth, change, and finding your way"
-summary: "A beautifully crafted song about navigating life's uncertainties with hope and determination"
-date: 2025-11-13T18:20:28-05:00
-lastmod: 2025-11-17T10:00:00-05:00
-draft: false
-weight: 50
-toc: true
-seo:
-  title: "Learning to Fly - Pink Floyd | DailySpin.fm" 
-  description: "Pink Floyd's Learning to Fly captures the universal experience of facing life's challenges with grace"
-  canonical: ""
-  noindex: false
-
-# Music metadata
+date: 2025-11-13
 artists: ["Pink Floyd"]
-albums: ["A Momentary Lapse of Reason"]
-genres: ["Progressive Rock", "Art Rock"]
-moods: ["Contemplative", "Hopeful", "Atmospheric"]
-years: ["1987"]
-popularity: ["deep cut classic"]
-tags: ["Cult Classic", "Progressive Rock", "Art Rock", "Pink Floyd", "1980s", "Atmospheric", "David Gilmour", "Deep Cut"]
-
-# Song details
-spotify_id: "3ieDOGcOqVxScs2VZBzidt"
+album: "A Momentary Lapse of Reason"
 release_year: "1987"
-featured_date: 2025-09-09
+spotify_id: "3ieDOGcOqVxScs2VZBzidt"
+genres: ["progressive rock", "art rock"]
+duration: "4:53"
+description: "David Gilmour proved you don't need Roger Waters to touch the sky."
 ---
 
-## Background
+"I'm learning to fly, but I ain't got wings."
 
-From Pink Floyd's 1987 album *A Momentary Lapse of Reason*, "Learning to Fly" marked a new chapter for the band following Roger Waters' departure. Written primarily by David Gilmour and Anthony Moore, the song showcases a more accessible, radio-friendly approach while maintaining Pink Floyd's signature atmospheric sound.
+That's the whole human condition in nine words. We're all trying to do impossible things without the equipment the universe promised us.
 
-The track became one of the band's most successful singles of the post-Waters era, proving that Pink Floyd could continue to create meaningful music despite the major lineup change. Its themes of growth and adaptation seemed to mirror the band's own journey during this transitional period.
+[YOUR MEMORY HERE - a time you jumped without knowing where you'd land]
 
-## Why It's Good
+<!--more-->
 
-"Learning to Fly" succeeds through its perfect balance of accessibility and depth. Gilmour's guitar work creates soaring melodies that mirror the song's lyrical themes of flight and freedom, while his vocals convey both vulnerability and determination. The atmospheric production creates a sense of weightlessness that supports the metaphorical content.
+1987. Roger Waters was gone, convinced he'd taken Pink Floyd with him. The lawyers disagreed. So did Gilmour. So did millions of fans who discovered that the spaceship could fly without its most difficult passenger.
 
-The song's genius lies in its universal metaphor - everyone can relate to the feeling of navigating unfamiliar territory without clear guidance. This relatability, combined with Pink Floyd's musical craftsmanship, creates a deeply moving listening experience.
+*A Momentary Lapse of Reason* wasn't *The Wall*. It wasn't trying to be. This was Gilmour staking a claim, proving that Pink Floyd was bigger than any one ego. "Learning to Fly" was his mission statement: we're still here, we're still reaching, and yes, we can still make you feel something.
 
-{{< lyrics-callout style="centered" artist="Pink Floyd" song="Learning to Fly" >}}
-I'm learning to fly, but I ain't got wings  
-Coming down is the hardest thing
-{{< /lyrics-callout >}}
+The song is about literal flying lessons—Gilmour got his pilot's license and channeled the experience into music. But like all great Floyd tracks, the specific becomes universal. It's not really about planes. It's about the terror and exhilaration of trying something new when failure means falling.
 
-The production maintains Pink Floyd's signature spaciousness while incorporating more contemporary elements, creating a sound that feels both timeless and of its era.
+"Coming down is the hardest thing." That line catches me every time. The flight isn't the scary part. Landing is. The return to earth after you've tasted altitude. The inevitable crash that follows every high.
 
-## Standout Lyrics
+Gilmour's guitar work here is restrained, almost gentle. He's not showing off. He's serving the song, letting the melody breathe, creating space for the lyrics to sink in. The production is clean and warm, atmospheric without being oppressive.
 
-The song's power lies in its honest exploration of the uncertainty that comes with growth and the courage required to move forward anyway.
+"So I've started out for God knows where. I guess I'll know when I get there."
 
-{{< lyrics-callout style="inline" >}}
-Well, some say life will beat you down  
-Break your heart, steal your crown  
-So I've started out for God knows where  
-I guess I'll know when I get there
-{{< /lyrics-callout >}}
+That's not uncertainty. That's faith. The only kind that matters—faith in the journey when the destination is invisible.
 
-[Listen on Spotify](https://open.spotify.com/search/pink%20floyd%20learning%20to%20fly)
+Waters would return eventually. The lawsuits would settle. But this song stands as proof that sometimes the hardest part of learning to fly is deciding to leave the ground at all.
 
----
+Spread your arms. Jump.
 
-**Featured on:** October 28, 2025  
-**Artist:** Pink Floyd  
-**Album:** A Momentary Lapse of Reason  
-**Genre:** Progressive Rock, Art Rock  
-**Mood:** Contemplative, Hopeful, Atmospheric  
-**Popularity:** Deep Cut Classic  
-**Your Play Count:** 122 plays
+See what happens.

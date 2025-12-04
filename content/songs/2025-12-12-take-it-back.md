@@ -4,7 +4,7 @@ description: "Pink Floyd's surprisingly catchy single from their Gilmour-led era
 summary: "A radio-friendly gem that proved Floyd could craft accessible hooks without abandoning their atmospheric depth"
 date: 2025-12-12T08:00:00-05:00
 lastmod: 2025-12-12T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

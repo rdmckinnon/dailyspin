@@ -4,7 +4,7 @@ description: "Meat Loaf's operatic rock epic that spawned a thousand debates abo
 summary: "A twelve-minute theatrical masterpiece that combined power ballad intimacy with Broadway grandeur"
 date: 2025-12-28T08:00:00-05:00
 lastmod: 2025-12-28T08:00:00-05:00
-draft: false
+draft: true
 weight: 50
 toc: true
 seo:

@@ -1,5 +1,6 @@
 .env
 .netlify
+CLAUDE.md
 .hugo_build.lock
 node_modules
 public
